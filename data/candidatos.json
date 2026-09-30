@@ -1,0 +1,514 @@
+[
+  {
+    "id": "federal-1300",
+    "cargo": "federal",
+    "nomeUrna": "Gregory França",
+    "partido": "PT",
+    "numero": "1300",
+    "compat": 75,
+    "doc": 50,
+    "criterios": {
+      "educacao": 80,
+      "minorias": 80,
+      "periferia": 70,
+      "midia": 50
+    },
+    "semDados": [
+      "midia"
+    ],
+    "pontosCompativeis": [
+      "Consta no TSE como professor de ensino fundamental.",
+      "Mora no Parque São Lucas (zona leste) e tem 24 anos.",
+      "Propõe inclusão de pessoas com deficiência da educação básica à formação técnica."
+    ],
+    "pontosConflito": [
+      "Sem histórico de votos ou falas para verificar; a análise se apoia em propostas de campanha.",
+      "O registro constava como 'em julgamento' no TSE na data da pesquisa."
+    ],
+    "fontes": [
+      {
+        "titulo": "Agência Mural: candidatos PcD das periferias",
+        "url": "https://agenciamural.org.br/candidatos-pcds-de-sao-paulo-driblam-falta-de-recursos-na-campanha/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "O Tempo: ficha de Gregory França",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-federal/gregory-franca-1300",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "federal-1351",
+    "cargo": "federal",
+    "nomeUrna": "Reis",
+    "partido": "PT",
+    "numero": "1351",
+    "compat": 68,
+    "doc": 55,
+    "criterios": {
+      "educacao": 60,
+      "minorias": 50,
+      "periferia": 90,
+      "midia": 55
+    },
+    "semDados": [
+      "minorias"
+    ],
+    "pontosCompativeis": [
+      "Nascido no Capão Redondo; foi cobrador de ônibus, metalúrgico, professor da rede estadual e servidor público.",
+      "Foi vereador de São Paulo (2013–2023) e é deputado estadual desde 2023."
+    ],
+    "pontosConflito": [
+      "Encontrei pouca informação sobre posições específicas em educação e minorias.",
+      "A biografia vem em boa parte do site do próprio partido.",
+      "Teve 108.726 votos em 2022, portanto exposição média."
+    ],
+    "fontes": [
+      {
+        "titulo": "PT Paulista: perfil de Reis",
+        "url": "https://ptpaulista.com.br/reis/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Wikipedia: Reis (político)",
+        "url": "https://pt.wikipedia.org/wiki/Reis_(pol%C3%ADtico)",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "federal-1389",
+    "cargo": "federal",
+    "nomeUrna": "Alfredinho",
+    "partido": "PT",
+    "numero": "1389",
+    "compat": 62,
+    "doc": 60,
+    "criterios": {
+      "educacao": 50,
+      "minorias": 50,
+      "periferia": 90,
+      "midia": 50
+    },
+    "semDados": [
+      "educacao",
+      "minorias",
+      "midia"
+    ],
+    "pontosCompativeis": [
+      "Migrou do Piauí, é ex-metalúrgico e ajudou a fundar a CUT e o PT; base eleitoral na zona sul (Grajaú).",
+      "Autor de leis de fomento à cultura popular (circo, samba das comunidades, forró) e presidente da Frente Parlamentar em Defesa da Cultura Periférica."
+    ],
+    "pontosConflito": [
+      "Não encontrei posições específicas sobre educação ou minorias.",
+      "Está no mandato de deputado federal desde 2023 (assumiu como suplente)."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipedia: Alfredinho",
+        "url": "https://pt.wikipedia.org/wiki/Alfredinho",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Câmara dos Deputados: Alfredinho",
+        "url": "https://www.camara.leg.br/deputados/221148",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "federal-2211",
+    "cargo": "federal",
+    "nomeUrna": "Lucas Pavanato",
+    "partido": "PL",
+    "numero": "2211",
+    "compat": 3,
+    "doc": 90,
+    "criterios": {
+      "educacao": 0,
+      "minorias": 50,
+      "periferia": 50,
+      "midia": 0
+    },
+    "semDados": [
+      "minorias",
+      "periferia"
+    ],
+    "pontosCompativeis": [],
+    "pontosConflito": [
+      "Em 13/05/2026, na Câmara Municipal, chamou professores em greve de 'vagabundos' e 'burros'; a sessão foi suspensa.",
+      "Deputados do PSOL pediram investigação ao Ministério Público de SP por essas ofensas.",
+      "Votou a favor do reajuste de 3,51% aos servidores, que sindicato e oposição criticaram como abaixo da inflação.",
+      "Alta exposição midiática."
+    ],
+    "fontes": [
+      {
+        "titulo": "Congresso em Foco",
+        "url": "https://www.congressoemfoco.com.br/noticia/118960/sessao-e-suspensa-apos-pavanato-chamar-professores-de-vagabundos",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Revista Fórum",
+        "url": "https://revistaforum.com.br/brasil/pavanato-professores-vagabundos/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Simões Online",
+        "url": "http://www.simoesonline.com.br/2026/05/vereador-bolsonarista-chama-professores.html",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "federal-2225",
+    "cargo": "federal",
+    "nomeUrna": "Luiz Philippe de O. e Bragança",
+    "partido": "PL",
+    "numero": "2225",
+    "compat": 12,
+    "doc": 85,
+    "criterios": {
+      "educacao": 10,
+      "minorias": 50,
+      "periferia": 50,
+      "midia": 50
+    },
+    "semDados": [
+      "minorias",
+      "periferia",
+      "midia"
+    ],
+    "pontosCompativeis": [],
+    "pontosConflito": [
+      "Coautor do PL 246/2019, que institui o 'Programa Escola sem Partido'.",
+      "O texto defendido por ele afirma que não existe liberdade de expressão no exercício estrito da atividade docente; críticos veem interferência na autonomia do professor.",
+      "Ele defende o projeto como proteção da liberdade de consciência dos estudantes."
+    ],
+    "fontes": [
+      {
+        "titulo": "Câmara dos Deputados: texto do projeto",
+        "url": "https://www.camara.leg.br/proposicoesWeb/prop_mostrarintegra?codteor=1707037",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Site do candidato: Entenda o Escola sem Partido",
+        "url": "https://lpbraganca.com.br/entenda-o-programa-escola-sem-partido/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Revista Educação Pública: crítica ao projeto",
+        "url": "https://educacaopublica.cecierj.edu.br/artigos/17/12/escola-sem-partido-h-interferncia-na-autonomia-do-professor",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "federal-2270",
+    "cargo": "federal",
+    "nomeUrna": "Pastor Marco Feliciano",
+    "partido": "PL",
+    "numero": "2270",
+    "compat": 5,
+    "doc": 80,
+    "criterios": {
+      "educacao": 50,
+      "minorias": 5,
+      "periferia": 50,
+      "midia": 50
+    },
+    "semDados": [
+      "educacao",
+      "periferia",
+      "midia"
+    ],
+    "pontosCompativeis": [],
+    "pontosConflito": [
+      "Em 2013 foi acusado de homofobia e racismo por declarações públicas, entre elas a de que africanos seriam alvo de uma 'maldição'.",
+      "Ele diz que se trata de crença religiosa e não de racismo.",
+      "Os fatos têm cerca de 13 anos; não encontrei falas recentes nessa linha."
+    ],
+    "fontes": [
+      {
+        "titulo": "Terra (2013)",
+        "url": "https://www.terra.com.br/noticias/brasil/politica/acusado-de-homofobia-e-racismo-feliciano-semeia-polemicas-no-congresso,2f8de89a54bdd310VgnCLD2000000ec6eb0aRCRD.html",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Jornal Opção",
+        "url": "https://www.jornalopcao.com.br/ultimas-noticias/exclusivo-ao-jornal-opcao-marco-feliciano-critica-governo-e-defende-bolsonaro-como-unica-opcao-para-2026-677659/",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "estadual-65400",
+    "cargo": "estadual",
+    "nomeUrna": "Keila Pereira",
+    "partido": "PCdoB",
+    "numero": "65400",
+    "compat": 88,
+    "doc": 60,
+    "criterios": {
+      "educacao": 90,
+      "minorias": 85,
+      "periferia": 90,
+      "midia": 90
+    },
+    "semDados": [],
+    "pontosCompativeis": [
+      "Atua desde 2015 em cultura e educação em Parelheiros (zona sul); cofundou o Coletivo Sarauê.",
+      "Foi diretora de Cultura da União Municipal dos Estudantes Secundaristas de SP e preside (licenciada) a Federação das Mulheres Paulistas.",
+      "Critica cortes de verba na educação e defende mais proteção às mulheres da região.",
+      "Baixa exposição midiática (cerca de 9 mil seguidores no Instagram)."
+    ],
+    "pontosConflito": [
+      "Boa parte das fontes é do próprio partido ou de veículo partidário.",
+      "Sem mandato anterior: teve 5.100 votos como suplente em 2022."
+    ],
+    "fontes": [
+      {
+        "titulo": "PCdoB: perfil",
+        "url": "https://pcdob.org.br/candidaturas/keila-pereira/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Hora do Povo: lançamento da candidatura",
+        "url": "https://horadopovo.com.br/keila-pereira-lanca-candidatura-a-deputada-estadual-em-encontro-com-liderancas-de-parelheiros/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Nexo: ficha",
+        "url": "https://candidatos.nexojornal.com.br/2026/sp/keila-pereira-250002536849/",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "estadual-50300",
+    "cargo": "estadual",
+    "nomeUrna": "Keit Lima",
+    "partido": "PSOL",
+    "numero": "50300",
+    "compat": 85,
+    "doc": 80,
+    "criterios": {
+      "educacao": 90,
+      "minorias": 90,
+      "periferia": 95,
+      "midia": 40
+    },
+    "semDados": [],
+    "pontosCompativeis": [
+      "É a primeira vereadora moradora da Brasilândia na Câmara de São Paulo (27.769 votos em 2024).",
+      "Começou no ativismo pela educação aos 13 anos, ensinando crianças com dificuldade de leitura na escola pública.",
+      "Atua na Educafro e na Marcha das Mulheres Negras; pauta inclusão de periferias e favelas no orçamento."
+    ],
+    "pontosConflito": [
+      "Já tem mandato e projeção como vereadora, então é menos discreta do que outros perfis."
+    ],
+    "fontes": [
+      {
+        "titulo": "HubPolítico: perfil",
+        "url": "https://hubpolitico.com.br/perfil/keitlima",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Desenrola e Não Me Enrola: trajetória",
+        "url": "https://desenrolaenaomenrola.com.br/series/somos-seres-politicos-conheca-a-trajetoria-politica-de-keit-lima-na-brasilandia/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Alma Preta: entrevista",
+        "url": "https://almapreta.com.br/sessao/politica/e-preciso-colocar-o-povo-pobre-e-favelado-no-orcamento-diz-keit-lima-candidata-a-vereadora-em-sao-paulo/",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "estadual-13123",
+    "cargo": "estadual",
+    "nomeUrna": "Professora Bebel",
+    "partido": "PT",
+    "numero": "13123",
+    "compat": 70,
+    "doc": 90,
+    "criterios": {
+      "educacao": 95,
+      "minorias": 50,
+      "periferia": 30,
+      "midia": 30
+    },
+    "semDados": [
+      "minorias"
+    ],
+    "pontosCompativeis": [
+      "Professora efetiva da rede estadual; presidiu a Apeoesp (sindicato dos professores) em ao menos cinco mandatos.",
+      "Presidiu a Comissão de Educação e Cultura da Alesp e foi conselheira do Conselho Nacional de Educação (2006–2014).",
+      "Em 2024 protocolou representação no Conselho de Ética contra o deputado Lucas Bove por intimidação a professores."
+    ],
+    "pontosConflito": [
+      "É de Piracicaba e bem conhecida (3º mandato), portanto não atende bem aos critérios de origem periférica e baixa exposição."
+    ],
+    "fontes": [
+      {
+        "titulo": "Professora Bebel: trajetória (site da candidata)",
+        "url": "https://professorabebel.com.br/minha-trajetoria/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Sampi Piracicaba: lançamento da candidatura",
+        "url": "https://sampi.net.br/piracicaba/noticias/2999307/cidade/2026/08/deputada-bebel-faz-lancamento-estadual-da-sua-candidatura",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Metrópoles: pedidos contra Bove",
+        "url": "https://www.metropoles.com/sao-paulo/alesp-pedidos-cassacao-bove",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "estadual-22051",
+    "cargo": "estadual",
+    "nomeUrna": "Fabiana Bolsonaro",
+    "partido": "PL",
+    "numero": "22051",
+    "compat": 4,
+    "doc": 90,
+    "criterios": {
+      "educacao": 50,
+      "minorias": 0,
+      "periferia": 50,
+      "midia": 50
+    },
+    "semDados": [
+      "educacao",
+      "periferia",
+      "midia"
+    ],
+    "pontosCompativeis": [],
+    "pontosConflito": [
+      "Em 18/03/2026, pintou rosto e braços de marrom na tribuna da Alesp para criticar a eleição de Erika Hilton, mulher trans, à presidência da Comissão da Mulher.",
+      "O MPSP e o MPF abriram investigação por suspeita de racismo e transfobia; 18 deputados estaduais acionaram o Conselho de Ética.",
+      "Ela nega ter feito blackface e diz que o protesto defendia que cada grupo seja representado por seus pares."
+    ],
+    "fontes": [
+      {
+        "titulo": "CNN Brasil",
+        "url": "https://www.cnnbrasil.com.br/politica/governistas-acionam-conselho-de-etica-contra-deputada-fabiana-bolsonaro/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Band",
+        "url": "https://www.band.com.br/noticias/deputados-pedem-cassacao-de-fabiana-bolsonaro-por-blackface-na-alesp-202603191600",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "SBT News",
+        "url": "https://sbtnews.sbt.com.br/noticia/politica/mpf-pede-investigacao-contra-deputada-apos-blackface-na-alesp",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "estadual-22500",
+    "cargo": "estadual",
+    "nomeUrna": "Lucas Bove",
+    "partido": "PL",
+    "numero": "22500",
+    "compat": 10,
+    "doc": 65,
+    "criterios": {
+      "educacao": 10,
+      "minorias": 50,
+      "periferia": 50,
+      "midia": 50
+    },
+    "semDados": [
+      "minorias",
+      "periferia",
+      "midia"
+    ],
+    "pontosCompativeis": [],
+    "pontosConflito": [
+      "Segundo representação da deputada Professora Bebel (fev/2024), teria intimidado professores que protestavam na Alesp, chamando o grupo de 'massa de manobra'.",
+      "É uma acusação em análise no Conselho de Ética; não encontrei a versão do deputado."
+    ],
+    "fontes": [
+      {
+        "titulo": "Metrópoles: pedidos de cassação contra Bove",
+        "url": "https://www.metropoles.com/sao-paulo/alesp-pedidos-cassacao-bove",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  },
+  {
+    "id": "estadual-44555",
+    "cargo": "estadual",
+    "nomeUrna": "Douglas Garcia",
+    "partido": "União",
+    "numero": "44555",
+    "compat": 10,
+    "doc": 85,
+    "criterios": {
+      "educacao": 50,
+      "minorias": 8,
+      "periferia": 50,
+      "midia": 50
+    },
+    "semDados": [
+      "educacao",
+      "periferia",
+      "midia"
+    ],
+    "pontosCompativeis": [],
+    "pontosConflito": [
+      "Em 2019, na Alesp, disse que tiraria uma mulher trans do banheiro 'no tapa'; retratou-se em plenário e o Conselho de Ética o advertiu.",
+      "O Condepe pediu abertura de processo por transfobia.",
+      "Em 2021 foi condenado em primeira instância a indenizar citados em um 'dossiê antifascista'.",
+      "O fato central tem mais de 5 anos."
+    ],
+    "fontes": [
+      {
+        "titulo": "Exame",
+        "url": "https://exame.com/brasil/erica-malunguinho-abrira-processo-apos-fala-transfobica-de-deputado-do-psl/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Carta Capital",
+        "url": "https://www.cartacapital.com.br/diversidade/deputado-do-psl-que-ofendeu-parlamentar-trans-e-advertido-pela-alesp/",
+        "data": "2026-09-29"
+      },
+      {
+        "titulo": "Revista Fórum: Condepe",
+        "url": "https://revistaforum.com.br/direitos/condepe-pede-abertura-de-processo-contra-deputado-do-psl-que-atacou-erica-malunguinho/",
+        "data": "2026-09-29"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-09-29"
+  }
+]

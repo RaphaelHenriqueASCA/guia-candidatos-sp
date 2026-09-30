@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/manrope';
+
+@theme {
+  --font-sans: 'Manrope Variable', ui-sans-serif, system-ui, sans-serif;
+  --color-fundo: #f7f5f0;
+  --color-borda: #e7e2d9;
+  --color-tinta: #1f2937;
+  --color-suave: #4b5563;
+  --color-petroleo: #0b3b4a;
+  --color-acento: #e4572e;
+  --color-vermelho: #b42318;
+  --color-ambar: #b54708;
+  --color-verde: #067647;
+  --radius-cartao: 18px;
+  --shadow-cartao: 0 1px 2px rgb(31 41 55 / 0.05), 0 6px 18px rgb(31 41 55 / 0.06);
+}
+
+html {
+  background: var(--color-fundo);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@layer components {
+  .cartao {
+    @apply rounded-cartao border border-borda bg-white shadow-cartao;
+  }
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-petroleo px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#08303c] disabled:cursor-not-allowed disabled:opacity-40;
+  }
+  .btn-sec {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-borda bg-white px-4 py-2 text-sm font-semibold text-petroleo transition hover:bg-fundo disabled:cursor-not-allowed disabled:opacity-40;
+  }
+}
+
+.medidor-barra {
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .medidor-barra {
+    transition: none;
+  }
+}
