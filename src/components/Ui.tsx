@@ -2,25 +2,24 @@ import { useState, type ReactNode } from 'react'
 import { DATA_PESQUISA } from '../config'
 import { iniciais, urlFoto } from '../lib/dados'
 import { faixa } from '../lib/nota'
-import type { Candidato } from '../lib/schema'
 
-export function Foto({ c, className = 'h-16 w-16' }: { c: Candidato; className?: string }) {
+export function Foto({ id, nome, className = 'h-16 w-16' }: { id: string; nome: string; className?: string }) {
   const [falhou, setFalhou] = useState(false)
   if (falhou) {
     return (
       <div
         role="img"
-        aria-label={`Sem foto oficial de ${c.nomeUrna}`}
+        aria-label={`Sem foto oficial de ${nome}`}
         className={`${className} flex shrink-0 items-center justify-center rounded-2xl bg-petroleo text-lg font-bold text-white`}
       >
-        {iniciais(c.nomeUrna)}
+        {iniciais(nome)}
       </div>
     )
   }
   return (
     <img
-      src={urlFoto(c)}
-      alt={`Foto oficial de ${c.nomeUrna}, candidato a deputado ${c.cargo}, número ${c.numero} (TSE)`}
+      src={urlFoto(id)}
+      alt={`Foto oficial de ${nome} (TSE)`}
       loading="lazy"
       onError={() => setFalhou(true)}
       className={`${className} shrink-0 rounded-2xl border border-borda bg-fundo object-cover`}
@@ -37,7 +36,7 @@ export function Medidor({ titulo, nota, rotulo, ajuda }: { titulo: string; nota:
     return (
       <div>
         <div className="text-xs font-semibold text-suave">{titulo}</div>
-        <div className="text-sm font-semibold text-suave">Sem dados</div>
+        <div className="text-sm font-semibold text-suave">{ajuda ?? 'Sem dados'}</div>
       </div>
     )
   }
@@ -77,8 +76,8 @@ export function Numero({ n, className = 'text-3xl' }: { n: string; className?: s
 export function AvisoPesquisa() {
   return (
     <p className="rounded-xl border border-borda bg-white px-4 py-3 text-sm text-suave">
-      <strong className="text-tinta">Curadoria pessoal, pesquisada em {DATA_PESQUISA}.</strong> Confira as fontes. As notas são
-      estimativas calculadas com os dados que encontrei; não são fatos nem uma medida objetiva.
+      <strong className="text-tinta">Curadoria pessoal, pesquisada em {DATA_PESQUISA}.</strong> Confira as fontes. Afinidades e posições são
+      estimativas com os dados que encontrei; não são fatos nem uma medida objetiva.
     </p>
   )
 }
@@ -103,5 +102,23 @@ export function Aba({ href, ativa, children }: { href: string; ativa: boolean; c
     >
       {children}
     </a>
+  )
+}
+
+/** Barra estática -100…+100 com marcador: onde está um candidato (ou a pessoa) entre progressista e conservador. */
+export function BarraPosicao({ valor, rotulo, cor = 'petroleo' }: { valor: number; rotulo: string; cor?: 'petroleo' | 'acento' }) {
+  const pct = (valor + 100) / 2
+  return (
+    <div
+      role="img"
+      aria-label={`${rotulo}: ${valor > 0 ? '+' : ''}${valor} numa escala de -100 (progressista) a +100 (conservador)`}
+      className="relative h-3 rounded-full bg-gradient-to-r from-[#0B3B4A]/25 via-borda to-[#B54708]/25"
+    >
+      <div className="absolute left-1/2 top-0 h-3 w-px bg-suave/50" />
+      <div
+        className={`absolute top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white ${cor === 'acento' ? 'bg-acento' : 'bg-petroleo'} shadow`}
+        style={{ left: `${pct}%` }}
+      />
+    </div>
   )
 }

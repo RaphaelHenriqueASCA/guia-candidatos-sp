@@ -1,78 +1,101 @@
 import { describe, expect, it } from 'vitest'
+import { DEFS, exemploPara } from '../src/lib/areas'
 import { analisarValores, dividirTrechos, sanitizar } from '../src/lib/valores'
 
-const soma = (p: Record<string, number>) => Object.values(p).reduce((a, b) => a + b, 0)
+const pos = (t: string, a: string) => analisarValores(t).areas[a as 'educacao']
 
-describe('extração de pesos do texto', () => {
-  it('um único critério recebe 100', () => {
-    const a = analisarValores('Quero alguém que defenda a escola pública.')
-    expect(a.pesos).toEqual({ educacao: 100, minorias: 0, periferia: 0, midia: 0 })
-    expect(a.nenhum).toBe(false)
+describe('texto → posição por área', () => {
+  it('educação pública e professores = progressista', () => {
+    expect(pos('Defendo a escola pública e o respeito aos professores.', 'educacao')!.pos).toBeLessThan(0)
   })
-
-  it('vários critérios em frases separadas por pontuação, somando 100', () => {
-    const a = analisarValores('Defenda os professores. Que apoie as mulheres; seja da periferia! Discreto, sem holofote?')
-    expect(soma(a.pesos)).toBe(100)
-    expect(a.pesos.educacao).toBeGreaterThan(0)
-    expect(a.pesos.minorias).toBeGreaterThan(0)
-    expect(a.pesos.periferia).toBeGreaterThan(0)
-    expect(a.pesos.midia).toBeGreaterThan(0)
+  it('escola sem partido e escola cívico-militar = conservador', () => {
+    expect(pos('Sou a favor da escola sem partido e da escola cívico-militar', 'educacao')!.pos).toBeGreaterThan(60)
   })
-
-  it('um trecho pode acionar mais de um critério', () => {
-    const a = analisarValores('quero alguém da periferia que defenda a escola pública')
-    expect(a.pesos.periferia).toBeGreaterThan(0)
-    expect(a.pesos.educacao).toBeGreaterThan(0)
-    expect(a.pesos.minorias).toBe(0)
+  it('"contra cotas" inverte o lado para conservador; "a favor de cotas" é progressista', () => {
+    expect(pos('Sou contra cotas', 'minorias')!.pos).toBeGreaterThan(0)
+    expect(pos('Defendo cotas raciais', 'minorias')!.pos).toBeLessThan(0)
   })
-
-  it('divide por conectores e mostra o trecho que acionou', () => {
-    const a = analisarValores('valorizo a educação e os direitos dos negros, mas também gosto de candidato discreto')
-    expect(a.evidencias.educacao[0]).toContain('educação')
-    expect(a.evidencias.minorias[0]).toContain('negros')
-    expect(a.evidencias.midia[0]).toContain('discreto')
-    expect(dividirTrechos('ana e beto, mas caio além de dora').length).toBe(4)
+  it('"contra a privatização" é progressista; "privatizar" é conservador', () => {
+    expect(pos('Sou contra a privatização', 'economia')!.pos).toBeLessThan(0)
+    expect(pos('Quero privatizar e cortar impostos', 'economia')!.pos).toBeGreaterThan(0)
   })
-
-  it('"principalmente" e "prioridade" aumentam o peso; "não me importo" reduz', () => {
-    const forte = analisarValores('educação e principalmente periferia')
-    expect(forte.pesos.periferia).toBeGreaterThan(forte.pesos.educacao)
-    const fraco = analisarValores('educação e não me importo com periferia')
-    expect(fraco.pesos.educacao).toBeGreaterThan(fraco.pesos.periferia)
-    expect(fraco.pesos.periferia).toBeGreaterThan(0)
+  it('vários temas na mesma frase, cada um com seu lado', () => {
+    const a = analisarValores('Quero tarifa zero no transporte público, mas também redução da maioridade penal')
+    expect(a.areas.transporte!.pos).toBeLessThan(0)
+    expect(a.areas.seguranca!.pos).toBeGreaterThan(0)
   })
-
-  it('ignora acentos e caixa', () => {
-    expect(analisarValores('EDUCAÇÃO').pesos.educacao).toBe(100)
-    expect(analisarValores('Deficiência').pesos.minorias).toBe(100)
+  it('uma só área citada deixa as outras de fora (neutras por padrão no cálculo)', () => {
+    const a = analisarValores('Quero mais metrô e ciclovias')
+    expect(Object.keys(a.areas)).toEqual(['transporte'])
   })
-
-  it('nenhum critério detectado devolve pesos zerados e nenhum=true', () => {
-    const a = analisarValores('quero um candidato honesto')
+  it('falar da área sem lado claro deixa neutro e sinaliza', () => {
+    const e = pos('A saúde é importante para mim', 'saude')!
+    expect(e.pos).toBe(0)
+    expect(e.semLado).toBe(true)
+  })
+  it('marcador genérico "progressista"/"conservador" vale para a área citada', () => {
+    expect(pos('Quero uma educação progressista', 'educacao')!.pos).toBeLessThan(0)
+    expect(pos('Penso de forma conservadora sobre a família', 'familia')!.pos).toBeGreaterThan(0)
+  })
+  it('intensidade: "muito" reforça e "talvez" suaviza', () => {
+    const forte = pos('Muito a favor de privatizar', 'economia')!.pos
+    const fraco = pos('Talvez privatizar', 'economia')!.pos
+    expect(forte).toBeGreaterThan(fraco)
+  })
+  it('nenhuma área detectada', () => {
+    const a = analisarValores('quero um candidato simpático')
     expect(a.nenhum).toBe(true)
-    expect(soma(a.pesos)).toBe(0)
-    expect(a.foraDeEscopo).toContain('corrupção')
+    expect(a.areas).toEqual({})
   })
-
-  it('"trans" não casa com "transporte"', () => {
-    const a = analisarValores('melhorar o transporte')
-    expect(a.pesos.minorias).toBe(0)
-    expect(a.foraDeEscopo).toContain('transporte')
-  })
-
-  it('texto vazio não quebra', () => {
+  it('ignora acentos, caixa e hífens; texto vazio não quebra', () => {
+    expect(pos('ESCOLA CÍVICO-MILITAR', 'educacao')!.pos).toBeGreaterThan(0)
     expect(analisarValores('').nenhum).toBe(true)
+  })
+  it('"transporte" não aciona minorias (palavra "trans")', () => {
+    expect(analisarValores('melhorar o transporte').areas.minorias).toBeUndefined()
+  })
+  it('posições ficam entre -100 e 100 e em múltiplos de 5', () => {
+    const p = pos('Escola sem partido, escola cívico-militar, educação domiciliar, doutrinação, homeschooling', 'educacao')!.pos
+    expect(p).toBe(100)
+    expect(p % 5).toBe(0)
+  })
+  it('temas fora das áreas são apontados', () => {
+    expect(analisarValores('quero mais cultura e esporte').foraDeEscopo).toEqual(expect.arrayContaining(['cultura', 'esporte']))
   })
 })
 
-describe('sanitização de texto', () => {
-  it('remove caracteres de controle e sinais de HTML', () => {
+describe('trechos e sanitização', () => {
+  it('divide por conectores e preserva "homem e mulher"', () => {
+    expect(dividirTrechos('ana e beto, mas caio além de dora').length).toBe(4)
+    expect(dividirTrechos('casamento entre homem e mulher').length).toBe(1)
+  })
+  it('remove controle/HTML e limita tamanho', () => {
     expect(sanitizar('a<script>b\u0000c</script>')).toBe('ascriptbc/script')
-  })
-  it('limita o tamanho', () => {
     expect(sanitizar('x'.repeat(5000)).length).toBe(1500)
-  })
-  it('mantém quebras de linha e acentos', () => {
     expect(sanitizar('ação\nfim')).toBe('ação\nfim')
+  })
+})
+
+describe('áreas e exemplos', () => {
+  it('são 9 áreas, incluindo educação, transporte e família', () => {
+    expect(DEFS.map((d) => d.id)).toEqual(expect.arrayContaining(['educacao', 'transporte', 'familia']))
+    expect(DEFS).toHaveLength(9)
+  })
+  it('cada ponta da régua tem frase de exemplo própria', () => {
+    for (const d of DEFS) {
+      expect(exemploPara(d.id, -100).frase).toBe(d.exemplos.progE)
+      expect(exemploPara(d.id, -40).frase).toBe(d.exemplos.progM)
+      expect(exemploPara(d.id, 0).rotulo).toBe('Neutro')
+      expect(exemploPara(d.id, 40).frase).toBe(d.exemplos.consM)
+      expect(exemploPara(d.id, 100).frase).toBe(d.exemplos.consE)
+    }
+  })
+  it('as frases de exemplo, analisadas pelo próprio dicionário, caem no lado esperado', () => {
+    for (const d of DEFS) {
+      const prog = analisarValores(d.exemplos.progE).areas[d.id]
+      const cons = analisarValores(d.exemplos.consE).areas[d.id]
+      expect(prog && prog.pos, `${d.id} progE`).toBeLessThan(0)
+      expect(cons && cons.pos, `${d.id} consE`).toBeGreaterThan(0)
+    }
   })
 })

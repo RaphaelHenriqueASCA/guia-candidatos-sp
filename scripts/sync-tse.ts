@@ -49,6 +49,35 @@ const linhas = parse(entrada.getData().toString('latin1'), { columns: true, deli
 console.log('Baixando fotos oficiais...')
 const zipFotos = new AdmZip(await baixar(URL_FOTOS, `foto_cand2026_${UF}_div.zip`))
 
+// Todos os candidatos a deputado federal/estadual de SP (sem CPF, e-mail ou outros dados pessoais): base do ranking por valores.
+type Linha = { id: string; cargo: 'federal' | 'estadual'; numero: string; nomeUrna: string; partido: string }
+const brutos: (Linha & { sq: string })[] = []
+for (const l of linhas) {
+  const cargo = l.DS_CARGO === CARGO_TSE.federal ? 'federal' : l.DS_CARGO === CARGO_TSE.estadual ? 'estadual' : null
+  if (!cargo || l.SG_UF !== UF) continue
+  brutos.push({ id: `${cargo}-${l.NR_CANDIDATO}`, cargo, numero: l.NR_CANDIDATO, nomeUrna: l.NM_URNA_CANDIDATO, partido: l.SG_PARTIDO, sq: l.SQ_CANDIDATO })
+}
+// Em poucos casos o TSE lista duas pessoas com o mesmo número/cargo (ex.: substituição). Como o site identifica por cargo+número,
+// esses números ficam de fora (melhor omitir do que atribuir foto ou posição à pessoa errada).
+const contagem = new Map<string, number>()
+for (const b of brutos) contagem.set(b.id, (contagem.get(b.id) ?? 0) + 1)
+const repetidos = [...contagem].filter(([, n]) => n > 1).map(([id]) => id)
+const todos: Linha[] = []
+let fotosTodas = 0
+for (const { sq, ...b } of brutos) {
+  if (repetidos.includes(b.id)) continue
+  todos.push(b)
+  const f = zipFotos.getEntry(`F${UF}${sq}_div.jpg`)
+  if (f) {
+    writeFileSync(new URL(`public/fotos/${b.id}.jpg`, raiz), f.getData())
+    fotosTodas++
+  }
+}
+todos.sort((a, b) => a.id.localeCompare(b.id))
+writeFileSync(new URL('data/tse-sp.json', raiz), JSON.stringify(todos))
+console.log(`TSE ${UF}: ${todos.length} candidatos a deputado; ${fotosTodas} fotos salvas.`)
+if (repetidos.length) console.warn(`Números repetidos no TSE, omitidos: ${repetidos.join(', ')}`)
+
 const divergencias: string[] = []
 const semFoto: string[] = []
 let fotos = 0

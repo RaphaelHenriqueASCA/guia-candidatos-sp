@@ -16,9 +16,8 @@ Regras:
 - Distinga fala, denúncia, investigação, processo e condenação. Inclua a defesa do candidato se existir; se não encontrar, diga isso no ponto.
 - Sem dados pessoais sensíveis fora do que for plataforma pública. Tom neutro, sem adjetivos.
 - "pontosCompativeis" e "pontosConflito": frases curtas, cada uma com base nas fontes.
-- Critérios do autor (ordem): 1) educação progressista e respeito aos professores; 2) empatia com causas das minorias; 3) origem na periferia e projetos populares; 4) baixa exposição midiática.
-- "criterios": nota 0–100 por critério, derivada só dos pontos listados. Onde não houver evidência, use 50 e liste o critério em "semDados".
-- "compat": estimativa 0–100 coerente com a média ponderada 40/30/20/10 dos critérios com dados (diferença máxima de 5).
+- "posicoes": para cada área em que houver EVIDÊNCIA (falas, votos, projetos de lei, atuação), uma posição de -100 (muito progressista) a +100 (muito conservador), 0 = neutro, com uma "nota" de uma frase dizendo em que a posição se baseia. Áreas possíveis: educacao, familia, seguranca, economia, saude, ambiente, transporte, minorias, religiao. Não preencha áreas sem evidência (o site usa a posição do partido nelas). Acusações ainda não julgadas não definem posição: descreva-as em "pontosConflito".
+- "pontosCompativeis" = pontos a favor; "pontosConflito" = pontos de atenção (neutros, factuais).
 - "doc" (régua de documentação): 0–29 pouca fonte, única ou partidária; 30–59 poucas fontes ou enviesadas; 60–79 ao menos 2 fontes jornalísticas independentes ou documento oficial; 80–100 várias fontes independentes e/ou documento primário.
 - "origem": "curadoria inicial" e "pesquisadoEm": a data de hoje.
 
@@ -29,10 +28,8 @@ Formato exato:
   "nomeUrna": "...",
   "partido": "SIGLA como no TSE",
   "numero": "1234",
-  "compat": 0,
   "doc": 0,
-  "criterios": {"educacao": 0, "minorias": 0, "periferia": 0, "midia": 0},
-  "semDados": [],
+  "posicoes": {"educacao": {"valor": -80, "nota": "Em que evidência esta posição se baseia."}},
   "pontosCompativeis": ["..."],
   "pontosConflito": ["..."],
   "fontes": [{"titulo": "...", "url": "https://...", "data": "AAAA-MM-DD"}],
@@ -50,8 +47,8 @@ Formato exato:
 npm run validate && npm run sync:tse && npm run check:links
 ```
 
-- `validate`: confere o formato, fontes com URL/data e a coerência das notas.
-- `sync:tse`: confere nome de urna, número e partido com o TSE e baixa a foto oficial. Se apontar divergência, corrija o JSON.
+- `validate`: confere o formato, fontes com URL/data e se o partido está em `data/partidos.json`.
+- `sync:tse`: confere nome de urna, número e partido com o TSE, baixa as fotos e atualiza `data/tse-sp.json` (todos os candidatos de SP). Se apontar divergência, corrija o JSON. Rode de novo quando o TSE atualizar as candidaturas.
 - `check:links`: lista fontes quebradas (403/429 costumam ser bloqueio de robô: abra no navegador).
 
 3. Faça commit e push na `main` (o deploy é automático).

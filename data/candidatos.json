@@ -5,17 +5,7 @@
     "nomeUrna": "Gregory França",
     "partido": "PT",
     "numero": "1300",
-    "compat": 75,
     "doc": 50,
-    "criterios": {
-      "educacao": 80,
-      "minorias": 80,
-      "periferia": 70,
-      "midia": 50
-    },
-    "semDados": [
-      "midia"
-    ],
     "pontosCompativeis": [
       "Consta no TSE como professor de ensino fundamental.",
       "Mora no Parque São Lucas (zona leste) e tem 24 anos.",
@@ -38,7 +28,17 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {
+      "educacao": {
+        "valor": -70,
+        "nota": "Professor de ensino fundamental; propõe inclusão de pessoas com deficiência da educação básica à formação técnica."
+      },
+      "minorias": {
+        "valor": -75,
+        "nota": "Propõe inclusão de pessoas com deficiência."
+      }
+    }
   },
   {
     "id": "federal-1351",
@@ -46,17 +46,7 @@
     "nomeUrna": "Reis",
     "partido": "PT",
     "numero": "1351",
-    "compat": 68,
     "doc": 55,
-    "criterios": {
-      "educacao": 60,
-      "minorias": 50,
-      "periferia": 90,
-      "midia": 55
-    },
-    "semDados": [
-      "minorias"
-    ],
     "pontosCompativeis": [
       "Nascido no Capão Redondo; foi cobrador de ônibus, metalúrgico, professor da rede estadual e servidor público.",
       "Foi vereador de São Paulo (2013–2023) e é deputado estadual desde 2023."
@@ -79,7 +69,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {}
   },
   {
     "id": "federal-1389",
@@ -87,19 +78,7 @@
     "nomeUrna": "Alfredinho",
     "partido": "PT",
     "numero": "1389",
-    "compat": 62,
     "doc": 60,
-    "criterios": {
-      "educacao": 50,
-      "minorias": 50,
-      "periferia": 90,
-      "midia": 50
-    },
-    "semDados": [
-      "educacao",
-      "minorias",
-      "midia"
-    ],
     "pontosCompativeis": [
       "Migrou do Piauí, é ex-metalúrgico e ajudou a fundar a CUT e o PT; base eleitoral na zona sul (Grajaú).",
       "Autor de leis de fomento à cultura popular (circo, samba das comunidades, forró) e presidente da Frente Parlamentar em Defesa da Cultura Periférica."
@@ -121,7 +100,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {}
   },
   {
     "id": "federal-2211",
@@ -129,18 +109,7 @@
     "nomeUrna": "Lucas Pavanato",
     "partido": "PL",
     "numero": "2211",
-    "compat": 3,
     "doc": 90,
-    "criterios": {
-      "educacao": 0,
-      "minorias": 50,
-      "periferia": 50,
-      "midia": 0
-    },
-    "semDados": [
-      "minorias",
-      "periferia"
-    ],
     "pontosCompativeis": [],
     "pontosConflito": [
       "Em 13/05/2026, na Câmara Municipal, chamou professores em greve de 'vagabundos' e 'burros'; a sessão foi suspensa.",
@@ -166,7 +135,13 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {
+      "educacao": {
+        "valor": 70,
+        "nota": "Inferida de fala sobre professores em greve (13/05/2026); não analisei propostas de educação."
+      }
+    }
   },
   {
     "id": "federal-2225",
@@ -174,19 +149,7 @@
     "nomeUrna": "Luiz Philippe de O. e Bragança",
     "partido": "PL",
     "numero": "2225",
-    "compat": 12,
     "doc": 85,
-    "criterios": {
-      "educacao": 10,
-      "minorias": 50,
-      "periferia": 50,
-      "midia": 50
-    },
-    "semDados": [
-      "minorias",
-      "periferia",
-      "midia"
-    ],
     "pontosCompativeis": [],
     "pontosConflito": [
       "Coautor do PL 246/2019, que institui o 'Programa Escola sem Partido'.",
@@ -211,7 +174,13 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {
+      "educacao": {
+        "valor": 90,
+        "nota": "Coautor do PL 246/2019 (Escola sem Partido); defende o projeto como proteção da liberdade de consciência dos estudantes."
+      }
+    }
   },
   {
     "id": "federal-2270",
@@ -219,19 +188,7 @@
     "nomeUrna": "Pastor Marco Feliciano",
     "partido": "PL",
     "numero": "2270",
-    "compat": 5,
     "doc": 80,
-    "criterios": {
-      "educacao": 50,
-      "minorias": 5,
-      "periferia": 50,
-      "midia": 50
-    },
-    "semDados": [
-      "educacao",
-      "periferia",
-      "midia"
-    ],
     "pontosCompativeis": [],
     "pontosConflito": [
       "Em 2013 foi acusado de homofobia e racismo por declarações públicas, entre elas a de que africanos seriam alvo de uma 'maldição'.",
@@ -251,7 +208,17 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {
+      "minorias": {
+        "valor": 90,
+        "nota": "Acusado em 2013 de homofobia e racismo por declarações; ele nega e diz tratar-se de crença religiosa."
+      },
+      "religiao": {
+        "valor": 80,
+        "nota": "Pastor; atribui suas declarações polêmicas a crença religiosa."
+      }
+    }
   },
   {
     "id": "estadual-65400",
@@ -259,15 +226,7 @@
     "nomeUrna": "Keila Pereira",
     "partido": "PCdoB",
     "numero": "65400",
-    "compat": 88,
     "doc": 60,
-    "criterios": {
-      "educacao": 90,
-      "minorias": 85,
-      "periferia": 90,
-      "midia": 90
-    },
-    "semDados": [],
     "pontosCompativeis": [
       "Atua desde 2015 em cultura e educação em Parelheiros (zona sul); cofundou o Coletivo Sarauê.",
       "Foi diretora de Cultura da União Municipal dos Estudantes Secundaristas de SP e preside (licenciada) a Federação das Mulheres Paulistas.",
@@ -296,7 +255,17 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {
+      "educacao": {
+        "valor": -85,
+        "nota": "Critica cortes de verba na educação; atua em cultura e educação em Parelheiros desde 2015."
+      },
+      "minorias": {
+        "valor": -80,
+        "nota": "Preside (licenciada) a Federação das Mulheres Paulistas; defende mais proteção às mulheres."
+      }
+    }
   },
   {
     "id": "estadual-50300",
@@ -304,15 +273,7 @@
     "nomeUrna": "Keit Lima",
     "partido": "PSOL",
     "numero": "50300",
-    "compat": 85,
     "doc": 80,
-    "criterios": {
-      "educacao": 90,
-      "minorias": 90,
-      "periferia": 95,
-      "midia": 40
-    },
-    "semDados": [],
     "pontosCompativeis": [
       "É a primeira vereadora moradora da Brasilândia na Câmara de São Paulo (27.769 votos em 2024).",
       "Começou no ativismo pela educação aos 13 anos, ensinando crianças com dificuldade de leitura na escola pública.",
@@ -339,7 +300,17 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {
+      "educacao": {
+        "valor": -90,
+        "nota": "Ativista pela educação desde os 13 anos; atua na Educafro."
+      },
+      "minorias": {
+        "valor": -90,
+        "nota": "Atua na Educafro e na Marcha das Mulheres Negras."
+      }
+    }
   },
   {
     "id": "estadual-13123",
@@ -347,17 +318,7 @@
     "nomeUrna": "Professora Bebel",
     "partido": "PT",
     "numero": "13123",
-    "compat": 70,
     "doc": 90,
-    "criterios": {
-      "educacao": 95,
-      "minorias": 50,
-      "periferia": 30,
-      "midia": 30
-    },
-    "semDados": [
-      "minorias"
-    ],
     "pontosCompativeis": [
       "Professora efetiva da rede estadual; presidiu a Apeoesp (sindicato dos professores) em ao menos cinco mandatos.",
       "Presidiu a Comissão de Educação e Cultura da Alesp e foi conselheira do Conselho Nacional de Educação (2006–2014).",
@@ -384,7 +345,13 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {
+      "educacao": {
+        "valor": -90,
+        "nota": "Professora da rede estadual; presidiu a Apeoesp e a Comissão de Educação e Cultura da Alesp."
+      }
+    }
   },
   {
     "id": "estadual-22051",
@@ -392,19 +359,7 @@
     "nomeUrna": "Fabiana Bolsonaro",
     "partido": "PL",
     "numero": "22051",
-    "compat": 4,
     "doc": 90,
-    "criterios": {
-      "educacao": 50,
-      "minorias": 0,
-      "periferia": 50,
-      "midia": 50
-    },
-    "semDados": [
-      "educacao",
-      "periferia",
-      "midia"
-    ],
     "pontosCompativeis": [],
     "pontosConflito": [
       "Em 18/03/2026, pintou rosto e braços de marrom na tribuna da Alesp para criticar a eleição de Erika Hilton, mulher trans, à presidência da Comissão da Mulher.",
@@ -429,7 +384,13 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {
+      "minorias": {
+        "valor": 90,
+        "nota": "Ato de 18/03/2026 na Alesp sobre a eleição de Erika Hilton, investigado pelo MPSP e MPF; ela nega blackface."
+      }
+    }
   },
   {
     "id": "estadual-22500",
@@ -437,19 +398,7 @@
     "nomeUrna": "Lucas Bove",
     "partido": "PL",
     "numero": "22500",
-    "compat": 10,
     "doc": 65,
-    "criterios": {
-      "educacao": 10,
-      "minorias": 50,
-      "periferia": 50,
-      "midia": 50
-    },
-    "semDados": [
-      "minorias",
-      "periferia",
-      "midia"
-    ],
     "pontosCompativeis": [],
     "pontosConflito": [
       "Segundo representação da deputada Professora Bebel (fev/2024), teria intimidado professores que protestavam na Alesp, chamando o grupo de 'massa de manobra'.",
@@ -463,7 +412,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {}
   },
   {
     "id": "estadual-44555",
@@ -471,19 +421,7 @@
     "nomeUrna": "Douglas Garcia",
     "partido": "União",
     "numero": "44555",
-    "compat": 10,
     "doc": 85,
-    "criterios": {
-      "educacao": 50,
-      "minorias": 8,
-      "periferia": 50,
-      "midia": 50
-    },
-    "semDados": [
-      "educacao",
-      "periferia",
-      "midia"
-    ],
     "pontosCompativeis": [],
     "pontosConflito": [
       "Em 2019, na Alesp, disse que tiraria uma mulher trans do banheiro 'no tapa'; retratou-se em plenário e o Conselho de Ética o advertiu.",
@@ -509,6 +447,12 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-09-29"
+    "pesquisadoEm": "2026-09-29",
+    "posicoes": {
+      "minorias": {
+        "valor": 85,
+        "nota": "Fala transfóbica em 2019 (retratou-se e foi advertido pelo Conselho de Ética)."
+      }
+    }
   }
 ]

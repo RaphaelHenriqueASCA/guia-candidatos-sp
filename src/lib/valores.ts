@@ -1,5 +1,5 @@
-import { CRITERIOS, type Criterio } from './schema'
-import { normalizarPesos, type Pesos } from './nota'
+import { DEFS } from './areas'
+import type { Area } from './schema'
 
 /** Remove caracteres de controle/HTML e limita o tamanho. O texto nunca é enviado a lugar nenhum. */
 export function sanitizar(texto: string, max = 1500): string {
@@ -9,79 +9,115 @@ export function sanitizar(texto: string, max = 1500): string {
     .slice(0, max)
 }
 
+/** Minúsculas, sem acento e com hífens viram espaço (ex.: cívico-militar → civico militar). */
 export function normalizar(texto: string): string {
   return texto
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
+    .replace(/[-–—]/g, ' ')
 }
 
-// Dicionário local (não é IA). Padrões aplicados ao texto sem acento e em minúsculas.
-const DICIONARIO: Record<Criterio, RegExp> = {
-  educacao:
-    /\b(educacao|escola\w*|professor\w*|ensino|alfabetizacao|universidade\w*|estudante\w*|alun[oa]s?|creche\w*|merenda|magisterio|docente\w*|faculdade\w*|letramento)\b/,
-  minorias:
-    /\b(minoria\w*|negr[oa]s?|pret[oa]s?|mulher\w*|lgbt\w*|gays?|lesbica\w*|trans|transgener\w*|transexua\w*|transfobia|homofobia|deficien\w*|pcd|racismo|racista\w*|indigena\w*|quilombola\w*|machismo|misoginia|inclusao|diversidade|igualdade racial)\b/,
-  periferia:
-    /\b(periferia\w*|periferic\w*|favela\w*|comunidade\w*|projetos? sociais?|popular\w*|populares|quebrada\w*|povo|origem humilde|coletivo\w*|movimentos? sociais?|zona (leste|sul|norte)|bairro\w*)\b/,
-  midia:
-    /\b(discret[oa]s?|pouco midiatic\w*|sem holofote\w*|sem exposicao|baixa exposicao|pouco conhecid\w*|longe da midia|low profile|sem fama|reservad[oa])\b/,
-}
+type Termo = { re: RegExp; flip: boolean }
+const compilar = (t: string): Termo => ({ re: new RegExp(`\\b(?:${t.replace(/^~/, '')})\\b`, 'g'), flip: t.startsWith('~') })
+
+const LEX = DEFS.map((d) => ({
+  id: d.id,
+  palavras: new RegExp(`\\b(?:${d.palavras})\\b`),
+  prog: d.prog.map(compilar),
+  cons: d.cons.map(compilar),
+}))
+
+const NEGACAO = /(?:contra|fim d[aeo]s?|nao (?:apoio|defendo|quero|concordo com|gosto d[aeo]s?))\s+(?:(?:o|a|os|as|de|da|do|das|dos)\s+)?$/
+const MARCA_PROG = /\b(?:progressist\w*|de esquerda|esquerdist\w*)\b/
+const MARCA_CONS = /\b(?:conservador\w*|de direita|direitist\w*)\b/
+const FORTE = /\b(?:muito|totalmente|extremamente|radical\w*|absolutamente|fortemente)\b/
+const FRACO = /\b(?:um pouco|mais ou menos|moderad\w*|talvez|em parte)\b/
 
 const FORA_DE_ESCOPO: Record<string, RegExp> = {
-  saúde: /\b(saude|sus|hospital\w*|medic\w*)\b/,
-  segurança: /\b(seguranca|policia\w*|violencia|crime\w*|armas?)\b/,
-  economia: /\b(economia|imposto\w*|emprego\w*|salario\w*|inflacao|renda)\b/,
-  'meio ambiente': /\b(meio ambiente|ambiental|clima|desmatamento)\b/,
-  transporte: /\b(transporte\w*|onibus|metro|mobilidade)\b/,
-  moradia: /\b(moradia\w*|habitacao|aluguel)\b/,
-  corrupção: /\b(corrupcao|corrupt\w*|honest\w*|etica)\b/,
-  religião: /\b(religia\w*|igreja\w*|evangelic\w*|catolic\w*)\b/,
+  corrupção: /\b(?:corrupcao|corrupt\w*|honest\w*|etica)\b/,
+  cultura: /\b(?:cultura\w*|arte|artistas?)\b/,
+  esporte: /\b(?:esportes?|esportiv\w*)\b/,
+  moradia: /\b(?:moradia\w*|habitacao|aluguel)\b/,
+  tecnologia: /\b(?:tecnologia\w*|internet|inovacao)\b/,
 }
-
-const ENFASE =
-  /\b(mais importante|prioridade|prioritari\w*|principalmente|sobretudo|fundamental|essencial|acima de tudo|antes de tudo)\b/
-const DESDEM = /\b(nao me importo|tanto faz|nao ligo|nao importa|nao faz diferenca|nao e importante)\b/
 
 /** Divide por pontuação/quebras de linha e depois por conectores. */
 export function dividirTrechos(texto: string): string[] {
-  const limpo = sanitizar(texto)
+  const limpo = sanitizar(texto).replace(/\b(homem|homens|pais) e (mulher|mulheres|maes)\b/gi, '$1_e_$2')
   const trechos: string[] = []
   for (const frase of limpo.split(/[.;!?\n\r]+/)) {
-    // a divisão usa uma cópia sem acento apenas para localizar conectores; o texto original é preservado
     const partes = frase.split(/,\s*e\s+|\s+e\s+|\s+mas\s+|\s+além de\s+|\s+alem de\s+|\s+também\s+|\s+tambem\s+|,/i)
     for (const p of partes) {
-      const t = p.trim()
+      const t = p.replace(/_e_/g, ' e ').trim()
       if (t.length > 1) trechos.push(t)
     }
   }
   return trechos
 }
 
+export type PosicaoEstimada = {
+  /** -100 progressista … +100 conservador; 0 quando falou da área mas não deu para saber o lado */
+  pos: number
+  semLado: boolean
+  evidencias: string[]
+}
+
 export type Analise = {
-  pesos: Pesos // soma 100, ou tudo 0 se nada foi detectado
-  evidencias: Record<Criterio, string[]> // trechos que acionaram cada critério
+  areas: Partial<Record<Area, PosicaoEstimada>>
   foraDeEscopo: string[]
   nenhum: boolean
 }
 
+const arredonda = (n: number) => Math.max(-100, Math.min(100, Math.round(n / 5) * 5))
+
 export function analisarValores(texto: string): Analise {
-  const brutos: Pesos = { educacao: 0, minorias: 0, periferia: 0, midia: 0 }
-  const evidencias: Record<Criterio, string[]> = { educacao: [], minorias: [], periferia: [], midia: [] }
+  const liquido: Partial<Record<Area, number>> = {}
+  const evid: Partial<Record<Area, string[]>> = {}
+  const ladoVisto = new Set<Area>()
   const fora = new Set<string>()
 
   for (const trecho of dividirTrechos(texto)) {
     const n = normalizar(trecho)
-    const mult = DESDEM.test(n) ? 0.3 : ENFASE.test(n) ? 2 : 1
-    for (const c of CRITERIOS) {
-      if (DICIONARIO[c].test(n)) {
-        brutos[c] += mult
-        evidencias[c].push(trecho)
+    const mult = FRACO.test(n) ? 0.5 : FORTE.test(n) ? 1.5 : 1
+    const marca = MARCA_PROG.test(n) ? -1 : MARCA_CONS.test(n) ? 1 : 0
+
+    for (const area of LEX) {
+      let net = 0
+      let achou = false
+      for (const [lado, lista] of [[-1, area.prog], [1, area.cons]] as const) {
+        for (const t of lista) {
+          t.re.lastIndex = 0
+          for (let m = t.re.exec(n); m; m = t.re.exec(n)) {
+            achou = true
+            const antes = n.slice(Math.max(0, m.index - 30), m.index)
+            const inverte = t.flip && NEGACAO.test(antes)
+            net += (inverte ? -lado : lado) * mult
+            ladoVisto.add(area.id)
+          }
+        }
       }
+      const falouDaArea = achou || area.palavras.test(n)
+      if (!falouDaArea) continue
+      if (!achou && marca !== 0) {
+        net += marca * mult
+        ladoVisto.add(area.id)
+      }
+      liquido[area.id] = (liquido[area.id] ?? 0) + net
+      ;(evid[area.id] ??= []).push(trecho)
     }
     for (const [tema, re] of Object.entries(FORA_DE_ESCOPO)) if (re.test(n)) fora.add(tema)
   }
 
-  const nenhum = CRITERIOS.every((c) => brutos[c] === 0)
-  return { pesos: nenhum ? brutos : normalizarPesos(brutos), evidencias, foraDeEscopo: [...fora], nenhum }
+  const areas: Analise['areas'] = {}
+  for (const area of LEX) {
+    const e = evid[area.id]
+    if (!e) continue
+    areas[area.id] = {
+      pos: arredonda((liquido[area.id] ?? 0) * 45),
+      semLado: !ladoVisto.has(area.id),
+      evidencias: e,
+    }
+  }
+  return { areas, foraDeEscopo: [...fora], nenhum: Object.keys(areas).length === 0 }
 }

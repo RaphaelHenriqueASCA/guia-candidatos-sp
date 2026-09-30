@@ -1,5 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
-import { ehPadrao, normalizarPesos, PESOS_PADRAO, pesosDeQuery, pesosParaQuery, type Pesos } from './nota'
+import { citadas, valoresDeQuery, valoresParaQuery, type Valores } from './posicao'
+import type { Area } from './schema'
 
 /** Hash atual sem o '#', ex.: '/candidato/federal-1300'. */
 function lerRota(): string {
@@ -20,10 +21,11 @@ export function useRota(): string {
 }
 
 type Ctx = {
-  pesos: Pesos
-  personalizado: boolean
-  aplicar: (p: Pesos) => void
-  restaurar: () => void
+  valores: Valores
+  temValores: boolean
+  definirArea: (a: Area, pos: number | undefined) => void
+  definirTodos: (v: Valores) => void
+  limpar: () => void
   comparar: string[]
   alternarComparar: (id: string) => void
 }
@@ -31,33 +33,34 @@ type Ctx = {
 const Contexto = createContext<Ctx | null>(null)
 
 export function EstadoProvider({ children }: { children: ReactNode }) {
-  const [pesos, setPesos] = useState<Pesos>(() => pesosDeQuery(new URLSearchParams(window.location.search).get('w')) ?? PESOS_PADRAO)
+  const [valores, setValores] = useState<Valores>(() => valoresDeQuery(new URLSearchParams(window.location.search).get('v')))
   const [comparar, setComparar] = useState<string[]>([])
 
-  // Pesos ficam só na URL (?w=40,30,20,10): sem cookies, sem servidor.
-  const gravar = useCallback((p: Pesos) => {
+  // Os valores ficam só na URL (?v=educacao:-80,familia:60): sem cookies, sem servidor.
+  useEffect(() => {
     const url = new URL(window.location.href)
-    url.search = ehPadrao(p) ? '' : `?w=${pesosParaQuery(p)}`
+    url.search = citadas(valores).length ? `?v=${valoresParaQuery(valores)}` : ''
     window.history.replaceState(null, '', url)
-  }, [])
+  }, [valores])
 
-  const aplicar = useCallback(
-    (p: Pesos) => {
-      const n = normalizarPesos(p)
-      setPesos(n)
-      gravar(n)
-    },
-    [gravar],
-  )
-  const restaurar = useCallback(() => aplicar(PESOS_PADRAO), [aplicar])
+  const definirArea = useCallback((a: Area, pos: number | undefined) => {
+    setValores((v) => {
+      const n = { ...v }
+      if (pos === undefined) delete n[a]
+      else n[a] = pos
+      return n
+    })
+  }, [])
+  const definirTodos = useCallback((v: Valores) => setValores(v), [])
+  const limpar = useCallback(() => setValores({}), [])
   const alternarComparar = useCallback(
     (id: string) => setComparar((l) => (l.includes(id) ? l.filter((x) => x !== id) : l.length >= 3 ? l : [...l, id])),
     [],
   )
 
   const valor = useMemo(
-    () => ({ pesos, personalizado: !ehPadrao(pesos), aplicar, restaurar, comparar, alternarComparar }),
-    [pesos, aplicar, restaurar, comparar, alternarComparar],
+    () => ({ valores, temValores: citadas(valores).length > 0, definirArea, definirTodos, limpar, comparar, alternarComparar }),
+    [valores, definirArea, definirTodos, limpar, comparar, alternarComparar],
   )
   return <Contexto.Provider value={valor}>{children}</Contexto.Provider>
 }
@@ -68,7 +71,7 @@ export function useEstado(): Ctx {
   return c
 }
 
-/** Mantém o `?w=` ao navegar e monta links absolutos para compartilhar. */
+/** Mantém o `?v=` ao montar links absolutos para compartilhar. */
 export function linkAtual(hash: string): string {
   const url = new URL(window.location.href)
   url.hash = hash

@@ -1,0 +1,37 @@
+{
+  "fonte": {
+    "titulo": "Bolognesi, Ribeiro, Codato e Silva (2025). O desaparecimento do centro ideológico no sistema partidário brasileiro: a classificação mais atualizada dos experts. Opinião Pública",
+    "url": "https://www.scielo.br/j/op/a/hv8GBg9hfCCZLwcWktfYhtC/?lang=pt",
+    "escala": "0 = extrema esquerda, 10 = extrema direita; média de avaliações de cientistas políticos (pesquisa de 2022)"
+  },
+  "partidos": {
+    "PSTU": { "lr": 0.51 },
+    "PCO": { "lr": 0.55 },
+    "UP": { "lr": 1.3 },
+    "PSOL": { "lr": 1.41 },
+    "PCDOB": { "lr": 1.78 },
+    "PT": { "lr": 2.68 },
+    "PSB": { "lr": 3.59 },
+    "REDE": { "lr": 3.69 },
+    "PDT": { "lr": 3.86 },
+    "PV": { "lr": 4.12 },
+    "SOLIDARIEDADE": { "lr": 6.01, "nota": "Classificado como SDD no estudo." },
+    "CIDADANIA": { "lr": 6.17, "nota": "Classificado como CDD no estudo." },
+    "AVANTE": { "lr": 6.47 },
+    "MDB": { "lr": 6.5 },
+    "MOBILIZA": { "lr": 6.74, "nota": "Aproximação: nome atual do PMN no estudo." },
+    "PSDB": { "lr": 6.76 },
+    "PSD": { "lr": 6.94 },
+    "PODE": { "lr": 7.44 },
+    "AGIR": { "lr": 7.55 },
+    "PRD": { "lr": 8.16, "nota": "Aproximação: média de PTB (7,72) e Patriota (8,60), que deram origem ao PRD." },
+    "PP": { "lr": 8.15, "nota": "Classificado como Progressistas no estudo." },
+    "DC": { "lr": 8.21 },
+    "REPUBLICANOS": { "lr": 8.33, "nota": "Classificado como REP no estudo." },
+    "UNIÃO": { "lr": 8.49, "nota": "Classificado como União Brasil no estudo." },
+    "NOVO": { "lr": 8.67 },
+    "PL": { "lr": 8.8 },
+    "MISSÃO": { "lr": null, "nota": "Partido novo, sem classificação no estudo." },
+    "DEMOCRATA": { "lr": null, "nota": "Sem classificação no estudo." }
+  }
+}
