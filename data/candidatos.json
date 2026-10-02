@@ -1686,5 +1686,771 @@
         "fonte": "https://pt.wikipedia.org/wiki/Conte_Lopes"
       }
     ]
+  },
+  {
+    "id": "federal-1313",
+    "cargo": "federal",
+    "nomeUrna": "Rui Falcão",
+    "partido": "PT",
+    "numero": "1313",
+    "doc": 50,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Deputado federal desde 2019 (dois mandatos); em 2018 foi o deputado mais votado do PT em SP (158.389 votos). Foi presidente nacional do PT (2011–2017) e deputado estadual (1991–1999 e 2007–2015).",
+      "Foi secretário municipal de Governo na gestão Marta Suplicy e presidente do DCE da USP (1966); coordenou as campanhas de Eduardo Suplicy (1992), Lula (1994) e Dilma Rousseff (2010)."
+    ],
+    "pontosConflito": [
+      "Em 2014, como presidente do PT, assinou nota de apoio ao presidente venezuelano Nicolás Maduro, posição que divide opiniões. Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Rui Falcão",
+        "url": "https://pt.wikipedia.org/wiki/Rui_Falc%C3%A3o",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Rui Falcão 1313",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-federal/rui-falcao-1313",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-5088",
+    "cargo": "federal",
+    "nomeUrna": "Sônia Guajajara",
+    "partido": "PSOL",
+    "numero": "5088",
+    "doc": 60,
+    "posicoes": {
+      "minorias": {
+        "valor": -95,
+        "nota": "Primeira indígena eleita deputada federal por SP, coordenadora executiva da APIB e primeira ministra dos Povos Indígenas."
+      },
+      "ambiente": {
+        "valor": -90,
+        "nota": "Em 2010 protestou contra as mudanças no Código Florestal; como ministra, retomou processos de demarcação de terras indígenas."
+      }
+    },
+    "pontosCompativeis": [
+      "Eleita deputada federal em 2022 com 156.966 votos (a primeira indígena eleita por SP). Foi ministra dos Povos Indígenas de 01/01/2023 a 31/03/2026, a primeira titular da pasta.",
+      "Candidata a vice-presidente na chapa de Guilherme Boulos (PSOL) em 2018 (617.122 votos).",
+      "Recebeu a Ordem do Mérito Cultural (2015), foi incluída na lista Time 100 (2022) e entre as 100 mulheres da BBC (2023)."
+    ],
+    "pontosConflito": [
+      "Como ministra, trabalhou sem orçamento próprio e com estrutura precária. O Congresso, de maioria contrária a interesses indígenas, trabalhou para validar o Marco Temporal (declarado inconstitucional pelo STF), e o ministério perdeu a atribuição de emitir portarias de demarcação. Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Sônia Guajajara",
+        "url": "https://pt.wikipedia.org/wiki/S%C3%B4nia_Guajajara",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Sônia Guajajara 5088",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-federal/sonia-guajajara-5088",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-4044",
+    "cargo": "federal",
+    "nomeUrna": "Marina Helou",
+    "partido": "PSB",
+    "numero": "4044",
+    "doc": 50,
+    "posicoes": {
+      "ambiente": {
+        "valor": -40,
+        "nota": "Autora da Lei de Política de Manejo do Fogo, contra incêndios florestais."
+      }
+    },
+    "pontosCompativeis": [
+      "Deputada estadual desde 2019 (eleita em 2018 e reeleita em 2022 com 85.517 votos) e candidata à Prefeitura de SP em 2020; em 2026 disputa uma vaga de deputada federal.",
+      "Autora da Lei 18.058/2024, que proíbe celulares e dispositivos similares nas escolas públicas e privadas durante o dia letivo, e da “Lei Criança Primeiro”, que prioriza a investigação de tentativas de homicídio e homicídios de crianças e adolescentes.",
+      "Preside o Comitê Paulista pela Prevenção de Homicídios na Adolescência (parceria com o Unicef) e é autora da Lei de Política de Manejo do Fogo."
+    ],
+    "pontosConflito": [
+      "A lei dos celulares é criticada por quem diz que se baseia em estudos insuficientes; uma petição com 1,5 milhão de assinaturas pediu regulamentação pedagógica, e não proibição total. Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Marina Helou",
+        "url": "https://pt.wikipedia.org/wiki/Marina_Helou",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Marina Helou 4044",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-federal/marina-helou-4044",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-5585",
+    "cargo": "federal",
+    "nomeUrna": "Carlos Sampaio",
+    "partido": "PSD",
+    "numero": "5585",
+    "doc": 60,
+    "posicoes": {
+      "economia": {
+        "valor": 55,
+        "nota": "Votou a favor da PEC do Teto de Gastos (2016)."
+      }
+    },
+    "pontosCompativeis": [
+      "Foi promotor de justiça, vereador de Campinas (1993–1997), deputado estadual (1999–2003) e é deputado federal desde 2003; teve 98.102 votos em 2022. Esteve no PSDB de 1992 a 2024 e hoje está no PSD.",
+      "Foi eleito três vezes líder do PSDB na Câmara e comandou a bancada do partido na CPI Mista da Petrobras.",
+      "Recebeu o Prêmio Excelência Parlamentar (Ranking dos Políticos) em 2023 e 2026."
+    ],
+    "pontosConflito": [
+      "Votou a favor do impeachment de Dilma Rousseff e da PEC do Teto (2016) e a favor da abertura de investigação contra Michel Temer (ago/2017). Em 2022 declarou apoio a Tarcísio de Freitas e a Jair Bolsonaro. Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Carlos Sampaio (político, 1963)",
+        "url": "https://pt.wikipedia.org/wiki/Carlos_Sampaio_(pol%C3%ADtico,_1963)",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara dos Deputados: biografia de Carlos Sampaio",
+        "url": "https://www.camara.leg.br/deputados/74262/biografia",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-1555",
+    "cargo": "federal",
+    "nomeUrna": "Orlando Morando",
+    "partido": "MDB",
+    "numero": "1555",
+    "doc": 55,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Foi vereador de São Bernardo do Campo (1997–2003), deputado estadual (2003–2016) e prefeito de São Bernardo (2017–2025), eleito em 2016 com 59,94% dos votos no 2º turno e reeleito em 2020 com 67,28%.",
+      "Foi anunciado em 27/12/2024 como secretário municipal de Segurança Urbana de São Paulo, na gestão Ricardo Nunes."
+    ],
+    "pontosConflito": [
+      "Em 2019 a Polícia Federal indiciou Morando e outras 15 pessoas por corrupção passiva e fraude em licitações (Operação Prato Feito). Não encontrei o desfecho nem a defesa dele.",
+      "Em 2018 foi acusado em investigação sobre esquema de carga roubada, quando coordenava a campanha de João Doria; não encontrei o desfecho.",
+      "Em 2019 e 2020 enfrentou quatro pedidos de impeachment na Câmara de São Bernardo, todos rejeitados.",
+      "Em 2023 a ONG Uneafro o denunciou à ONU por racismo institucional, após pedido de despejo da ONG Meninos e Meninas de Rua. Ele moveu queixa-crime contra dois membros da Uneafro e, segundo a Wikipédia, perdeu em duas instâncias (ago/2024)."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Orlando Morando",
+        "url": "https://pt.wikipedia.org/wiki/Orlando_Morando",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Orlando Morando 1555",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-federal/orlando-morando-1555",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [
+      {
+        "tipo": "investigacao",
+        "situacao": "em_curso",
+        "ano": 2019,
+        "descricao": "A Polícia Federal indiciou Morando e outras 15 pessoas por corrupção passiva e fraude em licitações (Operação Prato Feito); o desfecho não foi encontrado.",
+        "fonte": "https://pt.wikipedia.org/wiki/Orlando_Morando"
+      },
+      {
+        "tipo": "investigacao",
+        "situacao": "em_curso",
+        "ano": 2018,
+        "descricao": "Acusado em investigação sobre esquema de carga roubada quando coordenava a campanha de João Doria; o desfecho não foi encontrado.",
+        "fonte": "https://pt.wikipedia.org/wiki/Orlando_Morando"
+      },
+      {
+        "tipo": "representacao",
+        "situacao": "arquivada_ou_revertida",
+        "ano": 2019,
+        "descricao": "Três pedidos de impeachment em 2019 e um em 2020 foram rejeitados pela Câmara Municipal.",
+        "fonte": "https://pt.wikipedia.org/wiki/Orlando_Morando"
+      },
+      {
+        "tipo": "representacao",
+        "situacao": "em_curso",
+        "ano": 2023,
+        "descricao": "A Uneafro o denunciou à ONU por racismo institucional (pedido de despejo de uma ONG); ele moveu queixa-crime contra dois membros da Uneafro e, segundo a Wikipédia, perdeu em duas instâncias (ago/2024).",
+        "fonte": "https://pt.wikipedia.org/wiki/Orlando_Morando"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-2020",
+    "cargo": "federal",
+    "nomeUrna": "Renata Abreu",
+    "partido": "PODE",
+    "numero": "2020",
+    "doc": 55,
+    "posicoes": {
+      "economia": {
+        "valor": 55,
+        "nota": "Votou a favor da reforma trabalhista (2017) e da reforma da Previdência (2019)."
+      }
+    },
+    "pontosCompativeis": [
+      "Deputada federal desde 2015 (reeleita em 2018 com 161.239 votos e em 2022 com 180.247) e presidente nacional do Podemos desde 2017; em 2016 foi a única mulher no Colégio de Líderes da Câmara.",
+      "Autora da Lei 13.931/2019, que obriga a notificação de violência contra a mulher em 24 horas.",
+      "Recebeu o Prêmio Excelência Parlamentar (Ranking dos Políticos) em 2024."
+    ],
+    "pontosConflito": [
+      "Em 2014, como presidente do PTN, o partido recebeu repasses indiretos da OAS, da Andrade Gutierrez e da JBS (Wikipédia).",
+      "Em setembro de 2024 a PGR passou a investigar emendas parlamentares dela para cidades do interior de SP, e uma “emenda Pix” para evento esportivo foi alvo de exame da CGU. Não encontrei a defesa dela.",
+      "Votou a favor da reforma trabalhista (2017), da reforma da Previdência (2019) e da PEC da Blindagem (2025)."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Renata Abreu",
+        "url": "https://pt.wikipedia.org/wiki/Renata_Abreu",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Renata Abreu 2020",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-federal/renata-abreu-2020",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [
+      {
+        "tipo": "investigacao",
+        "situacao": "em_curso",
+        "ano": 2024,
+        "descricao": "A PGR investiga emendas parlamentares dela para cidades do interior de SP (set/2024); a defesa e o desfecho não foram encontrados.",
+        "fonte": "https://pt.wikipedia.org/wiki/Renata_Abreu"
+      },
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 2024,
+        "descricao": "Uma “emenda Pix” para evento esportivo foi alvo de exame da CGU.",
+        "fonte": "https://pt.wikipedia.org/wiki/Renata_Abreu"
+      },
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 2014,
+        "descricao": "Como presidente do PTN, o partido recebeu repasses indiretos da OAS, da Andrade Gutierrez e da JBS.",
+        "fonte": "https://pt.wikipedia.org/wiki/Renata_Abreu"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-2208",
+    "cargo": "federal",
+    "nomeUrna": "Mario Frias",
+    "partido": "PL",
+    "numero": "2208",
+    "doc": 60,
+    "posicoes": {
+      "minorias": {
+        "valor": 65,
+        "nota": "Em 2021 comemorou publicamente o cancelamento de uma live LGBTQ+ em Itajaí (SC) e criticou o ativista negro Jones Manoel em rede social."
+      }
+    },
+    "pontosCompativeis": [
+      "Foi secretário especial da Cultura (jun/2020 a mar/2022) e é deputado federal desde 2023, eleito em 2022 com 122.564 votos.",
+      "Recebeu o Prêmio Excelência Parlamentar (Ranking dos Políticos) em 2023."
+    ],
+    "pontosConflito": [
+      "A Polícia Federal fez, em 10/09/2026, a Operação Make Up, autorizada pelo ministro Flávio Dino (STF), com 49 mandados de busca; Frias é um dos alvos, com medidas cautelares como a proibição de deixar o país. Apura-se desvio de emendas parlamentares (duas emendas somam R$ 2 milhões para o Instituto Conhecer Brasil) ligadas ao filme “Dark Horse”, por peculato, lavagem de dinheiro, falsidade documental, organização criminosa e fraude a licitação. Não encontrei a defesa dele sobre a operação.",
+      "Em 2026 veio à tona o financiamento do filme “Dark Horse” pelo ex-banqueiro Daniel Vorcaro (Banco Master); a PF investiga o caso. Frias diz que o patrocínio não é crime e nega contrapartida; segundo a Wikipédia, ele havia negado os repasses e depois admitiu o dinheiro.",
+      "Segundo a Wikipédia, em 23/02/2025 a Justiça Eleitoral de SP aceitou denúncia contra ele por crime eleitoral (art. 323 do Código Eleitoral) por postagem com foto falsa de Lula; o TSE determinou a remoção. Não encontrei a defesa dele.",
+      "Em 2021 colocou em dúvida, durante uma transmissão ao vivo, a causa da morte do ator Paulo Gustavo (Wikipédia)."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Mario Frias",
+        "url": "https://pt.wikipedia.org/wiki/Mario_Frias",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Agência Brasil: operação da PF mira Mário Frias",
+        "url": "https://agenciabrasil.ebc.com.br/radioagencia-nacional/geral/audio/2026-09/operacao-da-pf-mira-deputado-mario-frias-e-produtora-do-filme",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Revista Oeste: Frias contesta investigação sobre Dark Horse",
+        "url": "https://revistaoeste.com/politica/mario-frias-contesta-investigacao-sobre-idark-horse-i-nao-e-crime/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Mario Frias 2208",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-federal/mario-frias-2208",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [
+      {
+        "tipo": "acao_em_curso",
+        "situacao": "em_curso",
+        "ano": 2025,
+        "descricao": "Réu por crime eleitoral (art. 323 do Código Eleitoral) após a Justiça Eleitoral de SP aceitar denúncia em 23/02/2025, por postagem com foto falsa de Lula; a defesa não foi encontrada.",
+        "fonte": "https://pt.wikipedia.org/wiki/Mario_Frias"
+      },
+      {
+        "tipo": "investigacao",
+        "situacao": "em_curso",
+        "ano": 2026,
+        "descricao": "A PF investiga o financiamento do filme “Dark Horse” pelo ex-banqueiro Daniel Vorcaro (Banco Master); Frias diz que o patrocínio não é crime e nega contrapartida.",
+        "fonte": "https://revistaoeste.com/politica/mario-frias-contesta-investigacao-sobre-idark-horse-i-nao-e-crime/"
+      },
+      {
+        "tipo": "investigacao",
+        "situacao": "em_curso",
+        "ano": 2026,
+        "descricao": "Operação Make Up (PF, 10/09/2026): investigação de desvio de emendas parlamentares ligadas ao filme “Dark Horse”, com busca e medidas cautelares contra ele; a defesa não foi encontrada.",
+        "fonte": "https://agenciabrasil.ebc.com.br/radioagencia-nacional/geral/audio/2026-09/operacao-da-pf-mira-deputado-mario-frias-e-produtora-do-filme"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-1010",
+    "cargo": "federal",
+    "nomeUrna": "Marcos Pereira",
+    "partido": "Republicanos",
+    "numero": "1010",
+    "doc": 55,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Advogado, presidente nacional do Republicanos (2011–2016 e desde 2018, reeleito para 2023–2027) e deputado federal desde 2019; teve mais de 231 mil votos em 2022 (15º mais votado de SP).",
+      "Foi ministro da Indústria, Comércio Exterior e Serviços no governo Temer (12/05/2016 a 03/01/2018) e primeiro vice-presidente da Câmara (2019–2021 e 2023–2025).",
+      "Cristão neopentecostal, segundo a Wikipédia (em inglês), foi bispo da Igreja Universal do Reino de Deus."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia (em inglês): Marcos Pereira",
+        "url": "https://en.wikipedia.org/wiki/Marcos_Pereira_(politician)",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara dos Deputados: Marcos Pereira promete independência",
+        "url": "https://www.camara.leg.br/noticias/936389-marcos-pereira-promete-independencia-na-camara-e-no-congresso/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Marcos Pereira 1010",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-federal/marcos-pereira-1010",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-3030",
+    "cargo": "federal",
+    "nomeUrna": "Adriana Ventura",
+    "partido": "Novo",
+    "numero": "3030",
+    "doc": 55,
+    "posicoes": {
+      "educacao": {
+        "valor": 45,
+        "nota": "Coautora do PL 5.595/2020 (aulas presenciais obrigatórias na pandemia), criticado por sindicato de docentes por reduzir a autonomia de prefeitos e governadores."
+      },
+      "transporte": {
+        "valor": 60,
+        "nota": "Destacou-se em 2022 na defesa da “Liberdade no Transporte” (Congresso em Foco)."
+      }
+    },
+    "pontosCompativeis": [
+      "Deputada federal desde 2019, reeleita em 2022 com 109.474 votos; professora de gestão e empreendedorismo na FGV.",
+      "Autora da Lei da Telemedicina (13.989/2020) e da Lei 14.510/2022, que tornou permanente a telessaúde no país; recebeu o prêmio “100 Mais Influentes da Saúde” em 2022.",
+      "Coautora de leis de 2020 de proteção a profissionais essenciais em pandemias (Lei 14.023/2020) e de outra parcialmente vetada por Jair Bolsonaro (Lei 14.006/2020). Não faltou a nenhuma sessão no primeiro mandato."
+    ],
+    "pontosConflito": [
+      "O PL 5.595/2020 (aulas presenciais obrigatórias na pandemia), de que é coautora, foi criticado pelo Sindicato Nacional dos Docentes por reduzir a autonomia de prefeitos e governadores. Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Adriana Ventura",
+        "url": "https://pt.wikipedia.org/wiki/Adriana_Ventura",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Adriana Ventura 3030",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-federal/adriana-ventura-3030",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-50555",
+    "cargo": "estadual",
+    "nomeUrna": "Luiza Erundina",
+    "partido": "PSOL",
+    "numero": "50555",
+    "doc": 60,
+    "posicoes": {
+      "educacao": {
+        "valor": -85,
+        "nota": "Como prefeita (1989–1992) criou os MOVAs de alfabetização de adultos, teve Paulo Freire na Secretaria de Educação, aumentou salários e capacitou professores."
+      }
+    },
+    "pontosCompativeis": [
+      "Foi prefeita de São Paulo (1989–1992), ministra da Administração Federal (jan–maio/1993), vereadora (1983–1986), deputada estadual (1987–1988) e é deputada federal desde 1999; em 2022 teve 113.983 votos. Em 2026 disputa uma vaga de deputada estadual.",
+      "Como prefeita, criou os MOVAs (alfabetização de adultos), melhorou a merenda escolar, construiu o Sambódromo do Anhembi (1991) e restaurou a Biblioteca Mário de Andrade; apoiou a habitação por mutirões autogeridos.",
+      "Em 2016 votou contra o impeachment de Dilma Rousseff e em 2006 protestou contra o aumento de 91% nos salários dos parlamentares."
+    ],
+    "pontosConflito": [
+      "Em 2008 foi condenada a devolver R$ 353 mil aos cofres públicos por ter usado verba da prefeitura, em 1989, em anúncio na Folha de S.Paulo em defesa de uma greve dos transportes; seus direitos políticos não foram suspensos (Wikipédia). O trânsito em julgado não foi verificado."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Luiza Erundina",
+        "url": "https://pt.wikipedia.org/wiki/Luiza_Erundina",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Luiza Erundina 50555",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/luiza-erundina-50555",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [
+      {
+        "tipo": "condenacao_administrativa",
+        "situacao": "nao_definitiva",
+        "ano": 2008,
+        "descricao": "Condenada em 2008 a devolver R$ 353 mil aos cofres públicos por ter usado verba da prefeitura, em 1989, em anúncio defendendo uma greve dos transportes; os direitos políticos não foram suspensos e o trânsito em julgado não foi verificado.",
+        "fonte": "https://pt.wikipedia.org/wiki/Luiza_Erundina"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-13613",
+    "cargo": "estadual",
+    "nomeUrna": "Paulo Fiorilo",
+    "partido": "PT",
+    "numero": "13613",
+    "doc": 50,
+    "posicoes": {
+      "saude": {
+        "valor": -40,
+        "nota": "Autor da Lei 17.365/2021, que permitiu a compra direta de vacinas pelo governo do Estado sem esperar o governo federal."
+      }
+    },
+    "pontosCompativeis": [
+      "Deputado estadual desde 2019, reeleito em 2022 com 110.251 votos; foi vereador de SP (2005–2008 e 2013–2019) e chefe de gabinete na gestão Marta Suplicy (2003).",
+      "Professor da rede municipal, formado em Filosofia pela PUC-SP e mestre em Ciência Política. Autor da Lei 17.365/2021 (compra direta de vacinas pelo Estado).",
+      "Coordenou a Frente Parlamentar de Desenvolvimento Econômico Regional e presidiu a Comissão de Relações Internacionais da Alesp (2018–2022); propôs mais de 50 projetos de lei, com 6 aprovados."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Paulo Fiorilo",
+        "url": "https://pt.wikipedia.org/wiki/Paulo_Fiorilo",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Paulo Fiorilo 13613",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/paulo-fiorilo-13613",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-40640",
+    "cargo": "estadual",
+    "nomeUrna": "Caio França",
+    "partido": "PSB",
+    "numero": "40640",
+    "doc": 50,
+    "posicoes": {
+      "ambiente": {
+        "valor": -30,
+        "nota": "Criou o selo verde contra a dengue e o Ecociclo (bicicletas para coleta de recicláveis)."
+      }
+    },
+    "pontosCompativeis": [
+      "Deputado estadual desde 2015, eleito em 2014 como o mais jovem do estado e reeleito em 2018 com 162.166 votos; foi vereador de São Vicente (2009–2012) e candidato a prefeito em 2012 (47,01%, não eleito).",
+      "Levou o xadrez para escolas públicas, criou o selo verde contra a dengue e o Ecociclo (bicicletas para coleta de recicláveis) e implantou as Sessões Itinerantes da Câmara em bairros de São Vicente."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Caio França",
+        "url": "https://pt.wikipedia.org/wiki/Caio_Fran%C3%A7a",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Caio França 40640",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/caio-franca-40640",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-15000",
+    "cargo": "estadual",
+    "nomeUrna": "Caruso",
+    "partido": "MDB",
+    "numero": "15000",
+    "doc": 50,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Jorge Caruso é advogado e deputado estadual desde 1999, em seu sétimo mandato (votações: 51.250 em 1998; 94.894 em 2010; 104.354 em 2014; 83.758 em 2018). É secretário-geral da executiva estadual do MDB.",
+      "Autor da Lei 18.014/2024, que regula as ligações de telemarketing de cobrança, e do PL 1636/2023, sobre defesa do consumidor."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Jorge Caruso",
+        "url": "https://pt.wikipedia.org/wiki/Jorge_Caruso",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Alesp: perfil de Jorge Caruso",
+        "url": "https://www.al.sp.gov.br/noticia/?id=259305",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Caruso 15000",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/caruso-15000",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-45045",
+    "cargo": "estadual",
+    "nomeUrna": "Ana Carolina Serra",
+    "partido": "PSDB",
+    "numero": "45045",
+    "doc": 55,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Advogada, professora universitária e mestre em Direito das Relações Sociais; deputada estadual desde 2023, eleita em 2022 com 198.696 votos, a maior votação do Grande ABC.",
+      "Preside as comissões de Transportes e Comunicações e de Assuntos Metropolitanos e Municipais da Alesp; é autora de lei estadual sobre saúde da mulher e destinou, segundo a imprensa regional, R$ 82,8 milhões em emendas às sete cidades do ABC desde 2023.",
+      "Foi primeira-dama de Santo André (2017–2024) e presidiu o Fundo Social de Solidariedade da cidade. Saiu do Cidadania e se filiou ao PSDB em 2026."
+    ],
+    "pontosConflito": [
+      "É casada com o prefeito de Santo André, Paulo Serra (PSD), que preside o PSDB em SP. Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Ana Carolina Serra",
+        "url": "https://pt.wikipedia.org/wiki/Ana_Carolina_Serra",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Alesp: Ana Carolina Serra e a Comissão de Assuntos Metropolitanos",
+        "url": "https://www.al.sp.gov.br/noticia/?id=450125",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Ana Carolina Serra 45045",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/ana-carolina-serra-45045",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-55555",
+    "cargo": "estadual",
+    "nomeUrna": "Rogério Nogueira",
+    "partido": "PSD",
+    "numero": "55555",
+    "doc": 55,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Empresário e ex-piloto de motocross; deputado estadual desde 2003, em seu sexto mandato; em 2022 teve 139.756 votos, a maior votação da Região Metropolitana de Campinas. Está no PSD desde 2026 (antes PDT, DEM, União e PSDB) e lidera a bancada do PSD na Alesp desde 17/03/2026."
+    ],
+    "pontosConflito": [
+      "Em abril de 2023, segundo o Terra, o Ministério Público de SP o denunciou por peculato, lavagem de dinheiro e organização criminosa em suposto esquema de “rachadinha” (cerca de R$ 4,1 milhões entre 2009 e 2019, envolvendo 25 servidores) e a Justiça aceitou a denúncia. Ele negou as acusações; segundo a reportagem, sua defesa informou um depósito de R$ 4 milhões para encerrar a investigação. O desfecho posterior não foi verificado."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Rogério Nogueira",
+        "url": "https://pt.wikipedia.org/wiki/Rog%C3%A9rio_Nogueira",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Terra: Rogério Nogueira é investigado por rachadinha na Alesp",
+        "url": "https://www.terra.com.br/noticias/brasil/politica/deputado-rogerio-nogueira-e-investigado-por-esquema-de-rachadinha-na-alesp,08adbd44b8f1ce8f57ecc8e963c5a5d6tqfo7nrx.html",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Rogério Nogueira 55555",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/rogerio-nogueira-55555",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [
+      {
+        "tipo": "acao_em_curso",
+        "situacao": "em_curso",
+        "ano": 2023,
+        "descricao": "O Ministério Público de SP o denunciou por peculato, lavagem de dinheiro e organização criminosa em suposto esquema de “rachadinha” (cerca de R$ 4,1 milhões entre 2009 e 2019) e a Justiça aceitou a denúncia (abr/2023); ele negou as acusações; o desfecho posterior não foi verificado.",
+        "fonte": "https://www.terra.com.br/noticias/brasil/politica/deputado-rogerio-nogueira-e-investigado-por-esquema-de-rachadinha-na-alesp,08adbd44b8f1ce8f57ecc8e963c5a5d6tqfo7nrx.html"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-22922",
+    "cargo": "estadual",
+    "nomeUrna": "Valéria Bolsonaro",
+    "partido": "PL",
+    "numero": "22922",
+    "doc": 50,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Bióloga e professora (leciona desde 1987); deputada estadual desde 2019, eleita em 2018 (54.519 votos, pelo PSL) e reeleita em 2022 pelo PL com 131.557 votos.",
+      "É secretária estadual de Políticas Públicas para Mulheres desde 06/05/2024, no governo Tarcísio de Freitas, e foi eleita presidente da Comissão de Defesa dos Direitos das Mulheres da Alesp. Atua em educação, saúde, assistência social e políticas para mulheres."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Valéria Bolsonaro",
+        "url": "https://pt.wikipedia.org/wiki/Val%C3%A9ria_Bolsonaro",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Alesp: Valéria Bolsonaro presidente da Comissão de Defesa dos Direitos das Mulheres",
+        "url": "https://www.al.sp.gov.br/noticia/?id=449404",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Valéria Bolsonaro 22922",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/valeria-bolsonaro-22922",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-11777",
+    "cargo": "estadual",
+    "nomeUrna": "Delegado Olim",
+    "partido": "PP",
+    "numero": "11777",
+    "doc": 55,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Delegado da Polícia Civil, passou por delegacias territoriais e por departamentos como DEIC, DENARC, DHPP e DECAP; conduziu a investigação do assassinato da advogada Mércia Nakashima (2010). Lançou o livro “Proteja-se!” em 2016.",
+      "Deputado estadual desde 2015: eleito em 2014 com 195.932 votos (5º mais votado), reeleito em 2018 (161.569) e em 2022 (201.348)."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Delegado Olim",
+        "url": "https://pt.wikipedia.org/wiki/Delegado_Olim",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Delegado Olim 11777",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/delegado-olim-11777",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-10456",
+    "cargo": "estadual",
+    "nomeUrna": "Edna Macedo",
+    "partido": "Republicanos",
+    "numero": "10456",
+    "doc": 50,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Foi deputada estadual (1995–2003), deputada federal (2003–2007) e é deputada estadual desde 2019 (84.144 votos em 2018, pelo PRB). É irmã de Edir Macedo e integra a Igreja Universal do Reino de Deus; seu registro de 2026 consta como deferido no TSE."
+    ],
+    "pontosConflito": [
+      "Em 2006 foi citada no “Escândalo dos Sanguessugas”, com acusação de recebimento de propina (Wikipédia); não encontrei o desfecho nem a defesa dela.",
+      "Em 2006 teve a candidatura a deputada estadual indeferida (a Wikipédia não informa o motivo)."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Edna Macedo",
+        "url": "https://pt.wikipedia.org/wiki/Edna_Macedo",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Edna Macedo 10456",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/edna-macedo-10456",
+        "data": "2026-10-02"
+      }
+    ],
+    "ocorrencias": [
+      {
+        "tipo": "investigacao",
+        "situacao": "em_curso",
+        "ano": 2006,
+        "descricao": "Citada no “Escândalo dos Sanguessugas”, com acusação de recebimento de propina; o desfecho e a defesa não foram encontrados.",
+        "fonte": "https://pt.wikipedia.org/wiki/Edna_Macedo"
+      },
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 2006,
+        "descricao": "Teve a candidatura a deputada estadual indeferida em 2006; a Wikipédia não informa o motivo.",
+        "fonte": "https://pt.wikipedia.org/wiki/Edna_Macedo"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
   }
 ]
