@@ -905,5 +905,533 @@
     ],
     "origem": "curadoria inicial",
     "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-5000",
+    "cargo": "federal",
+    "nomeUrna": "Sâmia Bomfim",
+    "partido": "PSOL",
+    "numero": "5000",
+    "doc": 55,
+    "posicoes": {
+      "familia": {
+        "valor": -80,
+        "nota": "Autora, em 2017, do PL 120/2017 (atenção humanizada ao aborto legal) e de projetos de combate à violência contra a mulher."
+      },
+      "educacao": {
+        "valor": -60,
+        "nota": "Em 2017 propôs o programa “Escola Livre” e o ensino da Lei Maria da Penha nas escolas municipais."
+      }
+    },
+    "pontosCompativeis": [
+      "Foi vereadora de SP (2017–2019) e é deputada federal desde 2019; reeleita em 2022 com 226.187 votos (16ª mais votada de SP).",
+      "Em 2017, na Câmara Municipal, apresentou projetos para ensinar a Lei Maria da Penha nas escolas (PL 123/2017), ampliar a licença-paternidade de servidores para 20 dias (PL 122/2017) e destinar recursos a campanhas contra o machismo (PL 121/2017).",
+      "Foi coautora de ação contra o aumento salarial dos vereadores de SP aprovado no fim de 2016."
+    ],
+    "pontosConflito": [
+      "Foi autora do PL 120/2017, que criava programa de atenção humanizada ao aborto legal em SP, tema que divide opiniões.",
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Sâmia Bomfim",
+        "url": "https://pt.wikipedia.org/wiki/S%C3%A2mia_Bomfim",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara dos Deputados: Sâmia Bomfim",
+        "url": "https://www2.camara.leg.br/a-camara/estruturaadm/secretarias/secretaria-da-mulher/bancada-feminina/samia-bomfim",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-1515",
+    "cargo": "federal",
+    "nomeUrna": "Baleia Rossi",
+    "partido": "MDB",
+    "numero": "1515",
+    "doc": 60,
+    "posicoes": {
+      "economia": {
+        "valor": 55,
+        "nota": "Votou a favor da PEC do Teto de Gastos (2016) e da reforma trabalhista (2017); autor da PEC 45/2019 da reforma tributária."
+      }
+    },
+    "pontosCompativeis": [
+      "Foi vereador de Ribeirão Preto (1993–2003), deputado estadual (2003–2015) e é deputado federal desde 2015; reeleito em 2022 com 236.463 votos. Preside nacionalmente o MDB desde out/2019.",
+      "Autor da PEC 45/2019 da reforma tributária, que virou a Emenda Constitucional 132 em 2023.",
+      "Em 2022 implementou a reserva obrigatória de mulheres em cargos de direção em todos os diretórios municipais do partido."
+    ],
+    "pontosConflito": [
+      "Em 2016 foi citado por um lobista em esquema de fraude na merenda escolar; o inquérito foi arquivado pelo STF em 2018.",
+      "Em jan/2021 a Folha de S.Paulo publicou que seu nome constava em planilha de uma quadrilha investigada em Ribeirão Preto, com valores associados de R$ 760 mil. Não encontrei a defesa dele nem o desfecho.",
+      "Votou a favor do impeachment de Dilma Rousseff e, em 2017, contra a abertura de investigação contra Michel Temer."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Baleia Rossi",
+        "url": "https://pt.wikipedia.org/wiki/Baleia_Rossi",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara dos Deputados: bloco lança Baleia Rossi à presidência da Câmara",
+        "url": "https://www.camara.leg.br/noticias/718982-bloco-de-11-partidos-lanca-baleia-rossi-a-presidencia-da-camara-com-apoio-de-maia/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Gazeta do Povo: Baleia Rossi 1515",
+        "url": "https://www.gazetadopovo.com.br/eleicoes/2026/candidatos/sp/deputado-federal/baleia-rossi-mdb-1515/",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-1580",
+    "cargo": "federal",
+    "nomeUrna": "Fabio Teruel",
+    "partido": "MDB",
+    "numero": "1580",
+    "doc": 50,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Eleito deputado federal em 2022, em sua primeira disputa eleitoral, com cerca de 235 mil votos; radialista, escritor, cantor e influenciador, com audiência no meio cristão antes de entrar na política (Câmara dos Deputados).",
+      "É membro titular das comissões de Comunicação e de Finanças e Tributação e da Comissão Especial sobre Inteligência Artificial (PL 2338/23)."
+    ],
+    "pontosConflito": [
+      "Em jun/2025 o Portal da Transparência indicava que o prefeito de Barueri declarou R$ 11 milhões em emendas Pix enviadas por ele; uma delas, de R$ 2,2 milhões, recapearia ruas de um condomínio de luxo onde mora. A CGU e o MPF apuram o caso (Wikipédia). Não encontrei a defesa dele."
+    ],
+    "fontes": [
+      {
+        "titulo": "Câmara dos Deputados: biografia de Fábio Teruel",
+        "url": "https://www.camara.leg.br/deputados/220653/biografia",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Wikipédia: Fábio Teruel",
+        "url": "https://pt.wikipedia.org/wiki/F%C3%A1bio_Teruel",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-2323",
+    "cargo": "federal",
+    "nomeUrna": "Alex Manente",
+    "partido": "Cidadania",
+    "numero": "2323",
+    "doc": 60,
+    "posicoes": {
+      "economia": {
+        "valor": 55,
+        "nota": "Votou a favor do PL da terceirização (2015), da reforma trabalhista (2017) e da autonomia do Banco Central (2021)."
+      },
+      "seguranca": {
+        "valor": 45,
+        "nota": "Apresentou PEC sobre prisão em segunda instância (2019), apoiou o pacote anticrime e votou pela prisão do deputado Daniel Silveira (2021)."
+      }
+    },
+    "pontosCompativeis": [
+      "Foi vereador de São Bernardo do Campo (2005–2007), deputado estadual (2007–2015) e é deputado federal desde 2015; reeleito em 2022 com 196.866 votos. Preside nacionalmente o Cidadania desde 04/03/2026.",
+      "Integra a Frente Parlamentar Ambientalista e votou, em 2020, a favor da Convenção Interamericana contra o Racismo.",
+      "Em 2019 votou contra o aumento do Fundo Partidário e contra a alteração do Fundo Eleitoral."
+    ],
+    "pontosConflito": [
+      "Em 2020 votou para destinar verbas do Fundeb também à educação privada e, depois, apenas ao ensino público.",
+      "Em 2020 votou a favor da anistia de dívidas de igrejas.",
+      "Em 2019 esteve ausente na votação da MP 867, que alteraria o Código Florestal e anistiaria desmatadores."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Alex Manente",
+        "url": "https://pt.wikipedia.org/wiki/Alex_Manente",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara dos Deputados: biografia de Alex Manente",
+        "url": "https://www.camara.leg.br/deputados/178972/biografia",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-5533",
+    "cargo": "federal",
+    "nomeUrna": "Paulo Alexandre Barbosa",
+    "partido": "PSD",
+    "numero": "5533",
+    "doc": 60,
+    "posicoes": {
+      "seguranca": {
+        "valor": 35,
+        "nota": "Como prefeito de Santos, reequipou a Guarda Civil Municipal e autorizou o uso de armas de fogo pela guarda."
+      }
+    },
+    "pontosCompativeis": [
+      "Foi deputado estadual (2007–2013), secretário estadual de Desenvolvimento Econômico (2011–2012) e prefeito de Santos por dois mandatos (2013–2020); é deputado federal desde 2023, com 170.378 votos em 2022 (o mais votado do PSDB à época).",
+      "Segundo a Wikipédia, em sua gestão Santos chegou a 53% dos alunos em período integral, inaugurou uma clínica-escola do autista 100% SUS e a primeira escola pública de surfe adaptado do mundo (2020).",
+      "Deixou o PSDB, onde esteve por 25 anos, e se filiou ao PSD em 2026."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Paulo Alexandre Barbosa",
+        "url": "https://pt.wikipedia.org/wiki/Paulo_Alexandre_Barbosa",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara dos Deputados: biografia de Paulo Alexandre Barbosa",
+        "url": "https://www.camara.leg.br/deputados/220650/biografia",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "ND Mais: Paulo Alexandre Barbosa 5533",
+        "url": "https://ndmais.com.br/eleicoes/2026/candidatos/sp/deputado-federal/5533-paulo-alexandre-barbosa/",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-5501",
+    "cargo": "federal",
+    "nomeUrna": "Vitor Lippi",
+    "partido": "PSD",
+    "numero": "5501",
+    "doc": 55,
+    "posicoes": {
+      "economia": {
+        "valor": 55,
+        "nota": "Votou a favor da PEC do Teto de Gastos (2016) e da reforma trabalhista (2017); atua em pautas de tecnologia e desenvolvimento econômico."
+      }
+    },
+    "pontosCompativeis": [
+      "Médico; foi secretário municipal de Saúde de Sorocaba (1997–2004) e prefeito da cidade por dois mandatos (2005–2012). É deputado federal desde 2015 e foi reeleito em 2022 com 106.661 votos.",
+      "Atua em pautas de tecnologia (lei da informática, lei do bem, lei dos semicondutores) e é 1º vice-presidente da Comissão de Desenvolvimento Econômico desde 20/05/2026.",
+      "Recebeu o Prêmio Excelência Parlamentar do Ranking dos Políticos em todos os anos da legislatura atual (2023–2026)."
+    ],
+    "pontosConflito": [
+      "Votou a favor do impeachment de Dilma Rousseff, da PEC do Teto de Gastos (2016) e da reforma trabalhista (2017). Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Vitor Lippi",
+        "url": "https://pt.wikipedia.org/wiki/Vitor_Lippi",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara dos Deputados: biografia de Vitor Lippi",
+        "url": "https://www.camara.leg.br/deputados/178992/biografia",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-50000",
+    "cargo": "estadual",
+    "nomeUrna": "Paula da Bancada Feminista",
+    "partido": "PSOL",
+    "numero": "50000",
+    "doc": 55,
+    "posicoes": {
+      "minorias": {
+        "valor": -80,
+        "nota": "Militante da Marcha de Mulheres Negras e integrante do mandato coletivo da Bancada Feminista."
+      }
+    },
+    "pontosCompativeis": [
+      "Eleita deputada estadual em 2022 com 259.771 votos, a terceira maior votação do estado, em mandato coletivo: Paula Nunes (representante legal), Carolina Iara, Mariana Souza, Simone Nascimento e Sirlene Maciel.",
+      "Advogada criminalista (formada pela PUC-SP, com especialização em Direito Penal Econômico) e professora de Língua Portuguesa; foi co-vereadora de SP (2021–2022).",
+      "É militante da Marcha de Mulheres Negras e integrou a Afronte! Juventude Sem Medo."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Paula da Bancada Feminista",
+        "url": "https://pt.wikipedia.org/wiki/Paula_da_Bancada_Feminista",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Alesp: Paula da Bancada Feminista é a 1ª entrevistada do Mulheres na Alesp",
+        "url": "https://www.al.sp.gov.br/noticia/?id=497303",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Paula da Bancada Feminista 50000",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/paula-da-bancada-feminista-50000",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-55855",
+    "cargo": "estadual",
+    "nomeUrna": "Barros Munhoz",
+    "partido": "PSD",
+    "numero": "55855",
+    "doc": 60,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Foi prefeito de Itapira (1977–1983 e 1997–2004), deputado estadual (1987–1994 e desde 2007), secretário estadual da Agricultura (1991–1993) e ministro da Agricultura no governo Itamar Franco (17/06 a 01/09/1993). Presidiu a Alesp.",
+      "Em 2026 foi oficializado candidato pelo PSD ao oitavo mandato; exerce o 7º mandato e é 2º secretário da Mesa Diretora da Alesp. Voltou ao PSDB em 2022 e migrou para o PSD depois."
+    ],
+    "pontosConflito": [
+      "A Wikipédia registra acusação de desvio de R$ 3,1 milhões da Prefeitura de Itapira; não encontrei o desfecho nem a defesa dele.",
+      "Em jun/2016 teve o mandato cassado pelo TRE-SP; a decisão foi revertida pelo TSE em nov/2017.",
+      "Em 2011 transferiu uma empresa rural para os filhos, fato registrado na Wikipédia."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Barros Munhoz",
+        "url": "https://pt.wikipedia.org/wiki/Barros_Munhoz",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Gazeta Itapirense: Munhoz busca seu 8º mandato na Alesp",
+        "url": "https://www.gazetaitapirense.com.br/totonho-munhoz-vai-em-busca-de-seu-8o-mandato-na-alesp/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Tribuna de Itapira: Munhoz confirma mudança para o PSD",
+        "url": "https://tribunadeitapira.com.br/uma-excelente-escolha-munhoz-confirma-mudanca-para-o-psd/",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-55125",
+    "cargo": "estadual",
+    "nomeUrna": "Mauro Bragato",
+    "partido": "PSD",
+    "numero": "55125",
+    "doc": 60,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Sociólogo; foi prefeito de Presidente Prudente (1997–2001) e deputado estadual em vários mandatos (1979–1997, 2005–2016 e desde 2019). Está no PSD desde 2026.",
+      "Preside a Comissão de Ciência e Tecnologia da Alesp e integra as de Educação e Cultura e de Relações Internacionais; defendeu a ampliação de parcerias com a China para o interior paulista (Diário de Prudente).",
+      "Em 2001–2002 foi assessor do MEC e participou da implantação do Bolsa Escola em SP."
+    ],
+    "pontosConflito": [
+      "Em jun/2016 foi noticiado que ele foi condenado por improbidade administrativa, em ação sobre compras de leite acima do preço de mercado na prefeitura de Presidente Prudente (1999–2000), com multa, ressarcimento, suspensão dos direitos políticos por cinco anos e perda da função pública; a Alesp anunciou que declararia a perda do mandato. Ele voltou à Alesp em 2019. Não encontrei a defesa dele."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Mauro Bragato",
+        "url": "https://pt.wikipedia.org/wiki/Mauro_Bragato",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Hojemais: Alesp vai declarar perda de mandato (25/06/2016)",
+        "url": "https://www.hojemais.com.br/andradina/noticia/geral/alesp-vai-declarar-perda-de-mandato-do-deputado-mauro-bragato",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Diário de Prudente: Bragato defende acordos com a China",
+        "url": "https://www.diariodeprudente.com/deputado-mauro-bragato-defende-expansao-de-acordos-com-a-china-para-o-interior-paulista-na-alesp/",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-55010",
+    "cargo": "estadual",
+    "nomeUrna": "Maria Lúcia Amary",
+    "partido": "PSD",
+    "numero": "55010",
+    "doc": 55,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Advogada, mestre em direito constitucional e administrativo pela PUC-SP e professora; exerce o sexto mandato consecutivo de deputada estadual, reeleita em 2022 com 66.956 votos. Saiu do PSDB em 06/03/2026, depois de mais de 30 anos, para o PSD.",
+      "Foi a primeira mulher a presidir um partido em Sorocaba (PSDB, 1995) e recebeu a Medalha Ruth Cardoso, pela defesa dos direitos das mulheres.",
+      "Recebeu a Medalha Brigadeiro Tobias, da Polícia Militar, por programa educacional de resistência às drogas e à violência. Atua em saúde, direitos da mulher, causa animal e segurança pública (Jornal Cruzeiro)."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Maria Lúcia Amary",
+        "url": "https://pt.wikipedia.org/wiki/Maria_L%C3%BAcia_Amary",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Jornal Cruzeiro do Sul: Maria Lúcia Amary prioriza saúde",
+        "url": "https://www.jornalcruzeiro.com.br/sorocaba/noticias/2026/09/764849-maria-lucia-amary-prioriza-saude-e-ampliacao-de-investimentos.html",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-55455",
+    "cargo": "estadual",
+    "nomeUrna": "Analice Fernandes",
+    "partido": "PSD",
+    "numero": "55455",
+    "doc": 55,
+    "posicoes": {
+      "saude": {
+        "valor": -30,
+        "nota": "Enfermeira; presidiu a Comissão de Saúde da Alesp (2019–2021) e é autora do PL 347/18 (jornada de 30 horas para a enfermagem)."
+      }
+    },
+    "pontosCompativeis": [
+      "Enfermeira; deputada estadual desde 2003, no sexto mandato consecutivo, reeleita em 2022 com 90.135 votos. Migrou do PSDB para o PSD em 2026.",
+      "Presidiu a Comissão de Saúde da Alesp (2019–2021) e é autora do PL 347/18, que limita a jornada da enfermagem a 30 horas.",
+      "Autora da lei 14.545/2011, que obriga a divulgação de índices de violência contra mulheres por sexo e região. Suas causas: combate à violência contra a mulher, valorização da enfermagem e educação inclusiva."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Analice Fernandes",
+        "url": "https://pt.wikipedia.org/wiki/Analice_Fernandes",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Alesp: bate-papo com a deputada Analice Fernandes",
+        "url": "https://www.al.sp.gov.br/noticia/?id=403621",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-15300",
+    "cargo": "estadual",
+    "nomeUrna": "Itamar Borges",
+    "partido": "MDB",
+    "numero": "15300",
+    "doc": 50,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Foi prefeito de Santa Fé do Sul (1993–1996 e 2001–2008) e é deputado estadual desde 2011, em seu quarto mandato; votação de 79.195 (2010), 99.558 (2014), 82.185 (2018) e 183.480 votos (2022).",
+      "Foi secretário estadual de Agricultura e Abastecimento (01/06/2021 a 01/04/2022); sua atuação tem ênfase em agricultura, pesquisa agropecuária e gestão municipal."
+    ],
+    "pontosConflito": [
+      "Declarou patrimônio de R$ 6,59 milhões ao TSE (O Tempo). Não encontrei controvérsias, processos ou a defesa do candidato; a pesquisa foi limitada."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Itamar Borges",
+        "url": "https://pt.wikipedia.org/wiki/Itamar_Borges",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Itamar Borges 15300",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/itamar-borges-15300",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-55400",
+    "cargo": "estadual",
+    "nomeUrna": "Marta Costa",
+    "partido": "PSD",
+    "numero": "55400",
+    "doc": 55,
+    "posicoes": {
+      "familia": {
+        "valor": 80,
+        "nota": "Autora do PL 504/2020, que proíbe publicidade com alusão a preferências sexuais e à diversidade sexual relacionadas a crianças."
+      },
+      "minorias": {
+        "valor": 70,
+        "nota": "O PL 504/2020 é criticado por entidades que o consideram discriminatório contra pessoas LGBT."
+      }
+    },
+    "pontosCompativeis": [
+      "Administradora; foi vereadora de SP (2005–2014) e é deputada estadual desde 2015, reeleita em 2018. É membro da Assembleia de Deus.",
+      "Autora do PL 504/2020 (apresentado em 05/08/2020), que proíbe publicidade com alusão a preferências sexuais e movimentos de diversidade sexual relacionada a crianças; o projeto foi aprovado no Congresso de Comissões da Alesp."
+    ],
+    "pontosConflito": [
+      "O PL 504/2020 recebeu notas de repúdio de entidades de educação sexual inclusiva, que o classificam como discriminatório; a bancada do PT e a deputada Erica Malunguinho (PSOL) também o criticaram. Não encontrei a justificativa dela para o projeto."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Marta Costa",
+        "url": "https://pt.wikipedia.org/wiki/Marta_Costa",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Casa 1: Alesp tenta aprovar projeto sobre publicidade com LGBT",
+        "url": "https://www.casaum.org/alesp-tenta-aprovar-projeto-de-lei-que-proibe-a-alusao-de-lgbt-na-publicidade/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Alma Preta: projeto classifica publicidade com LGBTs como danosa",
+        "url": "https://almapreta.com.br/sessao/politica/projeto-de-lei-classifica-publicidade-com-lgbts-como-danosa-para-criancas",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-22138",
+    "cargo": "estadual",
+    "nomeUrna": "Conte Lopes",
+    "partido": "PL",
+    "numero": "22138",
+    "doc": 60,
+    "posicoes": {
+      "seguranca": {
+        "valor": 85,
+        "nota": "Policial militar desde 1967, oficial da ROTA, integrante da bancada da bala."
+      }
+    },
+    "pontosCompativeis": [
+      "Entrou na PM em 1967 como soldado, formou-se oficial em 1970 e atuou na ROTA. Foi promovido a 1º tenente por bravura em 1977 e a capitão em 1980, após salvar um refém em sequestro na Vila Mariana; em 1987 salvou uma menina sequestrada em Mogi das Cruzes (caso que inspirou um filme).",
+      "Foi deputado estadual por vários mandatos (1987–2007 e desde 2019) e vereador de SP (eleito em 2016); reeleito deputado em 2022 pelo PL com 192.454 votos. Integra a bancada da bala."
+    ],
+    "pontosConflito": [
+      "O livro Rota 66 (Caco Barcellos, Prêmio Jabuti de 1993) atribui a ele inúmeros casos de abuso de força e de violência policial contra civis. Ele respondeu com o livro “Matar ou Morrer”."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Conte Lopes",
+        "url": "https://pt.wikipedia.org/wiki/Conte_Lopes",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara Municipal de SP: Conte Lopes",
+        "url": "https://www.saopaulo.sp.leg.br/vereador/conte-lopes/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Alesp: bate-papo com o deputado Conte Lopes",
+        "url": "https://www.al.sp.gov.br/noticia/?id=400975",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
   }
 ]

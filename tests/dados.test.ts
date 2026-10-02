@@ -9,10 +9,10 @@ const bruto = ler('../data/candidatos.json')
 const tse = tseSchema.parse(ler('../data/tse-sp.json'))
 
 describe('seed', () => {
-  it('passa no schema e tem 22 candidatos (12 federais, 10 estaduais)', () => {
+  it('passa no schema e tem 36 candidatos (18 federais, 18 estaduais)', () => {
     const r = candidatosSchema.parse(bruto)
-    expect(r).toHaveLength(22)
-    expect(r.filter((c) => c.cargo === 'federal')).toHaveLength(12)
+    expect(r).toHaveLength(36)
+    expect(r.filter((c) => c.cargo === 'federal')).toHaveLength(18)
   })
   it('passa nas regras de conteúdo', () => {
     expect(validarSemantica(candidatosSchema.parse(bruto))).toEqual([])
