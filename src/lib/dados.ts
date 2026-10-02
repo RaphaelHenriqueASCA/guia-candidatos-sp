@@ -1,4 +1,6 @@
+import Fuse from 'fuse.js'
 import curados from '../../data/candidatos.json'
+import { normalizar } from './valores'
 import tse from '../../data/tse-sp.json'
 import { candidatosSchema, tseSchema, type Candidato } from './schema'
 
@@ -30,6 +32,17 @@ export const curadosLista: Pessoa[] = pessoas.filter((p) => p.curado)
 const porIdMap = new Map(pessoas.map((p) => [p.id, p]))
 export function porId(id: string): Pessoa | undefined {
   return porIdMap.get(id)
+}
+
+const fuse = new Fuse(
+  pessoas.map((p) => ({ p, nome: normalizar(p.nomeUrna), numero: p.numero, partido: normalizar(p.partido) })),
+  { keys: ['nome', 'numero', 'partido'], threshold: 0.3, ignoreLocation: true },
+)
+
+/** Busca tolerante por nome de urna, número ou partido entre todos os candidatos de SP. */
+export function buscar(consulta: string, limite = 400): Pessoa[] {
+  const q = normalizar(consulta.trim())
+  return q ? fuse.search(q, { limit: limite }).map((r) => r.item.p) : []
 }
 
 export function urlFoto(id: string): string {

@@ -8,9 +8,10 @@ import { Valores } from './pages/Valores'
 
 function Rotas() {
   const rota = useRota()
-  const [, secao, resto] = rota.split('?')[0].split('/')
+  const [, secao, resto, extra] = rota.split('?')[0].split('/')
   let pagina
   if (secao === 'candidato') pagina = <Ficha id={resto ?? ''} />
+  else if (secao === 'comparar' && resto === 'meus') pagina = <Comparar ids={[]} modo="meus" alvo={extra} />
   else if (secao === 'comparar') pagina = <Comparar ids={(resto ?? '').split(',').filter(Boolean)} />
   else if (secao === 'valores') pagina = <Valores />
   else if (secao === 'metodologia') pagina = <Metodologia />

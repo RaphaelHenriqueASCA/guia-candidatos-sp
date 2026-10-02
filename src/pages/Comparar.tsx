@@ -5,18 +5,38 @@ import { curadosLista, nomeLegivel, pessoas, porId, type Pessoa } from '../lib/d
 import { useEstado } from '../lib/estado'
 import { rotuloAfinidade } from '../lib/nota'
 import { afinidade, posicaoCandidato } from '../lib/posicao'
+import { CompararMeus } from './CompararMeus'
 import { CopiarLink } from './Ficha'
 
-export function Comparar({ ids }: { ids: string[] }) {
+export function Comparar({ ids, modo, alvo }: { ids: string[]; modo?: 'meus'; alvo?: string }) {
   const { valores, temValores } = useEstado()
   const lista = ids.map(porId).filter((p): p is Pessoa => !!p).slice(0, 3)
   const opcoes = (lista.length ? pessoas.filter((p) => p.cargo === lista[0].cargo) : curadosLista).filter((p) => !lista.some((l) => l.id === p.id))
   const ordenadas = [...opcoes].sort((a, b) => Number(!!b.curado) - Number(!!a.curado) || a.nomeUrna.localeCompare(b.nomeUrna))
 
+  const abas = (
+    <nav aria-label="Tipo de comparação" className="mt-3 flex flex-wrap gap-2">
+      <a href="#/comparar" aria-current={modo ? undefined : 'page'} className={modo ? 'btn-sec' : 'btn'}>Candidatos entre si</a>
+      <a href="#/comparar/meus" aria-current={modo ? 'page' : undefined} className={modo ? 'btn' : 'btn-sec'}>Meus valores × um candidato</a>
+    </nav>
+  )
+
+  if (modo === 'meus') {
+    return (
+      <div>
+        <h1 className="text-3xl font-extrabold text-petroleo">Comparar</h1>
+        {abas}
+        <p className="mb-6 mt-3 text-suave">Escreva seus valores e compare com as posições (réguas) de um candidato que você escolher.</p>
+        <CompararMeus alvo={alvo} />
+      </div>
+    )
+  }
+
   return (
     <div>
-      <h1 className="text-3xl font-extrabold text-petroleo">Comparar candidatos</h1>
-      <p className="mt-1 text-suave">Até 3 candidatos do mesmo cargo, lado a lado. Posições e afinidades são estimativas.</p>
+      <h1 className="text-3xl font-extrabold text-petroleo">Comparar</h1>
+      {abas}
+      <p className="mt-3 text-suave">Até 3 candidatos do mesmo cargo, lado a lado. Posições e afinidades são estimativas.</p>
 
       {lista.length < 3 && (
         <div className="mt-4">
@@ -54,7 +74,7 @@ export function Comparar({ ids }: { ids: string[] }) {
                     <Numero n={p.numero} className="text-3xl" />
                   </div>
                   <BaseSelo p={p} />
-                  {temValores && <Medidor titulo="Afinidade com os seus valores" nota={af} rotulo={af === null ? undefined : rotuloAfinidade(af)} ajuda="Sem classificação do partido" />}
+                  {temValores && <Medidor titulo="Afinidade com os seus valores" nota={af} rotulo={af === null ? undefined : rotuloAfinidade(af)} ajuda={af === null ? 'Sem classificação do partido' : undefined} />}
                   <div className="space-y-3">
                     {DEFS.map((d) => {
                       const c = posicaoCandidato(p, d.id)

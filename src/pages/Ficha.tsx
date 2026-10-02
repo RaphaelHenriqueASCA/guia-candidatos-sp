@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BaseSelo } from '../components/Cartao'
+import { Pesquisar } from '../components/Pesquisar'
 import { AvisoPesquisa, BarraPosicao, Foto, Medidor, Numero, Secao } from '../components/Ui'
 import { EMAIL_CONTATO, REPO_GITHUB } from '../config'
 import { DEFS, rotuloPosicao } from '../lib/areas'
@@ -128,6 +129,15 @@ export function Ficha({ id }: { id: string }) {
           Um candidato pode pensar diferente do seu partido.
         </p>
       )}
+
+      <Secao titulo="Saiba mais sobre este candidato" id="mais">
+        <Pesquisar p={p} />
+        <p className="mt-2 text-sm text-suave">
+          O site é estático e não pesquisa sozinho. A busca abre o Google Notícias com o nome do candidato (seus valores não são enviados), e o pedido
+          copiado, já com os seus valores, é para você colar no seu chat do Claude.{' '}
+          <a className="font-semibold text-petroleo underline" href={`#/comparar/meus/${p.id}`}>Comparar meus valores com ele</a>
+        </p>
+      </Secao>
 
       <Secao titulo="Onde está em cada área" id="areas">
         <PosicoesPorArea p={p} />

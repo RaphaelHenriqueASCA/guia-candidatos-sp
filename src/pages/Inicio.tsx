@@ -1,20 +1,13 @@
-import Fuse from 'fuse.js'
 import { useMemo, useState } from 'react'
 import { Cartao } from '../components/Cartao'
 import { AvisoPesquisa } from '../components/Ui'
 import { ELEICAO } from '../config'
-import { pessoas, type Pessoa } from '../lib/dados'
+import { buscar, pessoas, type Pessoa } from '../lib/dados'
 import { useEstado } from '../lib/estado'
 import { afinidade } from '../lib/posicao'
-import { normalizar } from '../lib/valores'
 
 type Cargo = 'federal' | 'estadual'
-type Ordem = 'afinidade' | 'distantes' | 'nome'
-
-const fuse = new Fuse(
-  pessoas.map((p) => ({ p, nome: normalizar(p.nomeUrna), numero: p.numero, partido: normalizar(p.partido) })),
-  { keys: ['nome', 'numero', 'partido'], threshold: 0.3, ignoreLocation: true },
-)
+type Ordem = 'comparando' | 'afinidade' | 'distantes' | 'nome'
 
 const PAGINA = 24
 
@@ -22,26 +15,36 @@ export function Inicio() {
   const { valores, temValores, comparar } = useEstado()
   const [cargo, setCargo] = useState<Cargo>('federal')
   const [busca, setBusca] = useState('')
-  const [ordem, setOrdem] = useState<Ordem>('afinidade')
+  const [escolhida, setEscolhida] = useState<Ordem | null>(null)
   const [soCuradoria, setSoCuradoria] = useState(false)
   const [mostrar, setMostrar] = useState(PAGINA)
 
-  const q = normalizar(busca.trim())
+  // com valores informados, o padrão é "comparando com seus valores"; sem eles, ordem alfabética
+  const ordem: Ordem = temValores ? (escolhida ?? 'comparando') : 'nome'
+  const q = busca.trim()
   // sem valores nem busca, mostra só os pesquisados; com valores ou busca, todos os candidatos de SP
   const todos = temValores || q.length > 0
 
-  const lista = useMemo(() => {
-    let base: Pessoa[] = q ? fuse.search(q, { limit: 400 }).map((r) => r.item.p) : pessoas
-    base = base.filter((c) => c.cargo === cargo && (!todos || !soCuradoria || c.curado) && (todos || c.curado))
-    const comAf = base.map((p) => ({ p, a: temValores ? afinidade(p, valores) : null }))
-    if (ordem === 'nome' || !temValores) {
-      if (ordem === 'nome') comAf.sort((x, y) => x.p.nomeUrna.localeCompare(y.p.nomeUrna))
-    } else {
-      const f = ordem === 'afinidade' ? -1 : 1
-      comAf.sort((x, y) => f * ((x.a ?? (f < 0 ? -1 : 101)) - (y.a ?? (f < 0 ? -1 : 101))))
+  const base = useMemo(() => {
+    const origem: Pessoa[] = q ? buscar(q) : pessoas
+    return origem
+      .filter((c) => c.cargo === cargo && (todos ? !soCuradoria || !!c.curado : !!c.curado))
+      .map((p) => ({ p, a: temValores ? afinidade(p, valores) : null }))
+  }, [q, cargo, todos, soCuradoria, valores, temValores])
+
+  const { lista, proximos, distantes } = useMemo(() => {
+    const comAf = base.filter((x): x is { p: Pessoa; a: number } => x.a !== null).sort((x, y) => y.a - x.a)
+    if (ordem === 'comparando') {
+      const prox = comAf.slice(0, 3).map((x) => x.p)
+      const dist = comAf.slice(Math.max(3, comAf.length - 3)).reverse().map((x) => x.p)
+      return { lista: [] as Pessoa[], proximos: prox, distantes: dist }
     }
-    return comAf.map((x) => x.p)
-  }, [q, cargo, todos, soCuradoria, ordem, valores, temValores])
+    let l = base
+    if (ordem === 'nome') l = [...base].sort((x, y) => x.p.nomeUrna.localeCompare(y.p.nomeUrna))
+    else if (ordem === 'afinidade') l = [...base].sort((x, y) => (y.a ?? -1) - (x.a ?? -1))
+    else l = [...base].sort((x, y) => (x.a ?? 101) - (y.a ?? 101))
+    return { lista: l.map((x) => x.p), proximos: [], distantes: [] }
+  }, [base, ordem])
 
   const visiveis = lista.slice(0, mostrar)
 
@@ -95,9 +98,10 @@ export function Inicio() {
           <select
             id="ordem"
             value={ordem}
-            onChange={(e) => setOrdem(e.target.value as Ordem)}
+            onChange={(e) => setEscolhida(e.target.value as Ordem)}
             className="mt-1 block min-h-11 w-full rounded-xl border border-borda bg-white px-3 text-base"
           >
+            <option value="comparando" disabled={!temValores}>Comparando com seus valores</option>
             <option value="afinidade" disabled={!temValores}>Mais afins com meus valores</option>
             <option value="distantes" disabled={!temValores}>Mais distantes dos meus valores</option>
             <option value="nome">Nome (A–Z)</option>
@@ -114,12 +118,12 @@ export function Inicio() {
 
       {temValores ? (
         <p className="mt-3 rounded-xl border border-borda bg-white px-4 py-3 text-sm" role="status">
-          Ordenado pela afinidade com <strong>os seus valores</strong>. <a className="font-semibold text-petroleo underline" href="#/valores">Ajustar</a>
+          Comparando com <strong>os seus valores</strong>. <a className="font-semibold text-petroleo underline" href="#/valores">Ajustar</a>
         </p>
       ) : (
         <p className="mt-3 text-sm text-suave">
           Mostrando os candidatos pesquisados. Busque um nome para ver qualquer candidato de SP, ou{' '}
-          <a className="font-semibold text-petroleo underline" href="#/valores">informe seus valores</a> para ver todos ordenados por afinidade.
+          <a className="font-semibold text-petroleo underline" href="#/valores">informe seus valores</a> para ver os 3 mais próximos e os 3 mais distantes.
         </p>
       )}
 
@@ -130,7 +134,25 @@ export function Inicio() {
       )}
 
       <h2 className="sr-only">Candidatos</h2>
-      {lista.length === 0 ? (
+      {ordem === 'comparando' ? (
+        proximos.length === 0 ? (
+          <p className="mt-8 text-suave">Nenhum candidato com afinidade calculável para essa busca.</p>
+        ) : (
+          <>
+            <h3 className="mt-6 text-xl font-extrabold text-verde">Os 3 mais próximos dos seus valores</h3>
+            <ul className="mt-3 grid gap-4 md:grid-cols-2 xl:grid-cols-3">{proximos.map((p) => <Cartao key={p.id} p={p} />)}</ul>
+            {distantes.length > 0 && (
+              <>
+                <h3 className="mt-8 text-xl font-extrabold text-vermelho">Os 3 mais distantes dos seus valores</h3>
+                <ul className="mt-3 grid gap-4 md:grid-cols-2 xl:grid-cols-3">{distantes.map((p) => <Cartao key={p.id} p={p} />)}</ul>
+              </>
+            )}
+            <p className="mt-4 text-sm text-suave">
+              Fora dos 12 pesquisados, a posição é estimada pelo partido (veja a Metodologia). Para ver todos, escolha outra opção em “Ordenar”.
+            </p>
+          </>
+        )
+      ) : lista.length === 0 ? (
         <p className="mt-8 text-suave">Nenhum candidato encontrado.</p>
       ) : (
         <>
