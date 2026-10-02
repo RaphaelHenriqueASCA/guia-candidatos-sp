@@ -148,7 +148,7 @@ export function Inicio() {
               </>
             )}
             <p className="mt-4 text-sm text-suave">
-              Fora dos 12 pesquisados, a posição é estimada pelo partido (veja a Metodologia). Para ver todos, escolha outra opção em “Ordenar”.
+              Fora dos candidatos com curadoria (selo “Com curadoria”), a posição é estimada pelo partido (veja a Metodologia). Para ver todos, escolha outra opção em “Ordenar”.
             </p>
           </>
         )

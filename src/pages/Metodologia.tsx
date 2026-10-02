@@ -93,7 +93,7 @@ export function Metodologia() {
           <li>Toda afirmação pesquisada tem fonte e data de acesso; distinguimos fala, denúncia, investigação, processo e condenação.</li>
           <li>Quando há defesa do candidato, ela é incluída; quando não a encontrei, isso está dito.</li>
           <li>Nome de urna, número, partido e foto vêm dos dados abertos do TSE (todos os candidatos a deputado federal e estadual de SP).</li>
-          <li>Só 12 candidatos foram pesquisados; para os demais só existe a estimativa pelo partido. A ausência de pesquisa não diz nada sobre o candidato.</li>
+          <li>Só 22 candidatos foram pesquisados (escolhidos entre os mais votados de 2022 que disputam 2026, mais os do primeiro lote); para os demais só existe a estimativa pelo partido. A ausência de pesquisa não diz nada sobre o candidato.</li>
           <li>Achou um erro? Use “Reportar erro” na ficha.</li>
         </ul>
       </Secao>

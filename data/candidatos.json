@@ -454,5 +454,456 @@
         "nota": "Fala transfóbica em 2019 (retratou-se e foi advertido pelo Conselho de Ética)."
       }
     }
+  },
+  {
+    "id": "federal-4040",
+    "cargo": "federal",
+    "nomeUrna": "Tabata Amaral",
+    "partido": "PSB",
+    "numero": "4040",
+    "doc": 65,
+    "posicoes": {
+      "educacao": {
+        "valor": -50,
+        "nota": "Atuação por financiamento e acesso à educação pública: Fundeb permanente (PEC 15/15) e programa Pé-de-Meia."
+      }
+    },
+    "pontosCompativeis": [
+      "Dedicou o mandato sobretudo à educação: presidiu a bancada da educação e formulou o programa Pé-de-Meia, poupança para estudantes carentes do ensino médio (CNN Brasil, 2026).",
+      "Foi membro titular da Comissão Especial que tornou o Fundeb instrumento permanente de financiamento da educação básica (PEC 15/15).",
+      "Cofundou em 2014 o movimento Mapa Educação e coordenou, em 2019, um estudo sobre a execução de políticas do MEC."
+    ],
+    "pontosConflito": [
+      "Em julho/2019 votou a favor da reforma da Previdência contra a orientação do PDT, que suspendeu seu mandato e abriu processo de punição; ela disse ter votado por convicção. O TSE aceitou, em 2021, sua desfiliação por justa causa.",
+      "Em 2019, Veja e Exame revelaram pagamento de R$ 23 mil, com fundo eleitoral do PDT, a um ex-namorado por análise de campanha; ela defendeu a contratação.",
+      "Em março/2026 apresentou o PL 1.424/2026, que define antissemitismo usando parâmetros da IHRA; juristas criticaram o texto e nove deputados retiraram assinaturas. Não encontrei a defesa dela sobre as críticas."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Tabata Amaral",
+        "url": "https://pt.wikipedia.org/wiki/Tabata_Amaral",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara dos Deputados: Tabata Amaral",
+        "url": "https://www.camara.leg.br/deputados/204534",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "CNN Brasil: Tabata Amaral e o projeto do PSB em SP",
+        "url": "https://www.cnnbrasil.com.br/eleicoes/a-cnn-tabata-amaral-diz-que-a-ideia-e-seguir-liderando-projeto-do-psb-em-sao-paulo/",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-5070",
+    "cargo": "federal",
+    "nomeUrna": "Erika Hilton",
+    "partido": "PSOL",
+    "numero": "5070",
+    "doc": 65,
+    "posicoes": {
+      "minorias": {
+        "valor": -95,
+        "nota": "Liderou a criação da Frente Parlamentar LGBT na Câmara Federal (2023) e atuou na CPI da Transfobia da Câmara Municipal (2021)."
+      },
+      "familia": {
+        "valor": -85,
+        "nota": "Autora do PL 820/2025, que concede anistia a acusadas e condenadas por aborto."
+      },
+      "economia": {
+        "valor": -75,
+        "nota": "Coautora da PEC do fim da escala 6x1 e autora da PEC 8/25 (semana de quatro dias de trabalho)."
+      }
+    },
+    "pontosCompativeis": [
+      "Eleita deputada federal em 2022 com 256.903 votos; em 2020 foi a mulher mais votada para a Câmara Municipal de SP (50.508 votos).",
+      "Presidiu a Comissão de Direitos Humanos da Câmara Municipal (2021–2023) e liderou, em set/2023, a criação da Frente Parlamentar em Defesa da Cidadania e Direitos LGBT na Câmara, com mais de 210 parlamentares.",
+      "Coautora, com Reginaldo Lopes (PT-MG), da PEC do fim da escala 6x1; também propôs a PEC 8/25, de jornada de quatro dias de trabalho por semana."
+    ],
+    "pontosConflito": [
+      "Apresentou o PL 820/2025, que concede anistia a acusadas e condenadas por aborto, tema que divide opiniões.",
+      "Em março/2026 foi eleita presidente da Comissão de Direitos da Mulher da Câmara; a escolha foi criticada publicamente e ela acionou o MPF e a Justiça por transfobia, obtendo na Justiça direito de resposta contra uma emissora."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Erika Hilton",
+        "url": "https://pt.wikipedia.org/wiki/Erika_Hilton",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "ND Mais: Erika Hilton 5070",
+        "url": "https://ndmais.com.br/eleicoes/2026/candidatos/sp/deputado-federal/5070-erika-hilton/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Radar do Congresso: proposições de Erika Hilton",
+        "url": "https://radar.congressoemfoco.com.br/parlamentar/1220645/proposicoes",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Brasil de Fato: PSOL aposta em Erika Hilton em 2026",
+        "url": "https://www.brasildefato.com.br/2025/11/19/sem-boulos-psol-aposta-em-erika-hilton-e-monta-estrategia-em-sp-para-manter-numero-de-deputados-em-2026/",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-1414",
+    "cargo": "federal",
+    "nomeUrna": "Kim Kataguiri",
+    "partido": "Missão",
+    "numero": "1414",
+    "doc": 60,
+    "posicoes": {
+      "economia": {
+        "valor": 65,
+        "nota": "Voto contra a PEC do fim da escala 6x1 (2026), autor de PEC que limita o IPVA a 1% (2026) e coautor do Marco Legal das Startups (2020)."
+      },
+      "seguranca": {
+        "valor": 75,
+        "nota": "Defendeu pena de morte para integrantes de facções criminosas (out/2025)."
+      }
+    },
+    "pontosCompativeis": [
+      "Eleito deputado federal em 2018 (465.310 votos, pelo DEM) e em 2022 (295.460 votos, pelo União).",
+      "Coautor do Marco Legal das Startups (aprovado na Câmara em dez/2020) e autor do PL 848/20, que virou a Lei 14.028/20 (receitas de uso contínuo sem prazo de vencimento durante a calamidade pública).",
+      "Seu PL 4474/20, que torna facultativa a frequência em autoescolas para obter a CNH, foi adotado pelo governo federal por medida provisória em dez/2025."
+    ],
+    "pontosConflito": [
+      "Em out/2025 defendeu pena de morte para membros de facções criminosas e apresentou PEC que autorizaria o Brasil a produzir armas nucleares para dissuasão; entidades científicas (SBF, SBPC, ABC e SBQ) repudiaram a PEC.",
+      "Em fev/2022 afirmou, em podcast, que a Alemanha errou ao criminalizar o nazismo; depois esclareceu que se referia apenas a obras escritas, como Mein Kampf.",
+      "Em 2026 votou contra a PEC do fim da escala 6x1, chamando-a de “farsante” e “populista”.",
+      "Em 20/06/2026 desistiu de disputar o governo de SP para tentar novo mandato na Câmara e passou a integrar a campanha presidencial de Renan Santos (Missão)."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Kim Kataguiri",
+        "url": "https://pt.wikipedia.org/wiki/Kim_Kataguiri",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Nexo: ficha de Kim Kataguiri",
+        "url": "https://candidatos.nexojornal.com.br/2026/sp/kim-kataguiri-250002546642/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Tribuna de Jundiaí: Kim desiste do governo de SP",
+        "url": "https://tribunadejundiai.com.br/politica/eleicoes-2026/kim-kataguiri-desiste-governo-sao-paulo",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-1000",
+    "cargo": "federal",
+    "nomeUrna": "Celso Russomanno",
+    "partido": "Republicanos",
+    "numero": "1000",
+    "doc": 65,
+    "posicoes": {
+      "economia": {
+        "valor": -30,
+        "nota": "Atuação histórica na defesa do consumidor e do Código de Defesa do Consumidor; não encontrei posição sobre outros temas econômicos."
+      }
+    },
+    "pontosCompativeis": [
+      "Atua desde os anos 1990 na defesa do consumidor: foi apresentador de quadro do programa Aqui Agora (SBT, a partir de 1991) e preside o Instituto Nacional de Defesa do Consumidor.",
+      "Em sexto mandato de deputado federal, atua no Congresso pela manutenção do Código de Defesa do Consumidor (ABC Repórter, 18/09/2026).",
+      "Foi presidente da Frente Parlamentar da Polícia Federal por 14 anos."
+    ],
+    "pontosConflito": [
+      "Em 2014 foi condenado em primeira instância por peculato (uso de funcionária de gabinete em produtora privada, entre 1997 e 2001); foi absolvido pela 2ª Turma do STF em 2016.",
+      "Em 2010 apresentou emenda de R$ 1,1 milhão para uma ONG que presidia e administrava com familiares; após a revelação, redirecionou os recursos.",
+      "Em 2012 foi citado em gravação da Polícia Federal sobre o bicheiro Carlinhos Cachoeira; ele negou envolvimento e ofereceu seus sigilos bancário, telefônico e fiscal.",
+      "Apresentou um PDL que, segundo a imprensa (Metrópoles e Revista Fórum), poderia beneficiar seu filho, candidato a deputado estadual (Tenente Celsinho). Não encontrei a versão dele."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Celso Russomanno",
+        "url": "https://pt.wikipedia.org/wiki/Celso_Russomanno",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "ABC Repórter: Russomanno e o CDC",
+        "url": "https://abcreporter.com.br/2026/09/18/russomanno-reforca-atuacao-no-congresso-em-defesa-da-manutencao-do-cdc/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Metrópoles: projeto beneficiando o filho",
+        "url": "https://www.metropoles.com/colunas/demetrio-vecchioli/russomanno-apresentou-projeto-beneficiando-o-filho-candidato-como-tenente",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Celso Russomanno 1000",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-federal/celso-russomanno-1000",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-1150",
+    "cargo": "federal",
+    "nomeUrna": "Janaina Paschoal",
+    "partido": "PP",
+    "numero": "1150",
+    "doc": 55,
+    "posicoes": {
+      "familia": {
+        "valor": 50,
+        "nota": "Defende restrições ao aborto (propôs limite de 12 semanas para gravidez decorrente de estupro) e a pauta de proteção da infância; considerou um erro o PL 1.904/24, que equipara aborto a homicídio."
+      }
+    },
+    "pontosCompativeis": [
+      "Advogada e professora de Direito Penal da USP; foi deputada estadual (eleita em 2018, pelo PSL), candidata ao Senado em 2022 (PRTB) e vereadora de SP desde 2024 (48.893 votos, pelo PP).",
+      "Na Câmara Municipal de SP atua em fiscalização do gasto público, segurança pública, saúde, educação e proteção de crianças e adolescentes.",
+      "Propôs na Câmara Municipal o programa Infância Plena, contra a adultização de crianças, e um projeto que dá exclusividade a profissionais mulheres em cuidados íntimos na Educação Infantil."
+    ],
+    "pontosConflito": [
+      "Defendeu a redução do prazo para aborto (como deputada estadual propôs 12 semanas para gravidez decorrente de estupro) e, segundo a Revista Fórum, a “esterilização voluntária” para evitar abortos; ela também considerou um erro o PL 1.904/24, que equipara aborto a homicídio.",
+      "Em 2016 foi criticada por um discurso, classificado por críticos como “evangelo-fascista”, em que mencionou que “Deus havia mandado uma legião” contra “cobras” no poder. Não encontrei a resposta dela.",
+      "Em 2023, alunos de Direito da USP afirmaram que ela “não é mais bem-vinda” na faculdade (Estado de Minas)."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Janaina Paschoal",
+        "url": "https://pt.wikipedia.org/wiki/Janaína_Paschoal",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara Municipal de SP: Conheça a vereadora Janaina Paschoal",
+        "url": "https://www.saopaulo.sp.leg.br/blog/conheca-a-vereadora-janaina-paschoal/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Gazeta do Povo: Janaina defende redução de prazo para aborto",
+        "url": "https://www.gazetadopovo.com.br/vozes/entrelinhas/janaina-paschoal-defende-reducao-de-prazo-para-aborto-apos-caso-em-mg/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Revista Fórum: esterilização voluntária",
+        "url": "https://revistaforum.com.br/politica/janaina-paschoal-defende-esterilizacao-voluntaria-para-evitar-aborto/",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "federal-1100",
+    "cargo": "federal",
+    "nomeUrna": "Coronel Telhada",
+    "partido": "PP",
+    "numero": "1100",
+    "doc": 60,
+    "posicoes": {
+      "seguranca": {
+        "valor": 85,
+        "nota": "Coronel reformado da PM e comandante da ROTA (2009–2011); integra a bancada da bala e fundou frentes parlamentares de segurança pública."
+      },
+      "familia": {
+        "valor": 70,
+        "nota": "Fundador da Frente Parlamentar Cristã de Defesa da Família."
+      },
+      "religiao": {
+        "valor": 60,
+        "nota": "Autor de projeto que cria o Dia do Policial Militar Evangélico e fundador de frente parlamentar cristã."
+      }
+    },
+    "pontosCompativeis": [
+      "Coronel reformado da PM paulista; comandou a ROTA (2009–2011), foi vereador de SP, deputado estadual (2015–2023) e assumiu como deputado federal em fev/2023.",
+      "Autor da lei estadual 16.049/2015 contra os “pancadões” e da lei paulista que proibiu as linhas cortantes; foi relator do projeto federal sobre o mesmo tema.",
+      "Fundou a Frente Parlamentar de Segurança Pública e a Frente Parlamentar Cristã de Defesa da Família na Câmara Municipal."
+    ],
+    "pontosConflito": [
+      "Foi transferido da ROTA em 1992 em meio a dezenas de investigações por violência policial (Wikipédia).",
+      "Em 2014 postou que “chegou a hora de São Paulo se separar do resto” após a vitória de Dilma; o PSDB chamou a fala de xenófoba. Ele apagou a postagem e se retratou.",
+      "Em 2020, a prefeitura denunciou agressão verbal a funcionários e pacientes durante fiscalização sem aviso no hospital de campanha do Anhembi. Não encontrei a versão dele."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Coronel Telhada",
+        "url": "https://pt.wikipedia.org/wiki/Coronel_Telhada",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Câmara dos Deputados: biografia de Coronel Telhada",
+        "url": "https://www.camara.leg.br/deputados/222142/biografia",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "HubPolítico: Coronel Telhada",
+        "url": "https://hubpolitico.com.br/perfil/coroneltelhada",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-13133",
+    "cargo": "estadual",
+    "nomeUrna": "Eduardo Suplicy",
+    "partido": "PT",
+    "numero": "13133",
+    "doc": 60,
+    "posicoes": {
+      "economia": {
+        "valor": -80,
+        "nota": "Autor da Renda Básica de Cidadania (Lei 10.835/2004) e defensor de longa data da renda mínima."
+      }
+    },
+    "pontosCompativeis": [
+      "Autor do projeto da Renda Básica de Cidadania (apresentado em 2001, aprovado em 2003 e sancionado pelo presidente Lula como Lei 10.835 em 08/01/2004); antes, em 1991, propôs o Programa de Garantia de Renda Mínima (PLS 80/1991).",
+      "Professor de economia da FGV de 1966 a 2012; eleito vereador de SP em 2020 (167.552 votos) e deputado estadual em 2022, o mais votado do estado (807.015 votos).",
+      "Em 1979, como deputado estadual, atuou como guardião de um jovem transexual internado na Febem e o empregou em seu gabinete."
+    ],
+    "pontosConflito": [
+      "Em 2003 defendeu publicamente parlamentares expulsos do PT, o que gerou tensão com lideranças do partido.",
+      "Em 2016 foi detido por três horas ao se deitar na rua em protesto contra uma reintegração de posse (desobediência civil).",
+      "Declarou patrimônio de R$ 3,46 milhões em 2026, 72% a mais que os R$ 2,01 milhões de 2014 (O Tempo)."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Eduardo Suplicy",
+        "url": "https://pt.wikipedia.org/wiki/Eduardo_Suplicy",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Eduardo Suplicy 13133",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/eduardo-suplicy-13133",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-50789",
+    "cargo": "estadual",
+    "nomeUrna": "Carlos Giannazi",
+    "partido": "PSOL",
+    "numero": "50789",
+    "doc": 55,
+    "posicoes": {
+      "educacao": {
+        "valor": -90,
+        "nota": "Professor e diretor da rede pública; atua na defesa da escola pública e presidiu a CPI da Educação na Câmara Municipal."
+      }
+    },
+    "pontosCompativeis": [
+      "Professor, ex-diretor escolar e doutor em História Econômica pela USP; lidera a bancada do PSOL na Alesp e foi eleito deputado estadual em 2010, 2014, 2018 e 2022.",
+      "Como vereador presidiu a CPI da Educação; como deputado aprovou leis sobre aposentadoria especial para professores readaptados (2018) e limite de alunos em salas com estudantes com deficiência (2015).",
+      "Em 2026 apresentou o PL 06/26 e emendas ao orçamento para o descongelamento dos 583 dias de servidores estaduais."
+    ],
+    "pontosConflito": [
+      "Foi expulso do PT em 2002, após votar contra o orçamento educacional da gestão Marta Suplicy (a expulsão virou suspensão ao recorrer), e de novo em 2005, por se lançar candidato à presidência da Câmara Municipal.",
+      "Em 2018, em debate sobre o “Escola sem Partido”, o deputado Douglas Garcia o acusou de agressão; Giannazi disse que Garcia tentava tirar seu microfone."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Carlos Giannazi",
+        "url": "https://pt.wikipedia.org/wiki/Carlos_Giannazi",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "HubPolítico: Carlos Giannazi",
+        "url": "https://hubpolitico.com.br/perfil/carlosgiannazi",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "O Tempo: Carlos Giannazi 50789",
+        "url": "https://www.otempo.com.br/eleicoes/2026/candidatos/sao-paulo/deputado-estadual/carlos-giannazi-50789",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-55678",
+    "cargo": "estadual",
+    "nomeUrna": "Márcio Nakashima",
+    "partido": "PSD",
+    "numero": "55678",
+    "doc": 45,
+    "posicoes": {},
+    "pontosCompativeis": [
+      "Contador e advogado; reeleito deputado estadual em 2022 com 85.195 votos. Em 2026 migrou do PDT para o PSD e disputa a reeleição.",
+      "Autor de leis estaduais: 17.620/2023 (proíbe reter macas de ambulâncias em hospitais), 17.802/2023 (Carteira da Pessoa com Doença Rara) e 17.621/2023 (obriga bares e restaurantes a auxiliar mulheres em situação de risco ou assédio).",
+      "Passou a atuar na defesa de vítimas de violência de gênero e de famílias de desaparecidos após o assassinato de sua irmã, em 2010."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias nem posições próprias sobre as áreas do site; a pesquisa foi limitada, e a posição nas réguas vem do partido."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Márcio Nakashima",
+        "url": "https://pt.wikipedia.org/wiki/M%C3%A1rcio_Nakashima",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Alesp: bate-papo com o deputado Marcio Nakashima",
+        "url": "https://www.al.sp.gov.br/noticia/?id=400949",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Site do deputado: candidatura à reeleição",
+        "url": "https://www.deputadomarcionakashima.com.br/post/agora-sou-oficialmente-candidato-%C3%A0-reelei%C3%A7%C3%A3o-como-deputado-estadual",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
+  },
+  {
+    "id": "estadual-22444",
+    "cargo": "estadual",
+    "nomeUrna": "Tenente Coimbra",
+    "partido": "PL",
+    "numero": "22444",
+    "doc": 60,
+    "posicoes": {
+      "educacao": {
+        "valor": 85,
+        "nota": "Autor e articulador da lei estadual das escolas cívico-militares (sancionada em 2024) e presidente da frente parlamentar sobre o tema."
+      }
+    },
+    "pontosCompativeis": [
+      "Ex-primeiro-tenente do Exército (2012–2021); eleito deputado estadual em 2022.",
+      "Foi um dos articuladores da lei estadual das escolas cívico-militares, sancionada pelo governador Tarcísio de Freitas em 2024, e preside a Frente Parlamentar pela implantação desse modelo, que busca ampliar para 50 as unidades no estado.",
+      "Autor da Lei do Desembarque Preferencial em ônibus intermunicipais para mulheres, idosos e pessoas com deficiência, das 22h às 5h, e presidente da Frente Parlamentar pelos Tiros de Guerra."
+    ],
+    "pontosConflito": [
+      "Não encontrei controvérsias nem investigações sobre ele; a pesquisa foi limitada. O modelo das escolas cívico-militares é tema de debate público; esta ficha não avalia seus resultados."
+    ],
+    "fontes": [
+      {
+        "titulo": "Wikipédia: Tenente Coimbra",
+        "url": "https://pt.wikipedia.org/wiki/Tenente_Coimbra",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "Gazeta do Povo: Frente Parlamentar das escolas cívico-militares em SP",
+        "url": "https://www.gazetadopovo.com.br/sao-paulo/deputados-lancam-frente-parlamentar-da-escolas-civico-militares-na-assembleia-de-sp/",
+        "data": "2026-10-02"
+      },
+      {
+        "titulo": "ND Mais: Tenente Coimbra 22444",
+        "url": "https://ndmais.com.br/eleicoes/2026/candidatos/sp/deputado-estadual/22444-tenente-coimbra/",
+        "data": "2026-10-02"
+      }
+    ],
+    "origem": "curadoria inicial",
+    "pesquisadoEm": "2026-10-02"
   }
 ]
