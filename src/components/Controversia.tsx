@@ -13,28 +13,35 @@ const ROTULO_JG: Record<Julgamento, string> = {
 // quanto menor o índice, melhor: a cor segue 100 - índice (verde = poucas controvérsias)
 const COR: Record<string, string> = { vermelho: 'text-vermelho', ambar: 'text-ambar', verde: 'text-verde' }
 
-/** Índice de controvérsias só como número em %, sem barra. `grande` = destaque na ficha. */
-export function IndiceControversia({ p, grande = false }: { p: Pessoa; grande?: boolean }) {
+/** Índice de controvérsias só como número em %, sem barra. Tamanhos: card (lista), topo (ficha, discreto) e texto (seção da ficha). */
+export function IndiceControversia({ p, tamanho = 'card' }: { p: Pessoa; tamanho?: 'card' | 'topo' | 'texto' }) {
   const { indice, pesquisado } = controversiaDe(p)
   const cor = indice === null ? 'text-suave' : COR[faixa(100 - indice).cor]
-  return (
-    <div
-      className={grande ? 'inline-block rounded-2xl border border-borda bg-fundo px-4 py-2' : 'flex items-baseline justify-between gap-2'}
-      title={!pesquisado && indice !== null ? 'Só considera a Ficha Limpa no TSE; processos não foram pesquisados.' : undefined}
-    >
-      <div className={grande ? 'text-xs font-semibold uppercase tracking-wide text-suave' : 'text-xs font-semibold text-suave'}>
-        Índice de controvérsias
+  const dica = !pesquisado && indice !== null ? 'Só considera a Ficha Limpa no TSE; processos não foram pesquisados.' : undefined
+  const rotulo = tamanho === 'texto' ? 'Índice de controvérsias:' : 'Índice de controvérsias'
+  const valor =
+    indice === null ? (
+      <span className="text-sm font-semibold text-suave">Não pesquisado</span>
+    ) : (
+      <span
+        className={`font-extrabold tabular-nums ${cor} ${tamanho === 'card' ? 'text-xl' : tamanho === 'topo' ? 'text-2xl' : 'text-lg'}`}
+        aria-label={`Índice de controvérsias: ${indice} por cento`}
+      >
+        {indice}%
+      </span>
+    )
+  if (tamanho === 'card') {
+    return (
+      <div className="flex items-baseline justify-between gap-2" title={dica}>
+        <span className="text-xs font-semibold text-suave">{rotulo}</span>
+        {valor}
       </div>
-      {indice === null ? (
-        <div className={grande ? 'text-lg font-bold text-suave' : 'text-sm font-semibold text-suave'}>Não pesquisado</div>
-      ) : (
-        <div
-          className={`font-extrabold tabular-nums leading-none ${cor} ${grande ? 'mt-1 text-6xl' : 'text-xl'}`}
-          aria-label={`Índice de controvérsias: ${indice} por cento`}
-        >
-          {indice}%
-        </div>
-      )}
+    )
+  }
+  return (
+    <div className="flex items-baseline gap-2" title={dica}>
+      <span className="text-xs font-semibold text-suave">{rotulo}</span>
+      {valor}
     </div>
   )
 }
@@ -45,7 +52,8 @@ export function SecaoControversia({ p }: { p: Pessoa }) {
   return (
     <div className="space-y-4">
       <div className="cartao p-4">
-        <p className="text-sm text-suave">
+        <IndiceControversia p={p} tamanho="texto" />
+        <p className="mt-2 text-sm text-suave">
           O índice (no topo da ficha) resume o que encontrei sobre <strong>processos e investigações</strong>, com pesos de 0 a 100 conforme a
           gravidade e o estágio (condenação administrativa ou enquadramento na Ficha Limpa pesam mais; investigação e citação, menos; arquivadas ou
           revertidas pesam zero) e menos peso para fatos antigos. <strong>Não é um julgamento</strong>: vale a presunção de inocência, e a ausência de
