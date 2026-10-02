@@ -1,3 +1,4 @@
+import { FORMULARIO_CAMPO_CANDIDATO, FORMULARIO_URL, REPO_GITHUB } from '../config'
 import { DEF, rotuloPosicao } from './areas'
 import { nomeLegivel, type Pessoa } from './dados'
 import { citadas, type Valores } from './posicao'
@@ -6,6 +7,20 @@ import { citadas, type Valores } from './posicao'
 export function urlNoticias(p: Pessoa): string {
   const q = `"${nomeLegivel(p.nomeUrna)}" deputado ${p.cargo} São Paulo ${p.partido}`
   return `https://news.google.com/search?q=${encodeURIComponent(q)}&hl=pt-BR&gl=BR&ceid=BR:pt-419`
+}
+
+/** Link do formulário de feedback/erro (ou da issue do GitHub, se não houver formulário). `candidato` pré-preenche o campo, se configurado. */
+export function urlFeedback(candidato?: string): string | null {
+  if (FORMULARIO_URL) {
+    if (!candidato || !FORMULARIO_CAMPO_CANDIDATO) return FORMULARIO_URL
+    const sep = FORMULARIO_URL.includes('?') ? '&' : '?'
+    return `${FORMULARIO_URL}${sep}usp=pp_url&${FORMULARIO_CAMPO_CANDIDATO}=${encodeURIComponent(candidato)}`
+  }
+  if (REPO_GITHUB) {
+    const titulo = candidato ? `Erro na ficha: ${candidato}` : 'Feedback do guia'
+    return `https://github.com/${REPO_GITHUB}/issues/new?title=${encodeURIComponent(titulo)}&labels=${candidato ? 'erro-na-ficha' : 'feedback'}`
+  }
+  return null
 }
 
 /** Pedido para qualquer assistente de IA com acesso à internet. Não menciona nenhuma IA específica. */

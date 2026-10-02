@@ -1,5 +1,5 @@
 import { Aba } from './components/Ui'
-import { REPO_GITHUB } from './config'
+import { urlFeedback } from './lib/pesquisa'
 import { EstadoProvider, useRota } from './lib/estado'
 import { Comparar } from './pages/Comparar'
 import { Ficha } from './pages/Ficha'
@@ -35,15 +35,10 @@ function Rotas() {
       <footer className="mx-auto max-w-6xl px-4 pb-10 text-xs text-suave">
         Curadoria pessoal, pesquisada em 29/09/2026 · Origem: curadoria inicial · Fotos e números: TSE (dados abertos) · Sem cookies nem rastreamento.
         <p className="mt-2 font-semibold text-tinta">Criado por Raphael Henrique de Carvalho Alves</p>
-        {REPO_GITHUB && (
+        {urlFeedback() && (
           <p className="mt-1">
             Testou e tem sugestão?{' '}
-            <a
-              className="font-semibold text-petroleo underline"
-              href={`https://github.com/${REPO_GITHUB}/issues/new?title=${encodeURIComponent('Feedback do guia')}&labels=feedback`}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <a className="font-semibold text-petroleo underline" href={urlFeedback()!} target="_blank" rel="noreferrer noopener">
               Enviar feedback
             </a>
           </p>

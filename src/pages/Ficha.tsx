@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { BaseSelo } from '../components/Cartao'
 import { Pesquisar } from '../components/Pesquisar'
+import { urlFeedback } from '../lib/pesquisa'
 import { AvisoPesquisa, BarraPosicao, Foto, Medidor, Numero, Secao } from '../components/Ui'
-import { EMAIL_CONTATO, REPO_GITHUB } from '../config'
+import { EMAIL_CONTATO } from '../config'
 import { DEFS, rotuloPosicao } from '../lib/areas'
 import { formatarData, nomeLegivel, porId, type Pessoa } from '../lib/dados'
 import { linkAtual, useEstado } from '../lib/estado'
@@ -12,9 +13,8 @@ import { afinidade, partidos, posicaoCandidato } from '../lib/posicao'
 function urlReportar(p: Pessoa): string | null {
   const titulo = `Erro na ficha: ${p.nomeUrna} (${p.id})`
   const corpo = `Ficha: ${linkAtual(`/candidato/${p.id}`)}\n\nO que está errado:\n\nFonte que confirma a correção (link):\n`
-  if (REPO_GITHUB) {
-    return `https://github.com/${REPO_GITHUB}/issues/new?title=${encodeURIComponent(titulo)}&body=${encodeURIComponent(corpo)}&labels=erro-na-ficha`
-  }
+  const feedback = urlFeedback(`${nomeLegivel(p.nomeUrna)} (${p.partido} ${p.numero})`)
+  if (feedback) return feedback
   if (EMAIL_CONTATO) return `mailto:${EMAIL_CONTATO}?subject=${encodeURIComponent(titulo)}&body=${encodeURIComponent(corpo)}`
   return null
 }
