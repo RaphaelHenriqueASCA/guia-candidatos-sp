@@ -1,4 +1,4 @@
-import { EMAIL_CONTATO, FORMULARIO_CAMPO_CANDIDATO, FORMULARIO_URL, REPO_GITHUB } from '../config'
+import { FORMULARIO_CAMPO_CANDIDATO, FORMULARIO_URL } from '../config'
 import { DEF, rotuloPosicao } from './areas'
 import { nomeLegivel, type Pessoa } from './dados'
 import { citadas, type Valores } from './posicao'
@@ -9,25 +9,17 @@ export function urlNoticias(p: Pessoa): string {
   return `https://news.google.com/search?q=${encodeURIComponent(q)}&hl=pt-BR&gl=BR&ceid=BR:pt-419`
 }
 
-/** Link do formulário de feedback/erro (ou da issue do GitHub, se não houver formulário). `candidato` pré-preenche o campo, se configurado. */
-export function urlFeedback(candidato?: string, linkFicha?: string): string | null {
+/**
+ * Destino do feedback/erro: o formulário externo (se FORMULARIO_URL estiver preenchido) ou o formulário interno do site.
+ * `candidato` (id e rótulo da ficha) serve ao "Reportar erro": no externo pré-preenche o campo, se configurado.
+ */
+export function destinoFeedback(candidato?: { id: string; rotulo: string }): { href: string; externo: boolean } {
   if (FORMULARIO_URL) {
-    if (!candidato || !FORMULARIO_CAMPO_CANDIDATO) return FORMULARIO_URL
+    if (!candidato || !FORMULARIO_CAMPO_CANDIDATO) return { href: FORMULARIO_URL, externo: true }
     const sep = FORMULARIO_URL.includes('?') ? '&' : '?'
-    return `${FORMULARIO_URL}${sep}usp=pp_url&${FORMULARIO_CAMPO_CANDIDATO}=${encodeURIComponent(candidato)}`
+    return { href: `${FORMULARIO_URL}${sep}usp=pp_url&${FORMULARIO_CAMPO_CANDIDATO}=${encodeURIComponent(candidato.rotulo)}`, externo: true }
   }
-  if (EMAIL_CONTATO) {
-    const assunto = candidato ? `Erro na ficha: ${candidato}` : 'Feedback do Guia de Candidatos SP 2026'
-    const corpo = candidato
-      ? `Ficha: ${linkFicha ?? ''}\n\nO que está errado:\n\nFonte que confirma a correção (link):\n`
-      : 'O que você achou? Algo estranho, erro ou sugestão:\n\nDispositivo/navegador (opcional):\n'
-    return `mailto:${EMAIL_CONTATO}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`
-  }
-  if (REPO_GITHUB) {
-    const titulo = candidato ? `Erro na ficha: ${candidato}` : 'Feedback do guia'
-    return `https://github.com/${REPO_GITHUB}/issues/new?title=${encodeURIComponent(titulo)}&labels=${candidato ? 'erro-na-ficha' : 'feedback'}`
-  }
-  return null
+  return { href: candidato ? `#/feedback/${candidato.id}` : '#/feedback', externo: false }
 }
 
 /** Pedido para qualquer assistente de IA com acesso à internet. Não menciona nenhuma IA específica. */

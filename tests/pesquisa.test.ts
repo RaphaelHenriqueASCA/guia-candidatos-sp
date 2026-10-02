@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { buscar, porId } from '../src/lib/dados'
-import { IAS, pedidoDePesquisa, urlFeedback, urlNoticias } from '../src/lib/pesquisa'
+import { IAS, pedidoDePesquisa, urlNoticias } from '../src/lib/pesquisa'
 
 const p = porId('estadual-50300')!
 
@@ -42,15 +42,5 @@ describe('busca de candidato', () => {
     expect(buscar('gregory franca').some((x) => x.id === 'federal-1300')).toBe(true)
     expect(buscar('psol', 20).every((x) => x.partido === 'PSOL')).toBe(true)
     expect(buscar('')).toEqual([])
-  })
-})
-
-describe('feedback por e-mail', () => {
-  it('abre o programa de e-mail com assunto e corpo, e informa o candidato quando é erro de ficha', () => {
-    const geral = urlFeedback()!
-    expect(geral).toMatch(/^mailto:[^?]+\?subject=/)
-    const erro = decodeURIComponent(urlFeedback('Keit Lima (PSOL 50300)', 'https://exemplo/#/candidato/estadual-50300')!)
-    expect(erro).toContain('Erro na ficha: Keit Lima')
-    expect(erro).toContain('https://exemplo/#/candidato/estadual-50300')
   })
 })

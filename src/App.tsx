@@ -1,5 +1,6 @@
 import { Aba } from './components/Ui'
-import { urlFeedback } from './lib/pesquisa'
+import { destinoFeedback } from './lib/pesquisa'
+import { Feedback } from './pages/Feedback'
 import { EstadoProvider, useRota } from './lib/estado'
 import { Comparar } from './pages/Comparar'
 import { Ficha } from './pages/Ficha'
@@ -14,6 +15,7 @@ function Rotas() {
   if (secao === 'candidato') pagina = <Ficha id={resto ?? ''} />
   else if (secao === 'comparar' && resto === 'meus') pagina = <Comparar ids={[]} modo="meus" alvo={extra} />
   else if (secao === 'comparar') pagina = <Comparar ids={(resto ?? '').split(',').filter(Boolean)} />
+  else if (secao === 'feedback') pagina = <Feedback id={resto} />
   else if (secao === 'valores') pagina = <Valores />
   else if (secao === 'metodologia') pagina = <Metodologia />
   else pagina = <Inicio />
@@ -35,14 +37,16 @@ function Rotas() {
       <footer className="mx-auto max-w-6xl px-4 pb-10 text-xs text-suave">
         Curadoria pessoal, pesquisada em 29/09/2026 · Origem: curadoria inicial · Fotos e números: TSE (dados abertos) · Sem cookies nem rastreamento.
         <p className="mt-2 font-semibold text-tinta">Criado por Raphael Henrique de Carvalho Alves</p>
-        {urlFeedback() && (
-          <p className="mt-1">
-            Testou e tem sugestão?{' '}
-            <a className="font-semibold text-petroleo underline" href={urlFeedback()!} target="_blank" rel="noreferrer noopener">
-              Enviar feedback
-            </a>
-          </p>
-        )}
+        <p className="mt-1">
+          Testou e tem sugestão?{' '}
+          <a
+            className="font-semibold text-petroleo underline"
+            href={destinoFeedback().href}
+            {...(destinoFeedback().externo ? { target: '_blank', rel: 'noreferrer noopener' } : {})}
+          >
+            Enviar feedback
+          </a>
+        </p>
       </footer>
     </>
   )

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BaseSelo } from '../components/Cartao'
 import { Pesquisar } from '../components/Pesquisar'
-import { urlFeedback } from '../lib/pesquisa'
+import { destinoFeedback } from '../lib/pesquisa'
 import { AvisoPesquisa, BarraPosicao, Foto, Medidor, Numero, Secao } from '../components/Ui'
 import { DEFS, rotuloPosicao } from '../lib/areas'
 import { formatarData, nomeLegivel, porId, type Pessoa } from '../lib/dados'
@@ -9,8 +9,8 @@ import { linkAtual, useEstado } from '../lib/estado'
 import { rotuloAfinidade, rotuloDoc } from '../lib/nota'
 import { afinidade, partidos, posicaoCandidato } from '../lib/posicao'
 
-function urlReportar(p: Pessoa): string | null {
-  return urlFeedback(`${nomeLegivel(p.nomeUrna)} (${p.partido} ${p.numero})`, linkAtual(`/candidato/${p.id}`))
+function destinoReportar(p: Pessoa) {
+  return destinoFeedback({ id: p.id, rotulo: `${nomeLegivel(p.nomeUrna)} (${p.partido} ${p.numero})` })
 }
 
 export function CopiarLink({ hash, rotulo = 'Copiar link' }: { hash: string; rotulo?: string }) {
@@ -77,7 +77,7 @@ export function Ficha({ id }: { id: string }) {
   }
   const c = p.curado
   const af = temValores ? afinidade(p, valores) : null
-  const reportar = urlReportar(p)
+  const reportar = destinoReportar(p)
   const nome = nomeLegivel(p.nomeUrna)
   const info = partidos.partidos[p.partido]
 
@@ -108,7 +108,7 @@ export function Ficha({ id }: { id: string }) {
           <div className="mt-5 flex flex-wrap gap-2">
             <CopiarLink hash={`/candidato/${p.id}`} />
             <a className="btn-sec" href={`#/comparar/${p.id}`}>Comparar</a>
-            {reportar && <a className="btn-sec" href={reportar} target="_blank" rel="noreferrer noopener">Reportar erro</a>}
+            <a className="btn-sec" href={reportar.href} {...(reportar.externo ? { target: '_blank', rel: 'noreferrer noopener' } : {})}>Reportar erro</a>
           </div>
         </div>
       </div>
