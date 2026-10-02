@@ -20,9 +20,31 @@ export function useRota(): string {
   return rota
 }
 
+// Guardado só neste navegador (localStorage), nunca enviado a servidor. Pode falhar (janela privada etc.).
+const CHAVE_VALORES = 'guia-sp.valores'
+const CHAVE_TEXTO = 'guia-sp.texto'
+const ler = (k: string): string | null => {
+  try {
+    return window.localStorage.getItem(k)
+  } catch {
+    return null
+  }
+}
+const gravar = (k: string, v: string) => {
+  try {
+    if (v) window.localStorage.setItem(k, v)
+    else window.localStorage.removeItem(k)
+  } catch {
+    /* sem armazenamento: o site continua funcionando só com a URL */
+  }
+}
+
 type Ctx = {
   valores: Valores
   temValores: boolean
+  /** Texto que a pessoa escreveu/ditou, guardado para não precisar repetir ao trocar de tela. */
+  texto: string
+  setTexto: (t: string | ((atual: string) => string)) => void
   definirArea: (a: Area, pos: number | undefined) => void
   definirTodos: (v: Valores) => void
   limpar: () => void
@@ -33,15 +55,22 @@ type Ctx = {
 const Contexto = createContext<Ctx | null>(null)
 
 export function EstadoProvider({ children }: { children: ReactNode }) {
-  const [valores, setValores] = useState<Valores>(() => valoresDeQuery(new URLSearchParams(window.location.search).get('v')))
+  const [valores, setValores] = useState<Valores>(() => {
+    const daUrl = valoresDeQuery(new URLSearchParams(window.location.search).get('v'))
+    return citadas(daUrl).length ? daUrl : valoresDeQuery(ler(CHAVE_VALORES))
+  })
+  const [texto, setTexto] = useState<string>(() => ler(CHAVE_TEXTO) ?? '')
   const [comparar, setComparar] = useState<string[]>([])
 
-  // Os valores ficam só na URL (?v=educacao:-80,familia:60): sem cookies, sem servidor.
+  // Os valores ficam na URL (?v=educacao:-80,familia:60, para compartilhar) e neste navegador.
   useEffect(() => {
+    const q = valoresParaQuery(valores)
     const url = new URL(window.location.href)
-    url.search = citadas(valores).length ? `?v=${valoresParaQuery(valores)}` : ''
+    url.search = q ? `?v=${q}` : ''
     window.history.replaceState(null, '', url)
+    gravar(CHAVE_VALORES, q)
   }, [valores])
+  useEffect(() => gravar(CHAVE_TEXTO, texto), [texto])
 
   const definirArea = useCallback((a: Area, pos: number | undefined) => {
     setValores((v) => {
@@ -52,15 +81,18 @@ export function EstadoProvider({ children }: { children: ReactNode }) {
     })
   }, [])
   const definirTodos = useCallback((v: Valores) => setValores(v), [])
-  const limpar = useCallback(() => setValores({}), [])
+  const limpar = useCallback(() => {
+    setValores({})
+    setTexto('')
+  }, [])
   const alternarComparar = useCallback(
     (id: string) => setComparar((l) => (l.includes(id) ? l.filter((x) => x !== id) : l.length >= 3 ? l : [...l, id])),
     [],
   )
 
   const valor = useMemo(
-    () => ({ valores, temValores: citadas(valores).length > 0, definirArea, definirTodos, limpar, comparar, alternarComparar }),
-    [valores, definirArea, definirTodos, limpar, comparar, alternarComparar],
+    () => ({ valores, temValores: citadas(valores).length > 0, texto, setTexto, definirArea, definirTodos, limpar, comparar, alternarComparar }),
+    [valores, texto, definirArea, definirTodos, limpar, comparar, alternarComparar],
   )
   return <Contexto.Provider value={valor}>{children}</Contexto.Provider>
 }

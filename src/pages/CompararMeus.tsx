@@ -13,8 +13,7 @@ import { CopiarLink } from './Ficha'
 const veredito = (d: number) => (d <= 40 ? { t: 'Perto', c: 'text-verde' } : d <= 100 ? { t: 'Distante', c: 'text-ambar' } : { t: 'Opostos', c: 'text-vermelho' })
 
 export function CompararMeus({ alvo }: { alvo?: string }) {
-  const { valores, temValores, definirTodos } = useEstado()
-  const [texto, setTexto] = useState('')
+  const { valores, temValores, texto, setTexto, definirTodos } = useEstado()
   const [aviso, setAviso] = useState('')
   const [q, setQ] = useState('')
   const p = alvo ? porId(alvo) : undefined
@@ -163,7 +162,6 @@ export function CompararMeus({ alvo }: { alvo?: string }) {
           <div>
             <h3 className="mb-2 text-sm font-bold text-petroleo">Quer saber mais sobre este candidato?</h3>
             <Pesquisar p={p} />
-            <p className="mt-1 text-xs text-suave">A busca abre o Google Notícias com o nome dele; seus valores não são enviados. O pedido copiado é para você colar no seu chat.</p>
           </div>
           <CopiarLink hash={`/comparar/meus/${p.id}`} rotulo="Copiar link desta comparação" />
         </section>

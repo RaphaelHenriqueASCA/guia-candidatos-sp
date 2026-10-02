@@ -9,8 +9,7 @@ import { analisarValores, sanitizar, type Analise } from '../lib/valores'
 import { CopiarLink } from './Ficha'
 
 export function Valores() {
-  const { valores, temValores, definirArea, definirTodos, limpar } = useEstado()
-  const [texto, setTexto] = useState('')
+  const { valores, temValores, texto, setTexto, definirArea, definirTodos, limpar } = useEstado()
   const [parcial, setParcial] = useState('')
   const [analise, setAnalise] = useState<Analise | null>(null)
   const [cargo, setCargo] = useState<'federal' | 'estadual'>('federal')
@@ -170,8 +169,9 @@ export function Valores() {
             {temValores && <CopiarLink hash="/" rotulo="Copiar link com meus valores" />}
           </div>
           <p className="mt-4 text-sm text-suave">
-            Seus valores ficam só no endereço da página (<code>?v=</code>), para compartilhar. Nada é salvo em cookies nem enviado a servidor. Como
-            o texto vira posições: veja a <a className="font-semibold text-petroleo underline" href="#/metodologia">Metodologia</a>.
+            Seus valores e o texto ficam guardados <strong>só neste navegador</strong> (para você não repetir ao trocar de tela ou voltar depois) e
+            no endereço da página (<code>?v=</code>), para compartilhar. Nada é enviado a servidor nem a cookies; “Limpar tudo” apaga. Como o
+            texto vira posições: veja a <a className="font-semibold text-petroleo underline" href="#/metodologia">Metodologia</a>.
           </p>
         </div>
 

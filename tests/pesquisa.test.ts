@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { buscar, porId } from '../src/lib/dados'
-import { pedidoDePesquisa, urlNoticias } from '../src/lib/pesquisa'
+import { IAS, pedidoDePesquisa, urlNoticias } from '../src/lib/pesquisa'
 
 const p = porId('estadual-50300')!
 
@@ -17,6 +17,21 @@ describe('pesquisa sob demanda', () => {
     expect(t).toContain('Transporte e mobilidade: 60')
     expect(t).toContain('Keit Lima')
     expect(pedidoDePesquisa(p, {})).toContain('educação, família')
+  })
+})
+
+describe('pesquisa em IAs gratuitas', () => {
+  const pedido = pedidoDePesquisa(p, { educacao: -80 })
+  it('o pedido não menciona nenhuma IA específica', () => {
+    expect(pedido).not.toMatch(/claude|chatgpt|gemini|deepseek|perplexity/i)
+  })
+  it('IAs com link abrem já com o pedido codificado; as demais só abrem o site', () => {
+    for (const ia of IAS) {
+      const u = ia.url(pedido)
+      if (ia.modo === 'link') expect(u).toContain(encodeURIComponent('Keit Lima'))
+      else expect(u).not.toContain('?')
+    }
+    expect(IAS.map((i) => i.nome)).toEqual(expect.arrayContaining(['Gemini', 'DeepSeek', 'Perplexity', 'ChatGPT']))
   })
 })
 

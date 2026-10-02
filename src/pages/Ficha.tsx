@@ -133,8 +133,8 @@ export function Ficha({ id }: { id: string }) {
       <Secao titulo="Saiba mais sobre este candidato" id="mais">
         <Pesquisar p={p} />
         <p className="mt-2 text-sm text-suave">
-          O site é estático e não pesquisa sozinho. A busca abre o Google Notícias com o nome do candidato (seus valores não são enviados), e o pedido
-          copiado, já com os seus valores, é para você colar no seu chat do Claude.{' '}
+          O site é estático e não pesquisa sozinho. O Google Notícias recebe só o nome do candidato. Nas IAs, o pedido já leva os seus valores e a
+          pesquisa roda no site da IA escolhida.{' '}
           <a className="font-semibold text-petroleo underline" href={`#/comparar/meus/${p.id}`}>Comparar meus valores com ele</a>
         </p>
       </Secao>
