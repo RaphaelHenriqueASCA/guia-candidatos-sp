@@ -81,7 +81,7 @@ export function Metodologia() {
 
       <Secao titulo="Índice de controvérsias" id="m-controversias">
         <p>
-          É um número de 0 a 100 que resume o que foi encontrado sobre <strong>processos e investigações</strong> de cada candidato. Ele não mede
+          É um número de 0 a 100 (mostrado em %) que resume o que foi encontrado sobre <strong>processos e investigações</strong> de cada candidato. Ele não mede
           caráter nem prevê resultado de processo: vale a <strong>presunção de inocência</strong>, e “nenhuma ocorrência encontrada” significa só que a
           pesquisa (limitada às fontes listadas) não achou nada.
         </p>

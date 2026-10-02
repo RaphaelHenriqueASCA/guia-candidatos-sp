@@ -981,7 +981,6 @@
       "Em 2026 apresentou o PL 06/26 e emendas ao orçamento para o descongelamento dos 583 dias de servidores estaduais."
     ],
     "pontosConflito": [
-      "Foi expulso do PT em 2002, após votar contra o orçamento educacional da gestão Marta Suplicy (a expulsão virou suspensão ao recorrer), e de novo em 2005, por se lançar candidato à presidência da Câmara Municipal.",
       "Em 2018, em debate sobre o “Escola sem Partido”, o deputado Douglas Garcia o acusou de agressão; Giannazi disse que Garcia tentava tirar seu microfone."
     ],
     "fontes": [
@@ -1009,20 +1008,6 @@
         "situacao": "em_curso",
         "ano": 2018,
         "descricao": "O deputado Douglas Garcia o acusou de agressão em debate sobre o “Escola sem Partido”; Giannazi disse que Garcia tentava tirar seu microfone.",
-        "fonte": "https://pt.wikipedia.org/wiki/Carlos_Giannazi"
-      },
-      {
-        "tipo": "sancao_etica",
-        "situacao": "nao_definitiva",
-        "ano": 2002,
-        "descricao": "Expulso do PT após votar contra o orçamento educacional da gestão Marta Suplicy; a expulsão virou suspensão ao recorrer.",
-        "fonte": "https://pt.wikipedia.org/wiki/Carlos_Giannazi"
-      },
-      {
-        "tipo": "sancao_etica",
-        "situacao": "definitiva",
-        "ano": 2005,
-        "descricao": "Expulso novamente do PT por se lançar candidato à presidência da Câmara Municipal.",
         "fonte": "https://pt.wikipedia.org/wiki/Carlos_Giannazi"
       }
     ]

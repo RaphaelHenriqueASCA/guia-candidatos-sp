@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BaseSelo } from '../components/Cartao'
-import { SecaoControversia } from '../components/Controversia'
+import { IndiceControversia, SecaoControversia } from '../components/Controversia'
 import { Pesquisar } from '../components/Pesquisar'
 import { destinoFeedback } from '../lib/pesquisa'
 import { AvisoPesquisa, BarraPosicao, Foto, Medidor, Numero, Secao } from '../components/Ui'
@@ -93,6 +93,7 @@ export function Ficha({ id }: { id: string }) {
           <h1 className="text-3xl font-extrabold leading-tight">{nome}</h1>
           <div className="mt-1"><Numero n={p.numero} className="text-6xl" /></div>
           <div className="mt-2"><BaseSelo p={p} /></div>
+          <div className="mt-4"><IndiceControversia p={p} grande /></div>
           <div className="mt-5 grid gap-5 md:grid-cols-2">
             {temValores ? (
               <Medidor

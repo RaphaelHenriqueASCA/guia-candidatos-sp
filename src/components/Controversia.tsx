@@ -1,7 +1,6 @@
 import { controversiaDe, formatarData, type Pessoa } from '../lib/dados'
-import { rotuloIndice } from '../lib/controversia'
+import { faixa } from '../lib/nota'
 import type { Julgamento } from '../lib/schema'
-import { Medidor } from './Ui'
 
 const ROTULO_JG: Record<Julgamento, string> = {
   deferido: 'Deferido',
@@ -11,40 +10,47 @@ const ROTULO_JG: Record<Julgamento, string> = {
   renuncia: 'Renúncia',
 }
 
-/** Medidor compacto do índice de controvérsias (cores invertidas: verde = menos controvérsias). */
-export function MedidorControversia({ p }: { p: Pessoa }) {
-  const c = controversiaDe(p)
-  if (c.indice === null) {
-    return (
-      <div>
-        <div className="text-xs font-semibold text-suave">Índice de controvérsias</div>
-        <div className="text-sm text-suave">Não pesquisado (sem dados de processos para este candidato).</div>
-      </div>
-    )
-  }
+// quanto menor o índice, melhor: a cor segue 100 - índice (verde = poucas controvérsias)
+const COR: Record<string, string> = { vermelho: 'text-vermelho', ambar: 'text-ambar', verde: 'text-verde' }
+
+/** Índice de controvérsias só como número em %, sem barra. `grande` = destaque na ficha. */
+export function IndiceControversia({ p, grande = false }: { p: Pessoa; grande?: boolean }) {
+  const { indice, pesquisado } = controversiaDe(p)
+  const cor = indice === null ? 'text-suave' : COR[faixa(100 - indice).cor]
   return (
-    <Medidor
-      titulo="Índice de controvérsias (processos e investigações)"
-      nota={c.indice}
-      rotulo={rotuloIndice(c.indice)}
-      invertida
-      ajuda={!c.pesquisado ? 'Só considera a Ficha Limpa no TSE; processos não foram pesquisados.' : undefined}
-    />
+    <div
+      className={grande ? 'inline-block rounded-2xl border border-borda bg-fundo px-4 py-2' : 'flex items-baseline justify-between gap-2'}
+      title={!pesquisado && indice !== null ? 'Só considera a Ficha Limpa no TSE; processos não foram pesquisados.' : undefined}
+    >
+      <div className={grande ? 'text-xs font-semibold uppercase tracking-wide text-suave' : 'text-xs font-semibold text-suave'}>
+        Índice de controvérsias
+      </div>
+      {indice === null ? (
+        <div className={grande ? 'text-lg font-bold text-suave' : 'text-sm font-semibold text-suave'}>Não pesquisado</div>
+      ) : (
+        <div
+          className={`font-extrabold tabular-nums leading-none ${cor} ${grande ? 'mt-1 text-6xl' : 'text-xl'}`}
+          aria-label={`Índice de controvérsias: ${indice} por cento`}
+        >
+          {indice}%
+        </div>
+      )}
+    </div>
   )
 }
 
-/** Seção completa da ficha: índice, ocorrências com peso e fonte, e situação do registro no TSE. */
+/** Seção da ficha: como ler o índice, ocorrências com peso e fonte, e situação do registro no TSE. */
 export function SecaoControversia({ p }: { p: Pessoa }) {
   const c = controversiaDe(p)
   return (
     <div className="space-y-4">
       <div className="cartao p-4">
-        <MedidorControversia p={p} />
-        <p className="mt-3 text-sm text-suave">
-          O índice resume o que encontrei sobre <strong>processos e investigações</strong>, com pesos de 0 a 100 conforme a gravidade e o estágio
-          (condenação administrativa ou enquadramento na Ficha Limpa pesam mais; investigação e citação, menos; arquivadas ou revertidas pesam zero) e
-          menos peso para fatos antigos. <strong>Não é um julgamento</strong>: vale a presunção de inocência, e a ausência de ocorrências só quer
-          dizer que não encontrei nenhuma, não que não existam. Veja o cálculo na <a className="font-semibold text-petroleo underline" href="#/metodologia">Metodologia</a>.
+        <p className="text-sm text-suave">
+          O índice (no topo da ficha) resume o que encontrei sobre <strong>processos e investigações</strong>, com pesos de 0 a 100 conforme a
+          gravidade e o estágio (condenação administrativa ou enquadramento na Ficha Limpa pesam mais; investigação e citação, menos; arquivadas ou
+          revertidas pesam zero) e menos peso para fatos antigos. <strong>Não é um julgamento</strong>: vale a presunção de inocência, e a ausência de
+          ocorrências só quer dizer que não encontrei nenhuma, não que não existam. Veja o cálculo na{' '}
+          <a className="font-semibold text-petroleo underline" href="#/metodologia">Metodologia</a>.
         </p>
         {p.jg && (
           <p className="mt-2 text-sm">
