@@ -3,8 +3,8 @@
 /** Preencha depois de criar o repositório, ex.: 'usuario/guia-candidatos-sp'. Habilita "Reportar erro" via issue do GitHub. */
 export const REPO_GITHUB = 'RaphaelHenriqueASCA/guia-candidatos-sp'
 
-/** Alternativa ao GitHub: e-mail público de contato para "Reportar erro" (deixe vazio para não expor nenhum). */
-export const EMAIL_CONTATO = ''
+/** E-mail público que recebe feedback e "Reportar erro" (abre o programa de e-mail da pessoa). Usado se não houver FORMULARIO_URL. Vazio = usa o GitHub. */
+export const EMAIL_CONTATO = 'raphafisicosup@gmail.com'
 
 /**
  * Link do formulário gratuito (Google Forms) para feedback e "Reportar erro", sem exigir conta no GitHub.

@@ -1,4 +1,4 @@
-import { FORMULARIO_CAMPO_CANDIDATO, FORMULARIO_URL, REPO_GITHUB } from '../config'
+import { EMAIL_CONTATO, FORMULARIO_CAMPO_CANDIDATO, FORMULARIO_URL, REPO_GITHUB } from '../config'
 import { DEF, rotuloPosicao } from './areas'
 import { nomeLegivel, type Pessoa } from './dados'
 import { citadas, type Valores } from './posicao'
@@ -10,11 +10,18 @@ export function urlNoticias(p: Pessoa): string {
 }
 
 /** Link do formulário de feedback/erro (ou da issue do GitHub, se não houver formulário). `candidato` pré-preenche o campo, se configurado. */
-export function urlFeedback(candidato?: string): string | null {
+export function urlFeedback(candidato?: string, linkFicha?: string): string | null {
   if (FORMULARIO_URL) {
     if (!candidato || !FORMULARIO_CAMPO_CANDIDATO) return FORMULARIO_URL
     const sep = FORMULARIO_URL.includes('?') ? '&' : '?'
     return `${FORMULARIO_URL}${sep}usp=pp_url&${FORMULARIO_CAMPO_CANDIDATO}=${encodeURIComponent(candidato)}`
+  }
+  if (EMAIL_CONTATO) {
+    const assunto = candidato ? `Erro na ficha: ${candidato}` : 'Feedback do Guia de Candidatos SP 2026'
+    const corpo = candidato
+      ? `Ficha: ${linkFicha ?? ''}\n\nO que está errado:\n\nFonte que confirma a correção (link):\n`
+      : 'O que você achou? Algo estranho, erro ou sugestão:\n\nDispositivo/navegador (opcional):\n'
+    return `mailto:${EMAIL_CONTATO}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`
   }
   if (REPO_GITHUB) {
     const titulo = candidato ? `Erro na ficha: ${candidato}` : 'Feedback do guia'
