@@ -2,7 +2,8 @@ import Fuse from 'fuse.js'
 import curados from '../../data/candidatos.json'
 import { normalizar } from './valores'
 import tse from '../../data/tse-sp.json'
-import { candidatosSchema, tseSchema, type Candidato } from './schema'
+import { calcularControversia, type Controversia } from './controversia'
+import { candidatosSchema, tseSchema, type Candidato, type FichaLimpa, type Julgamento } from './schema'
 
 const listaCurada = candidatosSchema.parse(curados)
 const listaTse = tseSchema.parse(tse)
@@ -16,6 +17,9 @@ export type Pessoa = {
   partido: string
   posicoes?: Candidato['posicoes']
   curado?: Candidato
+  /** julgamento do registro de 2026 no TSE e marca da Ficha Limpa (LC 64/90), quando publicados */
+  jg?: Julgamento
+  fl?: FichaLimpa
 }
 
 const curadoPorId = new Map(listaCurada.map((c) => [c.id, c]))
@@ -23,7 +27,7 @@ const curadoPorId = new Map(listaCurada.map((c) => [c.id, c]))
 export const pessoas: Pessoa[] = listaTse.map((t) => {
   const c = curadoPorId.get(t.id)
   return c
-    ? { id: t.id, cargo: t.cargo, numero: t.numero, nomeUrna: c.nomeUrna, partido: c.partido, posicoes: c.posicoes, curado: c }
+    ? { id: t.id, cargo: t.cargo, numero: t.numero, nomeUrna: c.nomeUrna, partido: c.partido, posicoes: c.posicoes, curado: c, jg: t.jg, fl: t.fl }
     : t
 })
 
@@ -67,4 +71,9 @@ export function nomeLegivel(nome: string): string {
     .split(' ')
     .map((p) => (['de', 'da', 'do', 'das', 'dos', 'e'].includes(p) ? p : p.charAt(0).toUpperCase() + p.slice(1)))
     .join(' ')
+}
+
+/** Índice de controvérsias (0–100) de qualquer candidato: Ficha Limpa (TSE) + processos e investigações pesquisados. */
+export function controversiaDe(p: Pessoa): Controversia {
+  return calcularControversia({ ocorrencias: p.curado?.ocorrencias, fl: p.fl, pesquisado: !!p.curado })
 }

@@ -17,6 +17,7 @@ Regras:
 - Sem dados pessoais sensíveis fora do que for plataforma pública. Tom neutro, sem adjetivos.
 - "pontosCompativeis" e "pontosConflito": frases curtas, cada uma com base nas fontes.
 - "posicoes": para cada área em que houver EVIDÊNCIA (falas, votos, projetos de lei, atuação), uma posição de -100 (muito progressista) a +100 (muito conservador), 0 = neutro, com uma "nota" de uma frase dizendo em que a posição se baseia. Áreas possíveis: educacao, familia, seguranca, economia, saude, ambiente, transporte, minorias, religiao. Não preencha áreas sem evidência (o site usa a posição do partido nelas). Acusações ainda não julgadas não definem posição: descreva-as em "pontosConflito".
+- "ocorrencias": liste TODO processo, condenação, investigação ou citação encontrada, cada uma com "tipo" (condenacao_criminal, condenacao_administrativa, condenacao_civel, sancao_etica, acao_em_curso, investigacao, citacao ou representacao), "situacao" (definitiva, nao_definitiva, em_curso ou arquivada_ou_revertida), "ano", "descricao" (factual, com a defesa quando existir) e "fonte" (uma URL que esteja em "fontes"). Isso alimenta o índice de controvérsias; a Ficha Limpa vem do TSE automaticamente. Se não achar nada, use [].
 - "pontosCompativeis" = pontos a favor; "pontosConflito" = pontos de atenção (neutros, factuais).
 - "doc" (régua de documentação): 0–29 pouca fonte, única ou partidária; 30–59 poucas fontes ou enviesadas; 60–79 ao menos 2 fontes jornalísticas independentes ou documento oficial; 80–100 várias fontes independentes e/ou documento primário.
 - "origem": "curadoria inicial" e "pesquisadoEm": a data de hoje.
@@ -30,6 +31,7 @@ Formato exato:
   "numero": "1234",
   "doc": 0,
   "posicoes": {"educacao": {"valor": -80, "nota": "Em que evidência esta posição se baseia."}},
+  "ocorrencias": [{"tipo": "investigacao", "situacao": "em_curso", "ano": 2025, "descricao": "...", "fonte": "https://..."}],
   "pontosCompativeis": ["..."],
   "pontosConflito": ["..."],
   "fontes": [{"titulo": "...", "url": "https://...", "data": "AAAA-MM-DD"}],

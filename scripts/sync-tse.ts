@@ -49,8 +49,35 @@ const linhas = parse(entrada.getData().toString('latin1'), { columns: true, deli
 console.log('Baixando fotos oficiais...')
 const zipFotos = new AdmZip(await baixar(URL_FOTOS, `foto_cand2026_${UF}_div.zip`))
 
+// Julgamento do registro de candidatura (historico_candidatura) e motivos de indeferimento (motivo_cassacao).
+// "Inelegibilidade infraconstitucional (LC 64/90)" é o enquadramento da Lei da Ficha Limpa.
+console.log('Baixando situação do registro e motivos de indeferimento...')
+const lerCsv = (zip: AdmZip, nome: string) => {
+  const e = zip.getEntry(nome)
+  if (!e) return [] as Record<string, string>[]
+  return parse(e.getData().toString('latin1'), { columns: true, delimiter: ';', relax_quotes: true, skip_empty_lines: true }) as Record<string, string>[]
+}
+const hist = lerCsv(new AdmZip(await baixar(`${BASE}/odsele/historico_candidatura/historico_candidatura_2026.zip`, 'historico_candidatura.zip')), `historico_candidatura_2026_${UF}.csv`)
+const motivos = lerCsv(new AdmZip(await baixar(`${BASE}/odsele/motivo_cassacao/motivo_cassacao_2026.zip`, 'motivo_cassacao.zip')), `motivo_cassacao_2026_${UF}.csv`)
+const CODIGO_JG: Record<string, string> = {
+  Deferido: 'deferido',
+  'Deferido em prazo recursal ou com recurso': 'deferido_recurso',
+  Indeferido: 'indeferido',
+  'Indeferido em prazo recursal ou com recurso': 'indeferido_recurso',
+  Renúncia: 'renuncia',
+}
+const julgamento = new Map<string, string>()
+for (const r of hist) if (r.ANO_ELEICAO === '2026' && CODIGO_JG[r.DS_SITUACAO_JULGAMENTO]) julgamento.set(r.SQ_CANDIDATO, CODIGO_JG[r.DS_SITUACAO_JULGAMENTO])
+const fichaLimpa = new Set<string>()
+for (const r of motivos) if (/infraconstitucional/i.test(r.DS_MOTIVO)) fichaLimpa.add(r.SQ_CANDIDATO)
+function marcaFichaLimpa(sq: string): 'barrado' | 'em_recurso' | 'citado' | undefined {
+  if (!fichaLimpa.has(sq)) return undefined
+  const j = julgamento.get(sq)
+  return j === 'indeferido' ? 'barrado' : j === 'indeferido_recurso' ? 'em_recurso' : 'citado'
+}
+
 // Todos os candidatos a deputado federal/estadual de SP (sem CPF, e-mail ou outros dados pessoais): base do ranking por valores.
-type Linha = { id: string; cargo: 'federal' | 'estadual'; numero: string; nomeUrna: string; partido: string }
+type Linha = { id: string; cargo: 'federal' | 'estadual'; numero: string; nomeUrna: string; partido: string; jg?: string; fl?: 'barrado' | 'em_recurso' | 'citado' }
 const brutos: (Linha & { sq: string })[] = []
 for (const l of linhas) {
   const cargo = l.DS_CARGO === CARGO_TSE.federal ? 'federal' : l.DS_CARGO === CARGO_TSE.estadual ? 'estadual' : null
@@ -66,7 +93,9 @@ const todos: Linha[] = []
 let fotosTodas = 0
 for (const { sq, ...b } of brutos) {
   if (repetidos.includes(b.id)) continue
-  todos.push(b)
+  const jg = julgamento.get(sq)
+  const fl = marcaFichaLimpa(sq)
+  todos.push({ ...b, ...(jg ? { jg } : {}), ...(fl ? { fl } : {}) })
   const f = zipFotos.getEntry(`F${UF}${sq}_div.jpg`)
   if (f) {
     writeFileSync(new URL(`public/fotos/${b.id}.jpg`, raiz), f.getData())
@@ -76,6 +105,8 @@ for (const { sq, ...b } of brutos) {
 todos.sort((a, b) => a.id.localeCompare(b.id))
 writeFileSync(new URL('data/tse-sp.json', raiz), JSON.stringify(todos))
 console.log(`TSE ${UF}: ${todos.length} candidatos a deputado; ${fotosTodas} fotos salvas.`)
+const comFl = todos.filter((t) => t.fl)
+console.log(`Ficha Limpa (LC 64/90) nos registros: ${comFl.length} (barrados: ${comFl.filter((t) => t.fl === 'barrado').length}, em recurso: ${comFl.filter((t) => t.fl === 'em_recurso').length}, citados: ${comFl.filter((t) => t.fl === 'citado').length}).`)
 if (repetidos.length) console.warn(`Números repetidos no TSE, omitidos: ${repetidos.join(', ')}`)
 
 const divergencias: string[] = []

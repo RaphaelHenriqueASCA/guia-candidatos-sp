@@ -79,6 +79,33 @@ export function Metodologia() {
         </p>
       </Secao>
 
+      <Secao titulo="Índice de controvérsias" id="m-controversias">
+        <p>
+          É um número de 0 a 100 que resume o que foi encontrado sobre <strong>processos e investigações</strong> de cada candidato. Ele não mede
+          caráter nem prevê resultado de processo: vale a <strong>presunção de inocência</strong>, e “nenhuma ocorrência encontrada” significa só que a
+          pesquisa (limitada às fontes listadas) não achou nada.
+        </p>
+        <p className="mt-2">Cada ocorrência recebe um peso de 0 a 100 conforme o tipo e a situação:</p>
+        <ul className="ml-5 mt-1 list-disc space-y-1">
+          <li><strong>Ficha Limpa (dados do TSE):</strong> registro indeferido por inelegibilidade da LC 64/90 = 100; em recurso = 80; citado sem julgamento final = 60.</li>
+          <li><strong>Condenação administrativa ou por improbidade:</strong> definitiva = 90; cabe recurso = 70.</li>
+          <li><strong>Condenação criminal:</strong> definitiva = 100; cabe recurso = 75.</li>
+          <li><strong>Condenação cível:</strong> definitiva = 50; cabe recurso = 40.</li>
+          <li><strong>Sanção ético-disciplinar</strong> (conselho de ética, partido): definitiva = 30; cabe recurso = 20.</li>
+          <li><strong>Réu em ação em curso</strong> = 45; <strong>investigação aberta</strong> = 25; <strong>citação sem investigação formal</strong> = 10; <strong>representação de terceiros</strong> = 8.</li>
+          <li><strong>Arquivada, absolvido ou decisão revertida:</strong> aparece na ficha, mas pesa 0.</li>
+        </ul>
+        <p className="mt-2">
+          Fatos com mais de 10 anos pesam 50% e com mais de 20 anos, 25%. As ocorrências são combinadas de forma que o total nunca passe de 100:
+          índice = 100 × (1 − Π(1 − peso/100)). Faixas: 1–19 baixo, 20–49 moderado, 50–79 alto, 80–100 muito alto.
+        </p>
+        <p className="mt-2 text-suave">
+          Limites: para todos os candidatos de SP o site usa a situação do registro no TSE (Ficha Limpa); processos e investigações só foram
+          pesquisados nos candidatos com curadoria, com base em fontes públicas e sem acesso a sistemas judiciais. Os pesos são uma escolha do autor.
+          Candidatos sem pesquisa aparecem como “não pesquisado”, e não como zero.
+        </p>
+      </Secao>
+
       <Secao titulo="Régua de documentação" id="m-doc">
         <ul className="ml-5 list-disc space-y-1">
           <li><strong>0–29:</strong> pouca fonte, única ou partidária.</li>

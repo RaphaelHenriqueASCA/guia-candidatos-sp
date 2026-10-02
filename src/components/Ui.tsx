@@ -31,7 +31,7 @@ const COR: Record<string, string> = { vermelho: 'text-vermelho', ambar: 'text-am
 const BG: Record<string, string> = { vermelho: 'bg-vermelho', ambar: 'bg-ambar', verde: 'bg-verde' }
 
 /** Medidor com número, faixa de cor e rótulo textual (nunca só cor). */
-export function Medidor({ titulo, nota, rotulo, ajuda }: { titulo: string; nota: number | null; rotulo?: string; ajuda?: string }) {
+export function Medidor({ titulo, nota, rotulo, ajuda, invertida = false }: { titulo: string; nota: number | null; rotulo?: string; ajuda?: string; invertida?: boolean }) {
   if (nota === null) {
     return (
       <div>
@@ -40,7 +40,8 @@ export function Medidor({ titulo, nota, rotulo, ajuda }: { titulo: string; nota:
       </div>
     )
   }
-  const f = faixa(nota)
+  // invertida: nota alta é ruim (ex.: controvérsias), então a cor segue 100 - nota
+  const f = faixa(invertida ? 100 - nota : nota)
   return (
     <div>
       <div className="flex items-baseline justify-between gap-2">

@@ -3,6 +3,7 @@ import { nomeLegivel } from '../lib/dados'
 import { useEstado } from '../lib/estado'
 import { rotuloAfinidade, rotuloDoc } from '../lib/nota'
 import { afinidade, posicaoDoPartido } from '../lib/posicao'
+import { MedidorControversia } from './Controversia'
 import { Foto, Medidor, Numero } from './Ui'
 
 export function BaseSelo({ p }: { p: Pessoa }) {
@@ -44,6 +45,7 @@ export function Cartao({ p }: { p: Pessoa }) {
         </p>
       )}
       {p.curado && <Medidor titulo="Documentação das fontes" nota={p.curado.doc} rotulo={rotuloDoc(p.curado.doc)} />}
+      {(p.curado || p.fl) && <MedidorControversia p={p} />}
       <div className="flex items-center justify-between gap-2">
         <BaseSelo p={p} />
         <label className={`flex min-h-11 items-center gap-2 text-sm font-semibold text-petroleo ${cheio ? 'opacity-50' : ''}`}>

@@ -38,7 +38,8 @@
         "valor": -75,
         "nota": "Propõe inclusão de pessoas com deficiência."
       }
-    }
+    },
+    "ocorrencias": []
   },
   {
     "id": "federal-1351",
@@ -70,7 +71,8 @@
     ],
     "origem": "curadoria inicial",
     "pesquisadoEm": "2026-09-29",
-    "posicoes": {}
+    "posicoes": {},
+    "ocorrencias": []
   },
   {
     "id": "federal-1389",
@@ -101,7 +103,8 @@
     ],
     "origem": "curadoria inicial",
     "pesquisadoEm": "2026-09-29",
-    "posicoes": {}
+    "posicoes": {},
+    "ocorrencias": []
   },
   {
     "id": "federal-2211",
@@ -141,7 +144,16 @@
         "valor": 70,
         "nota": "Inferida de fala sobre professores em greve (13/05/2026); não analisei propostas de educação."
       }
-    }
+    },
+    "ocorrencias": [
+      {
+        "tipo": "representacao",
+        "situacao": "em_curso",
+        "ano": 2026,
+        "descricao": "Deputados do PSOL pediram ao Ministério Público de SP a investigação das ofensas a professores em greve (13/05/2026).",
+        "fonte": "https://www.congressoemfoco.com.br/noticia/118960/sessao-e-suspensa-apos-pavanato-chamar-professores-de-vagabundos"
+      }
+    ]
   },
   {
     "id": "federal-2225",
@@ -180,7 +192,8 @@
         "valor": 90,
         "nota": "Coautor do PL 246/2019 (Escola sem Partido); defende o projeto como proteção da liberdade de consciência dos estudantes."
       }
-    }
+    },
+    "ocorrencias": []
   },
   {
     "id": "federal-2270",
@@ -218,7 +231,16 @@
         "valor": 80,
         "nota": "Pastor; atribui suas declarações polêmicas a crença religiosa."
       }
-    }
+    },
+    "ocorrencias": [
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 2013,
+        "descricao": "Acusado de homofobia e racismo por declarações públicas, entre elas a de que africanos seriam alvo de uma “maldição”; ele diz tratar-se de crença religiosa.",
+        "fonte": "https://www.terra.com.br/noticias/brasil/politica/acusado-de-homofobia-e-racismo-feliciano-semeia-polemicas-no-congresso,2f8de89a54bdd310VgnCLD2000000ec6eb0aRCRD.html"
+      }
+    ]
   },
   {
     "id": "estadual-65400",
@@ -265,7 +287,8 @@
         "valor": -80,
         "nota": "Preside (licenciada) a Federação das Mulheres Paulistas; defende mais proteção às mulheres."
       }
-    }
+    },
+    "ocorrencias": []
   },
   {
     "id": "estadual-50300",
@@ -310,7 +333,8 @@
         "valor": -90,
         "nota": "Atua na Educafro e na Marcha das Mulheres Negras."
       }
-    }
+    },
+    "ocorrencias": []
   },
   {
     "id": "estadual-13123",
@@ -351,7 +375,8 @@
         "valor": -90,
         "nota": "Professora da rede estadual; presidiu a Apeoesp e a Comissão de Educação e Cultura da Alesp."
       }
-    }
+    },
+    "ocorrencias": []
   },
   {
     "id": "estadual-22051",
@@ -390,7 +415,23 @@
         "valor": 90,
         "nota": "Ato de 18/03/2026 na Alesp sobre a eleição de Erika Hilton, investigado pelo MPSP e MPF; ela nega blackface."
       }
-    }
+    },
+    "ocorrencias": [
+      {
+        "tipo": "investigacao",
+        "situacao": "em_curso",
+        "ano": 2026,
+        "descricao": "MPSP e MPF abriram investigação por suspeita de racismo e transfobia após o ato de 18/03/2026 na Alesp; ela nega ter feito blackface.",
+        "fonte": "https://sbtnews.sbt.com.br/noticia/politica/mpf-pede-investigacao-contra-deputada-apos-blackface-na-alesp"
+      },
+      {
+        "tipo": "representacao",
+        "situacao": "em_curso",
+        "ano": 2026,
+        "descricao": "18 deputados estaduais acionaram o Conselho de Ética da Alesp contra ela.",
+        "fonte": "https://www.cnnbrasil.com.br/politica/governistas-acionam-conselho-de-etica-contra-deputada-fabiana-bolsonaro/"
+      }
+    ]
   },
   {
     "id": "estadual-22500",
@@ -413,7 +454,16 @@
     ],
     "origem": "curadoria inicial",
     "pesquisadoEm": "2026-09-29",
-    "posicoes": {}
+    "posicoes": {},
+    "ocorrencias": [
+      {
+        "tipo": "representacao",
+        "situacao": "em_curso",
+        "ano": 2024,
+        "descricao": "Representação da deputada Professora Bebel no Conselho de Ética (fev/2024) por suposta intimidação de professores; acusação em análise, sem a versão do deputado.",
+        "fonte": "https://www.metropoles.com/sao-paulo/alesp-pedidos-cassacao-bove"
+      }
+    ]
   },
   {
     "id": "estadual-44555",
@@ -453,7 +503,30 @@
         "valor": 85,
         "nota": "Fala transfóbica em 2019 (retratou-se e foi advertido pelo Conselho de Ética)."
       }
-    }
+    },
+    "ocorrencias": [
+      {
+        "tipo": "sancao_etica",
+        "situacao": "definitiva",
+        "ano": 2019,
+        "descricao": "Advertido pelo Conselho de Ética da Alesp após dizer que tiraria uma mulher trans do banheiro “no tapa”; retratou-se em plenário.",
+        "fonte": "https://www.cartacapital.com.br/diversidade/deputado-do-psl-que-ofendeu-parlamentar-trans-e-advertido-pela-alesp/"
+      },
+      {
+        "tipo": "representacao",
+        "situacao": "em_curso",
+        "ano": 2019,
+        "descricao": "O Condepe pediu a abertura de processo contra ele por transfobia.",
+        "fonte": "https://revistaforum.com.br/direitos/condepe-pede-abertura-de-processo-contra-deputado-do-psl-que-atacou-erica-malunguinho/"
+      },
+      {
+        "tipo": "condenacao_civel",
+        "situacao": "nao_definitiva",
+        "ano": 2021,
+        "descricao": "Condenado em primeira instância a indenizar citados em um “dossiê antifascista”; o andamento do recurso não foi verificado.",
+        "fonte": "https://exame.com/brasil/erica-malunguinho-abrira-processo-apos-fala-transfobica-de-deputado-do-psl/"
+      }
+    ]
   },
   {
     "id": "federal-4040",
@@ -496,7 +569,23 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": [
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 2019,
+        "descricao": "Veja e Exame revelaram pagamento de R$ 23 mil, com fundo eleitoral do PDT, a um ex-namorado por análise de campanha; ela defendeu a contratação.",
+        "fonte": "https://pt.wikipedia.org/wiki/Tabata_Amaral"
+      },
+      {
+        "tipo": "sancao_etica",
+        "situacao": "arquivada_ou_revertida",
+        "ano": 2019,
+        "descricao": "O PDT suspendeu seu mandato e abriu processo de punição por votar a favor da reforma da Previdência; em 2021 o TSE aceitou sua desfiliação por justa causa.",
+        "fonte": "https://pt.wikipedia.org/wiki/Tabata_Amaral"
+      }
+    ]
   },
   {
     "id": "federal-5070",
@@ -551,7 +640,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "federal-1414",
@@ -599,7 +689,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "federal-1000",
@@ -648,7 +739,51 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": [
+      {
+        "tipo": "condenacao_criminal",
+        "situacao": "arquivada_ou_revertida",
+        "ano": 2014,
+        "descricao": "Condenado em primeira instância por peculato (uso de funcionária de gabinete em produtora privada, entre 1997 e 2001); absolvido pela 2ª Turma do STF em 2016.",
+        "fonte": "https://pt.wikipedia.org/wiki/Celso_Russomanno"
+      },
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 2010,
+        "descricao": "Emenda de R$ 1,1 milhão para uma ONG que presidia e administrava com familiares; após a revelação, redirecionou os recursos.",
+        "fonte": "https://pt.wikipedia.org/wiki/Celso_Russomanno"
+      },
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 2012,
+        "descricao": "Citado em gravação da Polícia Federal sobre o bicheiro Carlinhos Cachoeira; negou envolvimento e ofereceu seus sigilos bancário, telefônico e fiscal.",
+        "fonte": "https://pt.wikipedia.org/wiki/Celso_Russomanno"
+      },
+      {
+        "tipo": "acao_em_curso",
+        "situacao": "arquivada_ou_revertida",
+        "ano": 2002,
+        "descricao": "Acusado de agredir uma funcionária do Instituto do Coração (Incor); absolvido pelo STF.",
+        "fonte": "https://pt.wikipedia.org/wiki/Celso_Russomanno"
+      },
+      {
+        "tipo": "acao_em_curso",
+        "situacao": "arquivada_ou_revertida",
+        "ano": 2000,
+        "descricao": "Réu por falsidade ideológica (simulação de contrato imobiliário para mudar domicílio eleitoral); caso resolvido por acordo judicial.",
+        "fonte": "https://pt.wikipedia.org/wiki/Celso_Russomanno"
+      },
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 1998,
+        "descricao": "Acusado de exercício ilegal da advocacia por serviço de plantão jurídico por telefone; não consta como advogado registrado na OAB.",
+        "fonte": "https://pt.wikipedia.org/wiki/Celso_Russomanno"
+      }
+    ]
   },
   {
     "id": "federal-1150",
@@ -696,7 +831,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "federal-1100",
@@ -747,7 +883,37 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": [
+      {
+        "tipo": "investigacao",
+        "situacao": "em_curso",
+        "ano": 1992,
+        "descricao": "Foi transferido da ROTA em 1992 em meio a dezenas de investigações por violência policial; o desfecho não foi encontrado.",
+        "fonte": "https://pt.wikipedia.org/wiki/Coronel_Telhada"
+      },
+      {
+        "tipo": "representacao",
+        "situacao": "em_curso",
+        "ano": 2014,
+        "descricao": "Após postagem sobre separar São Paulo do “norte e nordeste”, o PT pediu medidas judiciais; ele apagou a postagem e se retratou.",
+        "fonte": "https://pt.wikipedia.org/wiki/Coronel_Telhada"
+      },
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 2014,
+        "descricao": "O UOL relatou gasto de R$ 49 mil de verba de gabinete com uma gráfica, entre os vereadores que mais gastaram com serviços gráficos.",
+        "fonte": "https://pt.wikipedia.org/wiki/Coronel_Telhada"
+      },
+      {
+        "tipo": "representacao",
+        "situacao": "em_curso",
+        "ano": 2020,
+        "descricao": "A prefeitura denunciou agressão verbal a funcionários e pacientes durante fiscalização sem aviso no hospital de campanha do Anhembi.",
+        "fonte": "https://pt.wikipedia.org/wiki/Coronel_Telhada"
+      }
+    ]
   },
   {
     "id": "estadual-13133",
@@ -785,7 +951,16 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": [
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 2016,
+        "descricao": "Detido por três horas ao se deitar na rua em protesto contra uma reintegração de posse (desobediência civil).",
+        "fonte": "https://pt.wikipedia.org/wiki/Eduardo_Suplicy"
+      }
+    ]
   },
   {
     "id": "estadual-50789",
@@ -827,7 +1002,30 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": [
+      {
+        "tipo": "representacao",
+        "situacao": "em_curso",
+        "ano": 2018,
+        "descricao": "O deputado Douglas Garcia o acusou de agressão em debate sobre o “Escola sem Partido”; Giannazi disse que Garcia tentava tirar seu microfone.",
+        "fonte": "https://pt.wikipedia.org/wiki/Carlos_Giannazi"
+      },
+      {
+        "tipo": "sancao_etica",
+        "situacao": "nao_definitiva",
+        "ano": 2002,
+        "descricao": "Expulso do PT após votar contra o orçamento educacional da gestão Marta Suplicy; a expulsão virou suspensão ao recorrer.",
+        "fonte": "https://pt.wikipedia.org/wiki/Carlos_Giannazi"
+      },
+      {
+        "tipo": "sancao_etica",
+        "situacao": "definitiva",
+        "ano": 2005,
+        "descricao": "Expulso novamente do PT por se lançar candidato à presidência da Câmara Municipal.",
+        "fonte": "https://pt.wikipedia.org/wiki/Carlos_Giannazi"
+      }
+    ]
   },
   {
     "id": "estadual-55678",
@@ -863,7 +1061,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "estadual-22444",
@@ -904,7 +1103,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "federal-5000",
@@ -945,7 +1145,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "federal-1515",
@@ -988,7 +1189,23 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": [
+      {
+        "tipo": "investigacao",
+        "situacao": "arquivada_ou_revertida",
+        "ano": 2016,
+        "descricao": "Citado por um lobista em esquema de fraude na merenda escolar; inquérito arquivado pelo STF em 2018.",
+        "fonte": "https://pt.wikipedia.org/wiki/Baleia_Rossi"
+      },
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 2021,
+        "descricao": "A Folha de S.Paulo publicou que seu nome constava em planilha de quadrilha investigada em Ribeirão Preto (R$ 760 mil associados); a defesa e o desfecho não foram encontrados.",
+        "fonte": "https://pt.wikipedia.org/wiki/Baleia_Rossi"
+      }
+    ]
   },
   {
     "id": "federal-1580",
@@ -1018,7 +1235,16 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": [
+      {
+        "tipo": "investigacao",
+        "situacao": "em_curso",
+        "ano": 2025,
+        "descricao": "CGU e MPF apuram emendas Pix enviadas a Barueri, entre elas R$ 2,2 milhões para recapear ruas de condomínio onde mora; a defesa dele não foi encontrada.",
+        "fonte": "https://pt.wikipedia.org/wiki/F%C3%A1bio_Teruel"
+      }
+    ]
   },
   {
     "id": "federal-2323",
@@ -1060,7 +1286,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "federal-5533",
@@ -1101,7 +1328,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "federal-5501",
@@ -1137,7 +1365,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "estadual-50000",
@@ -1178,7 +1407,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "estadual-55855",
@@ -1215,7 +1445,23 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": [
+      {
+        "tipo": "investigacao",
+        "situacao": "em_curso",
+        "ano": 2004,
+        "descricao": "Acusação de desvio de R$ 3,1 milhões da Prefeitura de Itapira (ano estimado pelo fim do mandato de prefeito; a Wikipédia não informa data nem desfecho).",
+        "fonte": "https://pt.wikipedia.org/wiki/Barros_Munhoz"
+      },
+      {
+        "tipo": "condenacao_administrativa",
+        "situacao": "arquivada_ou_revertida",
+        "ano": 2016,
+        "descricao": "Teve o mandato cassado pelo TRE-SP em jun/2016; a decisão foi revertida pelo TSE em nov/2017.",
+        "fonte": "https://pt.wikipedia.org/wiki/Barros_Munhoz"
+      }
+    ]
   },
   {
     "id": "estadual-55125",
@@ -1251,7 +1497,16 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": [
+      {
+        "tipo": "condenacao_administrativa",
+        "situacao": "definitiva",
+        "ano": 2016,
+        "descricao": "Condenado por improbidade administrativa (compras de leite acima do preço de mercado na prefeitura de Presidente Prudente, 1999–2000), em ação transitada em julgado no STF: multa, ressarcimento, perda da função e suspensão dos direitos políticos por cinco anos; a Alesp anunciou a perda do mandato (jun/2016). O registro de 2026 consta como deferido no TSE; a defesa não foi encontrada.",
+        "fonte": "https://www.hojemais.com.br/andradina/noticia/geral/alesp-vai-declarar-perda-de-mandato-do-deputado-mauro-bragato"
+      }
+    ]
   },
   {
     "id": "estadual-55010",
@@ -1282,7 +1537,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "estadual-55455",
@@ -1318,7 +1574,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "estadual-15300",
@@ -1348,7 +1605,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "estadual-55400",
@@ -1392,7 +1650,8 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": []
   },
   {
     "id": "estadual-22138",
@@ -1432,6 +1691,15 @@
       }
     ],
     "origem": "curadoria inicial",
-    "pesquisadoEm": "2026-10-02"
+    "pesquisadoEm": "2026-10-02",
+    "ocorrencias": [
+      {
+        "tipo": "citacao",
+        "situacao": "em_curso",
+        "ano": 1993,
+        "descricao": "O livro Rota 66 (Caco Barcellos, Prêmio Jabuti de 1993) atribui a ele inúmeros casos de abuso de força e violência policial contra civis; ele respondeu com o livro “Matar ou Morrer”.",
+        "fonte": "https://pt.wikipedia.org/wiki/Conte_Lopes"
+      }
+    ]
   }
 ]

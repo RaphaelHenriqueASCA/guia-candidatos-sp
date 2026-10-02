@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BaseSelo } from '../components/Cartao'
+import { SecaoControversia } from '../components/Controversia'
 import { Pesquisar } from '../components/Pesquisar'
 import { destinoFeedback } from '../lib/pesquisa'
 import { AvisoPesquisa, BarraPosicao, Foto, Medidor, Numero, Secao } from '../components/Ui'
@@ -131,6 +132,10 @@ export function Ficha({ id }: { id: string }) {
           pesquisa roda no site da IA escolhida.{' '}
           <a className="font-semibold text-petroleo underline" href={`#/comparar/meus/${p.id}`}>Comparar meus valores com ele</a>
         </p>
+      </Secao>
+
+      <Secao titulo="Índice de controvérsias" id="controversias">
+        <SecaoControversia p={p} />
       </Secao>
 
       <Secao titulo="Onde está em cada área" id="areas">

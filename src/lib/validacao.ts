@@ -12,6 +12,9 @@ export function validarSemantica(lista: Candidato[]): string[] {
       urls.add(f.url)
       if (f.data > c.pesquisadoEm) out.push(`${rot}: fonte com data posterior à pesquisa (${f.data})`)
     }
+    for (const o of c.ocorrencias) {
+      if (!urls.has(o.fonte)) out.push(`${rot}: ocorrência cita fonte que não está na lista de fontes da ficha (${o.fonte})`)
+    }
     if (!(c.partido.toUpperCase() in partidos.partidos)) {
       out.push(`${rot}: partido "${c.partido}" não está em data/partidos.json (adicione com lr: null se não houver classificação)`)
     }

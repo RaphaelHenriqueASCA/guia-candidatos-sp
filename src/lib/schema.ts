@@ -18,6 +18,33 @@ const posicaoSchema = z.object({
   nota: z.string().min(5),
 })
 
+export const TIPOS_OCORRENCIA = [
+  'condenacao_criminal',
+  'condenacao_administrativa', // inclui improbidade, cassação, rejeição de contas
+  'condenacao_civel',
+  'sancao_etica', // advertência/suspensão/expulsão em conselho de ética ou partido
+  'acao_em_curso', // réu em ação penal ou de improbidade
+  'investigacao', // inquérito, apuração do MP, PF, CGU etc.
+  'citacao', // citado em delação, planilha, reportagem ou publicação, sem investigação formal conhecida
+  'representacao', // pedido de investigação ou representação apresentado por terceiros
+] as const
+export type TipoOcorrencia = (typeof TIPOS_OCORRENCIA)[number]
+
+// definitiva = transitada em julgado/sanção final; nao_definitiva = cabe recurso; em_curso = sem desfecho conhecido;
+// arquivada_ou_revertida = arquivada, absolvido ou decisão revertida (aparece na ficha, mas pesa zero)
+export const SITUACOES = ['definitiva', 'nao_definitiva', 'em_curso', 'arquivada_ou_revertida'] as const
+export type Situacao = (typeof SITUACOES)[number]
+
+export const ocorrenciaSchema = z.object({
+  tipo: z.enum(TIPOS_OCORRENCIA),
+  situacao: z.enum(SITUACOES),
+  ano: z.number().int().min(1950).max(2026),
+  descricao: z.string().min(15),
+  /** URL de uma das fontes da ficha */
+  fonte: z.string().url(),
+})
+export type Ocorrencia = z.infer<typeof ocorrenciaSchema>
+
 export const candidatoSchema = z
   .object({
     id: z.string().regex(/^(federal|estadual)-\d{4,5}$/),
@@ -31,6 +58,8 @@ export const candidatoSchema = z
     pontosCompativeis: z.array(z.string().min(5)),
     pontosConflito: z.array(z.string().min(5)),
     fontes: z.array(fonteSchema),
+    /** processos e investigações encontrados na pesquisa (base do índice de controvérsias) */
+    ocorrencias: z.array(ocorrenciaSchema).default([]),
     origem: z.string().min(3),
     pesquisadoEm: dataIso,
   })
@@ -51,6 +80,11 @@ export const candidatosSchema = z.array(candidatoSchema).superRefine((arr, ctx) 
   })
 })
 
+export const JULGAMENTOS = ['deferido', 'deferido_recurso', 'indeferido', 'indeferido_recurso', 'renuncia'] as const
+export type Julgamento = (typeof JULGAMENTOS)[number]
+export const FICHA_LIMPA = ['barrado', 'em_recurso', 'citado'] as const
+export type FichaLimpa = (typeof FICHA_LIMPA)[number]
+
 export const tseSchema = z.array(
   z.object({
     id: z.string(),
@@ -58,6 +92,10 @@ export const tseSchema = z.array(
     numero: z.string(),
     nomeUrna: z.string(),
     partido: z.string(),
+    /** julgamento do registro de candidatura no TSE (quando já publicado) */
+    jg: z.enum(JULGAMENTOS).optional(),
+    /** Lei da Ficha Limpa (inelegibilidade LC 64/90): barrado (registro indeferido), em recurso ou citado */
+    fl: z.enum(FICHA_LIMPA).optional(),
   }),
 )
 

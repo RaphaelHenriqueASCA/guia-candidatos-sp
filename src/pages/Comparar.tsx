@@ -1,4 +1,5 @@
 import { BaseSelo } from '../components/Cartao'
+import { MedidorControversia } from '../components/Controversia'
 import { BarraPosicao, Foto, Medidor, Numero } from '../components/Ui'
 import { DEFS, rotuloPosicao } from '../lib/areas'
 import { curadosLista, nomeLegivel, pessoas, porId, type Pessoa } from '../lib/dados'
@@ -74,6 +75,7 @@ export function Comparar({ ids, modo, alvo }: { ids: string[]; modo?: 'meus'; al
                     <Numero n={p.numero} className="text-3xl" />
                   </div>
                   <BaseSelo p={p} />
+                  <MedidorControversia p={p} />
                   {temValores && <Medidor titulo="Afinidade com os seus valores" nota={af} rotulo={af === null ? undefined : rotuloAfinidade(af)} ajuda={af === null ? 'Sem classificação do partido' : undefined} />}
                   <div className="space-y-3">
                     {DEFS.map((d) => {
